@@ -1,0 +1,999 @@
+[
+ {
+  "id": "q-ai-001",
+  "question": "「人工知能（AI）」という言葉が初めて使われたとされる、1956年に開催された会議はどれですか。",
+  "choices": [
+   "ダートマス会議",
+   "ジュネーブ会議",
+   "チューリング会議",
+   "アシロマ会議"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "AI（人工知能）という言葉は、1956年のダートマス会議でジョン・マッカーシーらによって初めて使われたとされています。",
+  "wrongChoiceExplanations": {
+   "2": "チューリングは「チューリングテスト」で有名ですが、この名の会議でAIの語が生まれたわけではありません。",
+   "1": "ジュネーブ会議はAIの起源とは関係ありません。",
+   "3": "アシロマ会議はAI原則（2017年）で知られますが、AIの語の起源ではありません。"
+  },
+  "domain": "aiBasics",
+  "service": "AIの定義",
+  "difficulty": 1,
+  "tags": [
+   "ダートマス会議",
+   "AIの定義"
+  ],
+  "beginnerNote": "「AIという言葉の始まり＝ダートマス会議(1956年)」は頻出ポイントです。"
+ },
+ {
+  "id": "q-ai-002",
+  "question": "正解ラベル（答え）が付いたデータを使ってAIに学習させる手法はどれですか。",
+  "choices": [
+   "半教師あり学習",
+   "教師あり学習",
+   "強化学習",
+   "教師なし学習"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "教師あり学習は、入力と正解（ラベル）がセットになったデータで学習し、分類や予測を行う手法です。",
+  "wrongChoiceExplanations": {
+   "3": "教師なし学習はラベルの無いデータから構造やグループを見つけます。",
+   "2": "強化学習は報酬を手がかりに試行錯誤で学びます。",
+   "0": "半教師あり学習は少量のラベル付き＋大量のラベル無しを組み合わせます。"
+  },
+  "domain": "aiBasics",
+  "service": "機械学習",
+  "difficulty": 1,
+  "tags": [
+   "教師あり学習",
+   "機械学習"
+  ],
+  "beginnerNote": "ラベルの有無で「教師あり／なし」を見分けます。"
+ },
+ {
+  "id": "q-ai-003",
+  "question": "ラベルの無いデータから似たもの同士をグループ分けする「クラスタリング」は、どの学習に分類されますか。",
+  "choices": [
+   "強化学習",
+   "転移学習",
+   "教師なし学習",
+   "教師あり学習"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "クラスタリングは正解ラベルを使わずにデータの構造を見つける教師なし学習の代表例です。次元削減も教師なし学習に含まれます。",
+  "wrongChoiceExplanations": {
+   "3": "教師あり学習は正解ラベルを用いるため、クラスタリングとは異なります。",
+   "0": "強化学習は報酬による試行錯誤で、グループ分けが目的ではありません。",
+   "1": "転移学習は学習済みモデルを別タスクに応用する手法です。"
+  },
+  "domain": "aiBasics",
+  "service": "機械学習",
+  "difficulty": 2,
+  "tags": [
+   "教師なし学習",
+   "クラスタリング"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-ai-004",
+  "question": "報酬を最大化するように試行錯誤しながら行動を学習していく手法はどれですか。",
+  "choices": [
+   "教師なし学習",
+   "次元削減",
+   "教師あり学習",
+   "強化学習"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "強化学習は、行動に対する報酬（良し悪し）を手がかりに、より良い行動方針を学ぶ手法です。ゲームAIやロボット制御に使われます。",
+  "wrongChoiceExplanations": {
+   "2": "教師あり学習は正解ラベルから学び、報酬による試行錯誤ではありません。",
+   "0": "教師なし学習はデータの構造発見が目的です。",
+   "1": "次元削減はデータの特徴を圧縮する教師なし学習の手法です。"
+  },
+  "domain": "aiBasics",
+  "service": "機械学習",
+  "difficulty": 2,
+  "tags": [
+   "強化学習"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-ai-005",
+  "question": "人間の脳の神経細胞（ニューロン）の仕組みをまねた数理モデルを何と呼びますか。",
+  "choices": [
+   "ニューラルネットワーク",
+   "サポートベクターマシン",
+   "デシジョンツリー",
+   "ベイジアンネットワーク"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "ニューラルネットワークは、人工ニューロン（ノード）を層状につなげた数理モデルです。層を深くしたものがディープラーニング（深層学習）です。",
+  "wrongChoiceExplanations": {
+   "2": "デシジョンツリーは条件分岐による決定木で、脳の模倣ではありません。",
+   "1": "サポートベクターマシンは境界線で分類する手法です。",
+   "3": "ベイジアンネットワークは確率的な因果関係を表すモデルです。"
+  },
+  "domain": "aiBasics",
+  "service": "ディープラーニング",
+  "difficulty": 1,
+  "tags": [
+   "ニューラルネットワーク",
+   "ディープラーニング"
+  ],
+  "beginnerNote": "層を深くしたニューラルネットワーク＝ディープラーニングです。"
+ },
+ {
+  "id": "q-ai-006",
+  "question": "訓練データに過剰に適合し、未知のデータでは精度が落ちてしまう現象を何といいますか。",
+  "choices": [
+   "転移学習",
+   "過学習（オーバーフィッティング）",
+   "正則化",
+   "半教師あり学習"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "過学習（オーバーフィッティング）は、訓練データに合わせ込みすぎて汎化性能が下がる現象です。対策に正則化やドロップアウトがあります。",
+  "wrongChoiceExplanations": {
+   "0": "転移学習は学習済みモデルを別タスクに使う手法で、現象名ではありません。",
+   "2": "正則化は過学習を「抑える」手法であり、現象そのものではありません。",
+   "3": "半教師あり学習は学習手法の一種です。"
+  },
+  "domain": "aiBasics",
+  "service": "過学習",
+  "difficulty": 2,
+  "tags": [
+   "過学習",
+   "正則化"
+  ],
+  "beginnerNote": "過学習の対策＝正則化・ドロップアウトはセットで覚えます。"
+ },
+ {
+  "id": "q-ai-007",
+  "question": "特定の作業に特化したAI（画像認識や翻訳など）を指す言葉はどれですか。",
+  "choices": [
+   "シンギュラリティ",
+   "エキスパートシステム",
+   "弱いAI（ANI）",
+   "強いAI（AGI）"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "特定タスクに特化したAIを弱いAI（ANI）と呼びます。人間のように幅広く思考できるAIは強いAI（AGI）で、現時点では実現していません。",
+  "wrongChoiceExplanations": {
+   "3": "強いAI（AGI）は人間並みの汎用的知能で、まだ実現していません。",
+   "0": "シンギュラリティはAIが人間の知能を超える転換点の概念です。",
+   "1": "エキスパートシステムは第二次AIブームの技術です。"
+  },
+  "domain": "aiBasics",
+  "service": "AIの種類",
+  "difficulty": 2,
+  "tags": [
+   "ANI",
+   "AGI"
+  ],
+  "beginnerNote": "現在実用化されているAIはすべて弱いAI（ANI）です。"
+ },
+ {
+  "id": "q-ai-008",
+  "question": "AIが人間の知能を超え、社会が予測困難なほど変化するとされる転換点を何といいますか。",
+  "choices": [
+   "AI効果",
+   "ノーフリーランチ定理",
+   "ムーアの法則",
+   "シンギュラリティ（技術的特異点）"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "シンギュラリティ（技術的特異点）は、レイ・カーツワイルが2045年に到来すると提唱した、AIが人間の知能を超える転換点の概念です。",
+  "wrongChoiceExplanations": {
+   "2": "ムーアの法則は半導体の集積度に関する経験則です。",
+   "0": "AI効果は、原理が分かるとそれを知能とみなさなくなる心理現象です。",
+   "1": "ノーフリーランチ定理は万能な最適化手法は存在しないという定理です。"
+  },
+  "domain": "aiBasics",
+  "service": "シンギュラリティ",
+  "difficulty": 2,
+  "tags": [
+   "シンギュラリティ",
+   "2045年問題"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-001",
+  "question": "生成AI（ジェネレーティブAI）の説明として最も適切なものはどれですか。",
+  "choices": [
+   "文章・画像・音声など新しいコンテンツを生成するAI",
+   "人間の代わりに物理作業を行うロボット",
+   "計算処理を高速化する専用チップ",
+   "データを分類することだけを目的とするAI"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "生成AIは、学習した大量のデータをもとに、文章・画像・音声・動画などの新しいコンテンツを生成するAIです。",
+  "wrongChoiceExplanations": {
+   "3": "分類のみを行うのは識別モデルであり、生成AIとは異なります。",
+   "1": "物理作業を行うのはロボットで、生成AIの定義ではありません。",
+   "2": "計算を高速化するチップ（GPU等）はAIの基盤ですが、生成AIそのものではありません。"
+  },
+  "domain": "genAI",
+  "service": "生成AIの基礎",
+  "difficulty": 1,
+  "tags": [
+   "生成AI"
+  ],
+  "beginnerNote": "「新しいコンテンツを作る」のが生成AIの核心です。"
+ },
+ {
+  "id": "q-gen-002",
+  "question": "生成器と識別器を競わせながら学習させ、本物に近いデータを生成する仕組みはどれですか。",
+  "choices": [
+   "RNN（回帰型ニューラルネットワーク）",
+   "GAN（敵対的生成ネットワーク）",
+   "VAE（変分自己符号化器）",
+   "CNN（畳み込みニューラルネットワーク）"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "GAN（敵対的生成ネットワーク）は、生成器（Generator）と識別器（Discriminator）を競わせることで、本物らしいデータを生成します。",
+  "wrongChoiceExplanations": {
+   "2": "VAEはエンコーダ・デコーダと潜在ベクトルを使う生成モデルで、敵対的な競争は行いません。",
+   "0": "RNNは時系列・系列データを扱うモデルです。",
+   "3": "CNNは主に画像認識で使われる畳み込みを行うモデルです。"
+  },
+  "domain": "genAI",
+  "service": "生成モデル",
+  "difficulty": 2,
+  "tags": [
+   "GAN",
+   "生成器",
+   "識別器"
+  ],
+  "beginnerNote": "GAN＝生成器と識別器が競い合う、と覚えます。"
+ },
+ {
+  "id": "q-gen-003",
+  "question": "ChatGPTやGPTモデルの中核であり、「Attention（注意機構）」を用いる基盤アーキテクチャはどれですか。",
+  "choices": [
+   "LSTM",
+   "ボルツマンマシン",
+   "Transformer",
+   "エキスパートシステム"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "Transformerは自己注意（Self-Attention）によって文中の単語同士の関係を捉えるアーキテクチャで、GPTやBERTの基盤になっています。",
+  "wrongChoiceExplanations": {
+   "0": "LSTMはRNNを改良した系列モデルですが、Transformer以前の技術です。",
+   "1": "ボルツマンマシンは初期の生成モデルの一つです。",
+   "3": "エキスパートシステムは第二次AIブームのルールベース技術です。"
+  },
+  "domain": "genAI",
+  "service": "Transformer",
+  "difficulty": 2,
+  "tags": [
+   "Transformer",
+   "Attention"
+  ],
+  "beginnerNote": "現在の大規模言語モデルの土台＝Transformerです。"
+ },
+ {
+  "id": "q-gen-004",
+  "question": "生成AIが事実と異なる、もっともらしい誤った情報を生成してしまう現象を何といいますか。",
+  "choices": [
+   "プレトレーニング",
+   "アライメント",
+   "ファインチューニング",
+   "ハルシネーション"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "ハルシネーション（Hallucination）は、生成AIが事実に反する内容をもっともらしく出力してしまう現象です。出力は必ず人間が事実確認する必要があります。",
+  "wrongChoiceExplanations": {
+   "2": "ファインチューニングは追加学習でモデルを特定用途に調整することです。",
+   "1": "アライメントは人間の意図・価値観にAIの振る舞いを合わせることです。",
+   "0": "プレトレーニングは大量データによる事前学習の段階です。"
+  },
+  "domain": "genAI",
+  "service": "ChatGPT",
+  "difficulty": 1,
+  "tags": [
+   "ハルシネーション"
+  ],
+  "beginnerNote": "生成AIの答えは必ずファクトチェック、が実務の鉄則です。"
+ },
+ {
+  "id": "q-gen-005",
+  "question": "人間のフィードバックを使ってモデルの出力を人間の好みに近づける学習手法の略称はどれですか。",
+  "choices": [
+   "RLHF",
+   "NLP",
+   "NSP",
+   "MLM"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "RLHF（Reinforcement Learning from Human Feedback）は、人間の評価を報酬として使い、モデルの応答を人間の意図に沿うよう調整する手法です。",
+  "wrongChoiceExplanations": {
+   "1": "NLPは自然言語処理という分野全体を指す言葉です。",
+   "2": "NSPはBERTの学習に使われる次文予測タスクです。",
+   "3": "MLMはBERTの学習に使われる穴埋め（マスク言語モデル）タスクです。"
+  },
+  "domain": "genAI",
+  "service": "ChatGPT",
+  "difficulty": 3,
+  "tags": [
+   "RLHF",
+   "アライメント"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-006",
+  "question": "テキストだけでなく画像・音声など複数種類の情報を扱えるAIの性質を何といいますか。",
+  "choices": [
+   "ハルシネーション",
+   "マルチモーダル",
+   "オープンソース",
+   "ファインチューニング"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "マルチモーダルは、テキスト・画像・音声など複数の形式（モーダル）を統合的に扱える性質です。GPT-4oなどが該当します。",
+  "wrongChoiceExplanations": {
+   "3": "ファインチューニングは追加学習のことです。",
+   "0": "ハルシネーションは誤情報生成の現象です。",
+   "2": "オープンソースは公開・改変可能なソフトの提供形態です。"
+  },
+  "domain": "genAI",
+  "service": "ChatGPT",
+  "difficulty": 2,
+  "tags": [
+   "マルチモーダル",
+   "GPT-4o"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-007",
+  "question": "生成AIサービスと開発元の組み合わせとして正しいものはどれですか。",
+  "choices": [
+   "Gemini ― OpenAI",
+   "Copilot ― Google",
+   "Claude ― Anthropic",
+   "ChatGPT ― Anthropic"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "Claudeを開発しているのはAnthropicです。GeminiはGoogle、CopilotはMicrosoft、ChatGPTはOpenAIが開発しています。",
+  "wrongChoiceExplanations": {
+   "0": "GeminiはGoogleが開発しています。OpenAIではありません。",
+   "1": "CopilotはMicrosoftが提供しています。Googleではありません。",
+   "3": "ChatGPTはOpenAIが開発しています。Anthropicではありません。"
+  },
+  "domain": "genAI",
+  "service": "その他の主要生成AI",
+  "difficulty": 2,
+  "tags": [
+   "Gemini",
+   "Claude",
+   "Copilot"
+  ],
+  "beginnerNote": "Claude=Anthropic / Gemini=Google / Copilot=Microsoft / ChatGPT=OpenAI。"
+ },
+ {
+  "id": "q-gen-008",
+  "question": "OpenAIが開発した、テキストから高品質な動画を生成するモデルはどれですか。",
+  "choices": [
+   "BERT",
+   "ALBERT",
+   "RoBERTa",
+   "Sora"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "Soraは、テキストの指示から動画を生成するOpenAIのモデルです。BERT・RoBERTa・ALBERTはいずれも言語理解向けのモデルです。",
+  "wrongChoiceExplanations": {
+   "0": "BERTは文章理解に強い言語モデルで、動画生成モデルではありません。",
+   "2": "RoBERTaはBERTを改良した言語モデルです。",
+   "1": "ALBERTは軽量化したBERT系の言語モデルです。"
+  },
+  "domain": "genAI",
+  "service": "ChatGPT",
+  "difficulty": 2,
+  "tags": [
+   "Sora",
+   "動画生成"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-tr-001",
+  "question": "外部の知識データベースを検索し、その結果を踏まえて回答を生成する仕組みの略称はどれですか。",
+  "choices": [
+   "RAG",
+   "RLHF",
+   "CNN",
+   "GAN"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "RAG（Retrieval-Augmented Generation：検索拡張生成）は、外部データを検索して回答に反映する仕組みです。最新情報の反映やハルシネーション低減に役立ちます。",
+  "wrongChoiceExplanations": {
+   "3": "GANは画像などを生成する敵対的生成ネットワークです。",
+   "1": "RLHFは人間のフィードバックによる学習手法です。",
+   "2": "CNNは画像認識で使われるモデルです。"
+  },
+  "domain": "trends",
+  "service": "RAG",
+  "difficulty": 2,
+  "tags": [
+   "RAG",
+   "検索拡張生成"
+  ],
+  "beginnerNote": "RAG＝社内文書などを『検索してから答える』仕組みです。"
+ },
+ {
+  "id": "q-tr-002",
+  "question": "RAGを導入する主なメリットとして最も適切なものはどれですか。",
+  "choices": [
+   "計算コストが必ずゼロになる",
+   "社内文書など最新・独自の情報に基づいて回答でき、誤りを減らせる",
+   "AIの学習が一切不要になる",
+   "インターネット接続が不要になる"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "RAGは、モデルが学習していない最新情報や社内独自の情報を検索して回答に反映できるため、ハルシネーションの低減にもつながります。",
+  "wrongChoiceExplanations": {
+   "2": "学習済みモデルは引き続き必要で、学習が不要になるわけではありません。",
+   "3": "外部データの検索が前提であり、接続不要になるとは限りません。",
+   "0": "検索・生成の処理が伴うため、コストがゼロになるわけではありません。"
+  },
+  "domain": "trends",
+  "service": "RAG",
+  "difficulty": 2,
+  "tags": [
+   "RAG",
+   "メリット"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-tr-003",
+  "question": "目標を与えると、自ら計画・ツール利用・実行を繰り返して作業を進めるAIを何と呼びますか。",
+  "choices": [
+   "チャットボット",
+   "エキスパートシステム",
+   "AIエージェント",
+   "ディープフェイク"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "AIエージェントは、目的達成のために自律的に計画を立て、外部ツールを使いながらタスクを実行するAIです。GenSparkやManusなどが例です。",
+  "wrongChoiceExplanations": {
+   "3": "ディープフェイクは本物そっくりの偽コンテンツを作る技術です。",
+   "1": "エキスパートシステムは固定ルールに基づく旧来のAIです。",
+   "0": "一般的なチャットボットは応答が中心で、自律的な計画・実行は限定的です。"
+  },
+  "domain": "trends",
+  "service": "AIエージェント",
+  "difficulty": 2,
+  "tags": [
+   "AIエージェント",
+   "GenSpark",
+   "Manus"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-tr-004",
+  "question": "AIエージェントが外部のツールやデータに標準的な方法で接続するための仕組み（プロトコル）はどれですか。",
+  "choices": [
+   "SQL",
+   "HTTP",
+   "HTML",
+   "MCP"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "MCP（Model Context Protocol）は、AIが外部ツールやデータソースと連携するための標準的な接続の仕組みです。",
+  "wrongChoiceExplanations": {
+   "2": "HTMLはWebページを記述する言語です。",
+   "1": "HTTPはWeb通信の基本プロトコルですが、AIとツール連携の専用仕様ではありません。",
+   "0": "SQLはデータベース操作の言語です。"
+  },
+  "domain": "trends",
+  "service": "AIエージェント",
+  "difficulty": 3,
+  "tags": [
+   "MCP",
+   "外部連携"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-tr-005",
+  "question": "実在の人物の顔や声を本物そっくりに合成し、偽の映像・音声を作り出す技術はどれですか。",
+  "choices": [
+   "ディープフェイク",
+   "リマスタリング",
+   "正規化",
+   "データ拡張"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "ディープフェイク（深層偽造）は、AIで本物と見分けにくい偽の映像・音声を生成する技術で、偽情報（ディスインフォメーション）による被害が問題視されています。",
+  "wrongChoiceExplanations": {
+   "1": "リマスタリングは既存作品の品質を高め直す処理です。",
+   "3": "データ拡張（augmentation）は学習データを水増しする技術です。",
+   "2": "正規化はデータの尺度を揃える前処理です。"
+  },
+  "domain": "trends",
+  "service": "ディープフェイク",
+  "difficulty": 2,
+  "tags": [
+   "ディープフェイク",
+   "偽情報"
+  ],
+  "beginnerNote": "ディープフェイクは悪用リスクが大きく、生成物の真偽確認が重要です。"
+ },
+ {
+  "id": "q-tr-006",
+  "question": "生成AIで作れるコンテンツの種類として、当てはまらないものはどれですか。",
+  "choices": [
+   "音声・音楽",
+   "物理的な製品そのもの",
+   "画像",
+   "テキスト"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "生成AIはテキスト・画像・音声・音楽・動画などのデジタルコンテンツを生成しますが、物理的な製品そのものを作り出すわけではありません。",
+  "wrongChoiceExplanations": {
+   "3": "テキスト生成AIは代表的な生成AIです。",
+   "2": "画像生成AIは広く使われています。",
+   "0": "音声・音楽生成AIも実用化されています。"
+  },
+  "domain": "trends",
+  "service": "生成AIサービス",
+  "difficulty": 1,
+  "tags": [
+   "生成AIサービス"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-eth-001",
+  "question": "本物そっくりの偽メールやサイトで個人情報をだまし取る手口はどれですか。",
+  "choices": [
+   "クラスタリング",
+   "ファインチューニング",
+   "フィッシング詐欺",
+   "アライメント"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "フィッシング詐欺は、正規のメールやWebサイトを装って認証情報やクレジットカード情報などをだまし取る手口です。",
+  "wrongChoiceExplanations": {
+   "1": "ファインチューニングはAIの追加学習で、詐欺手口ではありません。",
+   "0": "クラスタリングは機械学習の手法です。",
+   "3": "アライメントはAIを人間の意図に合わせることです。"
+  },
+  "domain": "ethics",
+  "service": "セキュリティ",
+  "difficulty": 1,
+  "tags": [
+   "フィッシング",
+   "セキュリティ"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-eth-002",
+  "question": "人種・信条・病歴など、取り扱いに特に配慮を要する個人情報を何といいますか。",
+  "choices": [
+   "公開情報",
+   "匿名加工情報",
+   "仮名加工情報",
+   "要配慮個人情報"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "要配慮個人情報は、人種・信条・病歴・犯罪歴など、不当な差別につながりうる情報で、取得に原則本人同意が必要など特に厳格に扱われます。",
+  "wrongChoiceExplanations": {
+   "1": "匿名加工情報は個人を特定できないよう加工した情報です。",
+   "2": "仮名加工情報は他情報と照合しなければ個人を特定できないよう加工した情報です。",
+   "0": "公開情報でも個人情報保護法の対象になり得ます。"
+  },
+  "domain": "ethics",
+  "service": "個人情報保護",
+  "difficulty": 2,
+  "tags": [
+   "個人情報保護法",
+   "要配慮個人情報"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-eth-003",
+  "question": "生成AIに社外秘の顧客情報を入力する際の対応として、最も適切なものはどれですか。",
+  "choices": [
+   "個人情報や機密情報の入力可否を社内規程やサービスの規約で確認する",
+   "便利なので何でも自由に入力してよい",
+   "一度削除すれば入力しても問題は残らない",
+   "有料プランなら情報漏えいは絶対に起きない"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "生成AIに個人情報や機密情報を入力すると、学習や外部への流出のリスクがあります。入力前に社内規程やサービスの利用規約・データの取り扱いを確認することが重要です。",
+  "wrongChoiceExplanations": {
+   "1": "無制限な入力は情報漏えいや法令違反のリスクがあります。",
+   "2": "入力データが学習や保存に使われる可能性があり、削除で完全に解消するとは限りません。",
+   "3": "有料でもリスクがゼロになるとは限らず、規約確認が必要です。"
+  },
+  "domain": "ethics",
+  "service": "個人情報保護",
+  "difficulty": 2,
+  "tags": [
+   "個人情報保護法",
+   "情報リテラシー"
+  ],
+  "beginnerNote": "『入れる前に確認』が生成AI活用の基本姿勢です。"
+ },
+ {
+  "id": "q-eth-004",
+  "question": "生成AIが作った画像が、既存の著作物とそっくりだった場合に注意すべき権利はどれですか。",
+  "choices": [
+   "特許権",
+   "著作権",
+   "意匠権",
+   "商標権"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "生成物が既存の著作物に類似している場合、著作権侵害となる可能性があります。利用前に既存の権利を侵害していないか確認することが重要です。",
+  "wrongChoiceExplanations": {
+   "0": "特許権は発明を保護する権利で、画像の類似とは直接結びつきません。",
+   "2": "意匠権は工業デザインを保護する権利です。",
+   "3": "商標権はブランドのマークなどを保護する権利です。"
+  },
+  "domain": "ethics",
+  "service": "知的財産権",
+  "difficulty": 2,
+  "tags": [
+   "著作権",
+   "知的財産権"
+  ],
+  "beginnerNote": "AI生成物でも既存の著作権を侵害しうる点に注意します。"
+ },
+ {
+  "id": "q-eth-005",
+  "question": "他人の氏名や肖像が持つ経済的価値（顧客吸引力）を守る権利はどれですか。",
+  "choices": [
+   "著作権",
+   "肖像権",
+   "パブリシティ権",
+   "特許権"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "パブリシティ権は、著名人などの氏名・肖像が持つ経済的価値（顧客吸引力）を保護する権利です。肖像権は私生活上の人格的利益を守る権利で、区別されます。",
+  "wrongChoiceExplanations": {
+   "1": "肖像権は主に人格的利益（勝手に撮影・公開されない）を守る権利です。",
+   "0": "著作権は創作物を守る権利です。",
+   "3": "特許権は発明を守る権利です。"
+  },
+  "domain": "ethics",
+  "service": "知的財産権",
+  "difficulty": 3,
+  "tags": [
+   "パブリシティ権",
+   "肖像権"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-eth-006",
+  "question": "日本の「人間中心のAI社会原則」に含まれる考え方として、当てはまらないものはどれですか。",
+  "choices": [
+   "透明性",
+   "人間中心",
+   "アカウンタビリティ（説明責任）",
+   "AIの判断は常に人間より優先されるべきである"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "AI社会原則は、人間中心・公平性・プライバシー保護・セキュリティ確保・透明性・アカウンタビリティなどを掲げます。AIの判断を常に人間より優先する、という原則は含まれません。",
+  "wrongChoiceExplanations": {
+   "1": "人間中心はAI社会原則の中核です。",
+   "0": "透明性は原則に含まれます。",
+   "2": "アカウンタビリティ（説明責任）は原則に含まれます。"
+  },
+  "domain": "ethics",
+  "service": "AI社会原則",
+  "difficulty": 2,
+  "tags": [
+   "AI社会原則",
+   "人間中心"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-eth-007",
+  "question": "2025年6月に公布された、日本でAIの研究開発・活用の推進を目的とする法律は通称何と呼ばれますか。",
+  "choices": [
+   "AI新法",
+   "不正競争防止法",
+   "著作権法",
+   "個人情報保護法"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "AI新法（人工知能関連技術の研究開発及び活用の推進に関する法律）は2025年6月4日に公布された、日本のAIに関する基本的な法律です。",
+  "wrongChoiceExplanations": {
+   "3": "個人情報保護法は個人情報の取り扱いを定める法律です。",
+   "1": "不正競争防止法は営業秘密の保護などを定める法律です。",
+   "2": "著作権法は著作物を保護する法律です。"
+  },
+  "domain": "ethics",
+  "service": "AI新法",
+  "difficulty": 3,
+  "tags": [
+   "AI新法",
+   "法律"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-eth-008",
+  "question": "AI事業者ガイドラインが示す、AIの事業活動を担う3つの主体に当てはまらないものはどれですか。",
+  "choices": [
+   "AI利用者（AI Business User）",
+   "AI監査者",
+   "AI開発者（AI Developer）",
+   "AI提供者（AI Provider）"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "AI事業者ガイドラインでは、AI開発者・AI提供者・AI利用者の3主体が示されています。AI監査者は含まれません。",
+  "wrongChoiceExplanations": {
+   "2": "AI開発者は3主体の一つです。",
+   "3": "AI提供者は3主体の一つです。",
+   "0": "AI利用者（事業者）は3主体の一つです。"
+  },
+  "domain": "ethics",
+  "service": "AI社会原則",
+  "difficulty": 3,
+  "tags": [
+   "AI事業者ガイドライン",
+   "3主体"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-pr-001",
+  "question": "大量のテキストを学習し、文章を理解・生成する大規模な言語モデルの略称はどれですか。",
+  "choices": [
+   "HTML",
+   "JSON",
+   "LLM",
+   "LSTM"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "LLM（Large Language Model：大規模言語モデル）は、膨大なテキストで事前学習し、文章生成や質問応答などを行うモデルです。",
+  "wrongChoiceExplanations": {
+   "3": "LSTMはRNNを改良した系列モデルで、LLMそのものではありません。",
+   "0": "HTMLはWeb記述言語です。",
+   "1": "JSONはデータ記述の形式です。"
+  },
+  "domain": "prompt",
+  "service": "LLM",
+  "difficulty": 1,
+  "tags": [
+   "LLM",
+   "大規模言語モデル"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-pr-002",
+  "question": "例を1つも与えず、指示だけでタスクを実行させるプロンプトの手法はどれですか。",
+  "choices": [
+   "Few-Shotプロンプティング",
+   "RAG",
+   "ファインチューニング",
+   "Zero-Shotプロンプティング"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "Zero-Shotプロンプティングは、例を示さずに指示だけでタスクを行わせる方法です。例をいくつか示すのはFew-Shotです。",
+  "wrongChoiceExplanations": {
+   "0": "Few-Shotは少数の例を示してから実行させる方法です。",
+   "2": "ファインチューニングはモデル自体を追加学習する手法です。",
+   "1": "RAGは外部データを検索して回答に反映する仕組みです。"
+  },
+  "domain": "prompt",
+  "service": "プロンプティング",
+  "difficulty": 2,
+  "tags": [
+   "Zero-Shot"
+  ],
+  "beginnerNote": "例ゼロ＝Zero-Shot、例あり＝Few-Shot、で区別します。"
+ },
+ {
+  "id": "q-pr-003",
+  "question": "プロンプトにいくつかの例（サンプル）を示して回答の形式や傾向を誘導する手法はどれですか。",
+  "choices": [
+   "Few-Shotプロンプティング",
+   "Zero-Shotプロンプティング",
+   "アライメント",
+   "プレトレーニング"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "Few-Shotプロンプティングは、期待する入出力の例をいくつか提示することで、出力の精度や形式を安定させる手法です。",
+  "wrongChoiceExplanations": {
+   "1": "Zero-Shotは例を示しません。",
+   "3": "プレトレーニングは事前学習の段階を指します。",
+   "2": "アライメントはAIを人間の意図に合わせることです。"
+  },
+  "domain": "prompt",
+  "service": "プロンプティング",
+  "difficulty": 2,
+  "tags": [
+   "Few-Shot"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-pr-004",
+  "question": "良いプロンプトの構成要素として、一般に含まれないものはどれですか。",
+  "choices": [
+   "出力形式の指定（Output Indicator）",
+   "モデルのソースコード",
+   "文脈（Context）",
+   "指示（Instruction）"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "プロンプトの基本要素は、指示・文脈・入力データ・出力形式の指定などです。モデルのソースコードはプロンプトの構成要素ではありません。",
+  "wrongChoiceExplanations": {
+   "3": "指示（Instruction）はプロンプトの基本要素です。",
+   "2": "文脈（Context）は回答の前提を伝える要素です。",
+   "0": "出力形式の指定（Output Indicator）は望む出力形式を示す要素です。"
+  },
+  "domain": "prompt",
+  "service": "プロンプティング",
+  "difficulty": 2,
+  "tags": [
+   "プロンプト構成",
+   "Instruction"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-pr-005",
+  "question": "テキスト生成AIが「不得意」とされることとして、最も適切なものはどれですか。",
+  "choices": [
+   "アイデアの列挙",
+   "文章の要約",
+   "正確な文字数の指定や複雑な計算、最新情報の回答",
+   "文章の言い換え"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "生成AIは、正確な文字数指定・厳密な計算・学習後の最新情報などを苦手とします。要約・言い換え・アイデア出しは得意分野です。",
+  "wrongChoiceExplanations": {
+   "1": "要約は生成AIの得意分野です。",
+   "3": "言い換え（校正・整理）も得意分野です。",
+   "0": "ブレインストーミングなどアイデア列挙も得意です。"
+  },
+  "domain": "prompt",
+  "service": "生成AIの不得意",
+  "difficulty": 2,
+  "tags": [
+   "不得意",
+   "文字数",
+   "計算"
+  ],
+  "beginnerNote": "『正確な数字・最新情報は苦手』と覚え、必ず人が確認します。"
+ },
+ {
+  "id": "q-pr-006",
+  "question": "出力の多様性（ランダムさ）を調整する、生成AIのパラメータはどれですか。",
+  "choices": [
+   "ハルシネーション",
+   "エポック",
+   "トークン",
+   "Temperature"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "Temperature（や Top-p）は、出力のランダム性・多様性を調整するパラメータです。高いほど多様で創造的、低いほど堅実な出力になります。",
+  "wrongChoiceExplanations": {
+   "0": "ハルシネーションは誤情報を生成する現象です。",
+   "1": "エポックは学習でデータを何周するかの回数です。",
+   "2": "トークンはテキストを分割した単位です。"
+  },
+  "domain": "prompt",
+  "service": "プロンプティング",
+  "difficulty": 3,
+  "tags": [
+   "Temperature",
+   "Top-p"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-pr-007",
+  "question": "生成AIをビジネスに活用する例として、適切でないものはどれですか。",
+  "choices": [
+   "出力をそのまま検証せず契約書として利用する",
+   "アンケート項目の作成",
+   "メール文面のたたき台作成",
+   "議事録アジェンダの作成"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "生成AIはたたき台作成に有効ですが、ハルシネーションの可能性があるため、契約書など重要文書はそのまま使わず必ず人間が確認・検証する必要があります。",
+  "wrongChoiceExplanations": {
+   "2": "メールのたたき台作成は代表的な活用例です。",
+   "1": "アンケート項目の作成にも活用できます。",
+   "3": "アジェンダ作成も有効な活用例です。"
+  },
+  "domain": "prompt",
+  "service": "ビジネス応用",
+  "difficulty": 2,
+  "tags": [
+   "ビジネス応用",
+   "ファクトチェック"
+  ],
+  "beginnerNote": null
+ }
+]

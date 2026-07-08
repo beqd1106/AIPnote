@@ -1,0 +1,183 @@
+[
+ {
+  "id": "l-ai",
+  "title": "AIの基礎を理解する",
+  "domain": "aiBasics",
+  "estimatedMinutes": 12,
+  "summary": "AIの定義から機械学習・ディープラーニング、AIの種類と歴史、シンギュラリティまでを押さえます。",
+  "sections": [
+   {
+    "heading": "AIとは何か",
+    "body": "AI（人工知能）という言葉は1956年のダートマス会議で生まれました。明確な唯一の定義はなく、人間の知的なふるまいをコンピュータで実現する技術の総称です。"
+   },
+   {
+    "heading": "機械学習の3分類",
+    "body": "データから学ぶのが機械学習。正解ラベルで学ぶ『教師あり学習』、ラベル無しで構造を見つける『教師なし学習（クラスタリング等）』、報酬で試行錯誤する『強化学習』の3つが基本です。"
+   },
+   {
+    "heading": "ディープラーニングと過学習",
+    "body": "脳を模したニューラルネットワークの層を深くしたものがディープラーニング。訓練データに合わせ込みすぎる過学習を防ぐため、正則化やドロップアウトを使います。"
+   },
+   {
+    "heading": "AIの種類と歴史",
+    "body": "特化型が弱いAI(ANI)、汎用型が強いAI(AGI)で、現状は全てANI。AIは3度のブームを経て発展し、AIが人間を超えるとされる転換点がシンギュラリティ（2045年問題）です。"
+   }
+  ],
+  "quizIds": [
+   "q-ai-001",
+   "q-ai-002",
+   "q-ai-003",
+   "q-ai-005",
+   "q-ai-006",
+   "q-ai-007",
+   "q-ai-008"
+  ],
+  "challengeQuizIds": null,
+  "drillQuizIds": null
+ },
+ {
+  "id": "l-gen",
+  "title": "生成AIの仕組み",
+  "domain": "genAI",
+  "estimatedMinutes": 13,
+  "summary": "生成モデルの系譜（GAN・VAE・Transformer）とChatGPT、主要な生成AIサービスを理解します。",
+  "sections": [
+   {
+    "heading": "生成AIとは",
+    "body": "学習データをもとに文章・画像・音声・動画など新しいコンテンツを生み出すのが生成AIです。分類だけを行う識別モデルとは区別します。"
+   },
+   {
+    "heading": "主要な生成モデル",
+    "body": "生成器と識別器を競わせるGAN、エンコーダ・デコーダのVAE、そしてAttentionで単語の関係を捉えるTransformerが登場。TransformerがGPT・BERTの基盤です。"
+   },
+   {
+    "heading": "ChatGPTと重要用語",
+    "body": "GPTは進化を重ね、人間の評価で調整するRLHF、複数形式を扱うマルチモーダル（GPT-4o）が特徴。事実と異なる出力＝ハルシネーションに注意します。"
+   },
+   {
+    "heading": "主要サービスと開発元",
+    "body": "ChatGPT=OpenAI、Gemini=Google、Claude=Anthropic、Copilot=Microsoft。動画生成のSoraも押さえましょう。"
+   }
+  ],
+  "quizIds": [
+   "q-gen-001",
+   "q-gen-002",
+   "q-gen-003",
+   "q-gen-004",
+   "q-gen-005",
+   "q-gen-006",
+   "q-gen-007",
+   "q-gen-008"
+  ],
+  "challengeQuizIds": null,
+  "drillQuizIds": null
+ },
+ {
+  "id": "l-tr",
+  "title": "生成AIの最新動向",
+  "domain": "trends",
+  "estimatedMinutes": 11,
+  "summary": "画像・動画生成やディープフェイク、そして最新シラバスで追加されたRAG・AIエージェント・MCPを学びます。",
+  "sections": [
+   {
+    "heading": "生成AIでできること",
+    "body": "テキスト・画像・音楽・音声・動画など多様なコンテンツを生成できます。ただし物理的な製品そのものは作れません。"
+   },
+   {
+    "heading": "ディープフェイクのリスク",
+    "body": "本物そっくりの偽映像・音声を作る技術で、偽情報（ディスインフォメーション）による被害が問題。生成物の真偽確認が重要です。"
+   },
+   {
+    "heading": "RAG（検索拡張生成）",
+    "body": "外部の知識を検索して回答に反映する仕組み。最新・独自情報に対応でき、ハルシネーションの低減に役立ちます。"
+   },
+   {
+    "heading": "AIエージェントとMCP",
+    "body": "目標を与えると自律的に計画・実行するのがAIエージェント（GenSpark・Manus等）。外部ツール連携の標準がMCPです。"
+   }
+  ],
+  "quizIds": [
+   "q-tr-001",
+   "q-tr-002",
+   "q-tr-003",
+   "q-tr-004",
+   "q-tr-005",
+   "q-tr-006"
+  ],
+  "challengeQuizIds": null,
+  "drillQuizIds": null
+ },
+ {
+  "id": "l-eth",
+  "title": "情報リテラシー・法律・倫理",
+  "domain": "ethics",
+  "estimatedMinutes": 14,
+  "summary": "セキュリティ、個人情報保護、著作権など知的財産、AI社会原則とAI新法を押さえます。",
+  "sections": [
+   {
+    "heading": "セキュリティの基礎",
+    "body": "フィッシングやソーシャルエンジニアリングなど、人をだます手口を知り、生成AI利用時の情報の取り扱いに注意します。"
+   },
+   {
+    "heading": "個人情報の保護",
+    "body": "個人情報保護法では、要配慮個人情報や匿名加工情報などの区別が重要。生成AIに機密情報を入力する前に規程・規約を確認します。"
+   },
+   {
+    "heading": "生成AIと権利",
+    "body": "著作権・肖像権・パブリシティ権・不正競争防止法など。AI生成物が既存の権利を侵害しないか、事実確認が必要です。"
+   },
+   {
+    "heading": "AI社会原則とAI新法",
+    "body": "人間中心・透明性・アカウンタビリティ等のAI社会原則。2025年6月公布のAI新法や、AI開発者・提供者・利用者の3主体も押さえます。"
+   }
+  ],
+  "quizIds": [
+   "q-eth-001",
+   "q-eth-002",
+   "q-eth-003",
+   "q-eth-004",
+   "q-eth-005",
+   "q-eth-006",
+   "q-eth-007",
+   "q-eth-008"
+  ],
+  "challengeQuizIds": null,
+  "drillQuizIds": null
+ },
+ {
+  "id": "l-pr",
+  "title": "プロンプト制作と実例",
+  "domain": "prompt",
+  "estimatedMinutes": 12,
+  "summary": "LLMの基礎、Zero/Few-Shot、プロンプトの構成要素、ビジネス応用と生成AIの不得意を学びます。",
+  "sections": [
+   {
+    "heading": "LLMとは",
+    "body": "大量のテキストを学習した大規模言語モデルがLLM。Transformerを基盤に、文章生成や質問応答を行います。"
+   },
+   {
+    "heading": "プロンプティングの基礎",
+    "body": "例を示さないZero-Shot、少数の例を示すFew-Shot。指示・文脈・入力データ・出力形式がプロンプトの基本要素です。"
+   },
+   {
+    "heading": "パラメータと実践",
+    "body": "TemperatureやTop-pで出力の多様性を調整。要約・校正・言い換え・翻訳・ブレストなどビジネスに幅広く応用できます。"
+   },
+   {
+    "heading": "生成AIの不得意",
+    "body": "正確な文字数指定・厳密な計算・学習後の最新情報は苦手。重要文書はそのまま使わず、必ず人間が確認します。"
+   }
+  ],
+  "quizIds": [
+   "q-pr-001",
+   "q-pr-002",
+   "q-pr-003",
+   "q-pr-004",
+   "q-pr-005",
+   "q-pr-006",
+   "q-pr-007"
+  ],
+  "challengeQuizIds": null,
+  "drillQuizIds": null
+ }
+]
