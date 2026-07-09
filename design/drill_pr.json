@@ -1,0 +1,326 @@
+[
+ {
+  "id": "qd-pr-01",
+  "question": "「n-gram」とは、直前の【　】語の並びの出現頻度を統計的に数えて次の単語を予測する古典的な言語モデルの手法である。空欄に入るのは？",
+  "choices": [
+   "すべての文書中の",
+   "画像内の",
+   "いくつかの",
+   "音声波形の"
+  ],
+  "correctAnswers": [2],
+  "explanation": "n-gramモデルは直前のいくつかの単語の並びの出現頻度を数えて次の単語を予測する統計的手法です。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "LMとLLM",
+  "difficulty": 1,
+  "tags": ["ドリル", "n-gram"],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-02",
+  "question": "LLMが大量のテキストデータから言語の基本パターンを幅広く学習する最初の工程を何と呼ぶ？",
+  "choices": [
+   "ファインチューニング",
+   "プレトレーニング（事前学習）",
+   "アライメント",
+   "プロンプトエンジニアリング"
+  ],
+  "correctAnswers": [1],
+  "explanation": "プレトレーニング（事前学習）は大量のテキストで言語の基本構造を幅広く学ばせる最初の工程です。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "LMとLLM",
+  "difficulty": 1,
+  "tags": ["ドリル", "プレトレーニング"],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-03",
+  "question": "生成AIモデルの挙動を調整する、学習前に人間が設定する設定値の総称は？",
+  "choices": [
+   "トークン",
+   "エンベディング",
+   "ハイパーパラメータ",
+   "コーパス"
+  ],
+  "correctAnswers": [2],
+  "explanation": "ハイパーパラメータは学習や生成の挙動を制御するために人間が事前に設定する値の総称です。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "ハイパーパラメータ",
+  "difficulty": 1,
+  "tags": ["ドリル", "ハイパーパラメータ"],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-04",
+  "question": "出力の多様性・ランダム性を調整するハイパーパラメータで、値を高くするほど意外性のある表現が出やすくなるものは？",
+  "choices": [
+   "Temperature",
+   "Top-p",
+   "トークン数",
+   "エポック数"
+  ],
+  "correctAnswers": [0],
+  "explanation": "Temperatureは出力のランダム性を調整するパラメータで、値を上げるほど多様で意外性のある出力になります。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "Temperature/Top-p",
+  "difficulty": 1,
+  "tags": ["ドリル", "Temperature"],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-05",
+  "question": "レポートの誤字脱字や言い回しを直してほしいとき、プロンプトに含めるべき指示として適切なのは？",
+  "choices": [
+   "この文章の最新の統計データを教えて",
+   "この文章を校正して、誤字脱字や表現の不自然な箇所を直して",
+   "この文章を200文字ちょうどに要約して",
+   "この文章を絵画風に評論して"
+  ],
+  "correctAnswers": [1],
+  "explanation": "校正は誤字脱字や表現の誤りを直す作業で、生成AIが得意とする実践的な活用法の一つです。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "実践技法（校正）",
+  "difficulty": 1,
+  "tags": ["ドリル", "校正"],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-06",
+  "question": "プロンプトの基本4要素のうち、「AIに与える背景情報や前提条件」を指すものはどれ？",
+  "choices": [
+   "Context（背景情報）",
+   "Instruction（指示）",
+   "Input Data（入力データ）",
+   "Output Indicator（出力形式）"
+  ],
+  "correctAnswers": [0],
+  "explanation": "Contextはタスクの背景や前提条件をAIに伝える要素です。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "プロンプトの4要素",
+  "difficulty": 1,
+  "tags": ["ドリル", "プロンプト4要素"],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-07",
+  "question": "プロンプトの4要素のうち、「表を作って」「箇条書きで」のように出力の見せ方を指定する要素は？",
+  "choices": [
+   "Instruction（指示）",
+   "Context（背景情報）",
+   "Input Data（入力データ）",
+   "Output Indicator（出力形式）"
+  ],
+  "correctAnswers": [3],
+  "explanation": "Output Indicatorは出力の形式や見せ方をAIに指定する要素です。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "プロンプトの4要素",
+  "difficulty": 1,
+  "tags": ["ドリル", "プロンプト4要素"],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-08",
+  "question": "例を一切与えずに、指示文だけでタスクを実行させるプロンプティング手法を何と呼ぶ？",
+  "choices": [
+   "Zero-Shotプロンプティング",
+   "Few-Shotプロンプティング",
+   "ファインチューニング",
+   "アライメント"
+  ],
+  "correctAnswers": [0],
+  "explanation": "Zero-Shotプロンプティングは例を与えずに指示だけでタスクを実行させる手法です。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "Zero-Shot/Few-Shot",
+  "difficulty": 1,
+  "tags": ["ドリル", "Zero-Shot"],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-09",
+  "question": "「Few-Shotプロンプティング」とは、タスクの実行前にいくつかの【　】をプロンプト内に提示する手法である。空欄に入るのは？",
+  "choices": [
+   "エラーログ",
+   "APIキー",
+   "学習率の数値",
+   "入出力の例"
+  ],
+  "correctAnswers": [3],
+  "explanation": "Few-Shotプロンプティングは望ましい入出力の例をいくつか示すことで、AIの応答の精度や形式を安定させる手法です。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "Zero-Shot/Few-Shot",
+  "difficulty": 1,
+  "tags": ["ドリル", "Few-Shot"],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-10",
+  "question": "会議の議事録を「決定事項」「次回までのタスク」のように整理させたい。この活用法に最も近いのは？",
+  "choices": [
+   "翻訳",
+   "情報の整理",
+   "キャッチコピー生成",
+   "例え話への変換"
+  ],
+  "correctAnswers": [1],
+  "explanation": "議事録の要点を項目ごとに整理させる使い方は「情報の整理」に該当する実践技法です。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "実践技法（整理）",
+  "difficulty": 1,
+  "tags": ["ドリル", "情報の整理"],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-11",
+  "question": "難解な専門用語を、小学生でも理解できるように身近な比喩で説明してもらう活用法は？",
+  "choices": [
+   "数字への変換",
+   "文字数指定要約",
+   "例え話への変換",
+   "計算問題の依頼"
+  ],
+  "correctAnswers": [2],
+  "explanation": "専門的な内容を身近な比喩で言い換えさせる使い方は「例え話への変換」です。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "実践技法（例え話）",
+  "difficulty": 1,
+  "tags": ["ドリル", "例え話"],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-12",
+  "question": "アンケートの自由記述回答を要約し、傾向を数値やパーセンテージで示してもらう活用法は？",
+  "choices": [
+   "話者設定",
+   "アジェンダ作成",
+   "校正",
+   "数字への変換"
+  ],
+  "correctAnswers": [3],
+  "explanation": "定性的な回答を割合や件数などの数値表現に変換させる使い方が「数字への変換」です。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "実践技法（数字変換）",
+  "difficulty": 1,
+  "tags": ["ドリル", "数字への変換"],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-13",
+  "question": "「あなたはベテランの営業マネージャーです」のように役割を与えてから回答させる技法を何と呼ぶ？",
+  "choices": [
+   "Zero-Shotプロンプティング",
+   "n-gram",
+   "話者設定（ロールプレイ）",
+   "プレトレーニング"
+  ],
+  "correctAnswers": [2],
+  "explanation": "AIに特定の役割・立場を与えて回答させる技法は話者設定（ロールプレイ）と呼ばれます。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "実践技法（話者設定）",
+  "difficulty": 1,
+  "tags": ["ドリル", "話者設定"],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-14",
+  "question": "新商品のキャッチコピー案を10個出してほしいとき、活用したいビジネス応用は？",
+  "choices": [
+   "ブレインストーミング支援",
+   "翻訳",
+   "議事録の校正",
+   "計算の依頼"
+  ],
+  "correctAnswers": [0],
+  "explanation": "アイデアを多数出させる使い方はブレインストーミング支援としてキャッチコピー案作成にも活用できます。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "ビジネス応用",
+  "difficulty": 1,
+  "tags": ["ドリル", "ブレスト"],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-15",
+  "question": "長い会議の音声書き起こしから「決定事項」「懸念点」「次のアクション」を項目ごとに抜き出させたい。これは何の活用例？",
+  "choices": [
+   "タスク抽出",
+   "芸術作品の批評",
+   "最新ニュースの取得",
+   "正確な文字数指定の要約"
+  ],
+  "correctAnswers": [0],
+  "explanation": "テキストから必要な項目やタスクを抜き出させる使い方はタスク抽出の代表例です。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "ビジネス応用（タスク抽出）",
+  "difficulty": 1,
+  "tags": ["ドリル", "タスク抽出"],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-16",
+  "question": "生成AIへの依頼として、現状のAIが不得意で結果が信頼しにくいものはどれ？",
+  "choices": [
+   "文章のトーンを丁寧語に整える",
+   "文章をちょうど100文字に収める厳密な文字数指定",
+   "箇条書きへの変換",
+   "話者を専門家に設定して説明させる"
+  ],
+  "correctAnswers": [1],
+  "explanation": "生成AIはトークン単位で処理するため、文字数を正確に一致させる指定は不得意とされています。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "生成AIの不得意領域",
+  "difficulty": 2,
+  "tags": ["ドリル", "不得意領域"],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-17",
+  "question": "生成AIの活用に関する次の記述のうち、誤っているものはどれ？",
+  "choices": [
+   "生成AIはリアルタイムの最新ニュースを常に正確に把握し断言できる",
+   "Few-Shotプロンプティングは例を示すことで出力形式を安定させやすい",
+   "校正やビジネスメールの下書き作成は生成AIの得意な活用例である",
+   "Temperatureは出力のランダム性を調整するハイパーパラメータである"
+  ],
+  "correctAnswers": [0],
+  "explanation": "生成AIは学習時点までの情報が中心で、最新情報の正確な把握は不得意とされるため誤りです。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "生成AIの不得意領域",
+  "difficulty": 2,
+  "tags": ["ドリル", "不得意領域"],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-18",
+  "question": "英語のビジネスメールを自然な日本語に変換してもらいたいとき、最も適した活用法は？",
+  "choices": [
+   "翻訳",
+   "芸術作品の批評",
+   "計算問題の解答",
+   "厳密な文字数カウント"
+  ],
+  "correctAnswers": [0],
+  "explanation": "言語間の変換は翻訳という代表的なビジネス応用で、生成AIが得意とする分野です。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "ビジネス応用（翻訳）",
+  "difficulty": 1,
+  "tags": ["ドリル", "翻訳"],
+  "beginnerNote": null
+ }
+]

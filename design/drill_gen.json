@@ -1,0 +1,302 @@
+[
+  {
+    "id": "qd-gen-01",
+    "question": "画像に写っている物体が何かを認識するタスクに最も適したニューラルネットワークはどれか。",
+    "choices": ["CNN", "RNN", "GAN", "BERT"],
+    "correctAnswers": [0],
+    "explanation": "CNNは畳み込み処理で画像の局所的な特徴を捉えるのに優れているため画像認識に広く使われる。",
+    "wrongChoiceExplanations": {},
+    "domain": "genAI",
+    "service": "CNN",
+    "difficulty": 1,
+    "tags": ["ドリル", "CNN"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-gen-02",
+    "question": "テキストだけでなく画像や音声など複数の種類のデータを同時に扱えるAIの性質を何と呼ぶか。",
+    "choices": ["ファインチューニング", "マルチモーダル", "アライメント", "シングルモーダル"],
+    "correctAnswers": [1],
+    "explanation": "複数の種類のデータ(テキスト・画像・音声など)を扱えるAIをマルチモーダルAIと呼ぶ。",
+    "wrongChoiceExplanations": {},
+    "domain": "genAI",
+    "service": "マルチモーダル",
+    "difficulty": 1,
+    "tags": ["ドリル", "マルチモーダル"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-gen-03",
+    "question": "OpenAIが発表した、テキストの指示から動画を生成するモデルはどれか。",
+    "choices": ["Gemini", "Copilot", "Sora", "BERT"],
+    "correctAnswers": [2],
+    "explanation": "SoraはOpenAIが発表したテキストから動画を生成するモデルである。",
+    "wrongChoiceExplanations": {},
+    "domain": "genAI",
+    "service": "Sora",
+    "difficulty": 1,
+    "tags": ["ドリル", "Sora"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-gen-04",
+    "question": "文章や音声など、順序が意味を持つ時系列データの処理に適したニューラルネットワークはどれか。",
+    "choices": ["CNN", "GAN", "VAE", "RNN(再帰型ニューラルネットワーク)"],
+    "correctAnswers": [3],
+    "explanation": "RNNは前の情報を記憶しながら処理するため、時系列データの扱いに適している。",
+    "wrongChoiceExplanations": {},
+    "domain": "genAI",
+    "service": "RNN",
+    "difficulty": 1,
+    "tags": ["ドリル", "RNN"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-gen-05",
+    "question": "GAN(敵対的生成ネットワーク)の説明として正しいものはどれか。",
+    "choices": [
+      "生成器と識別器が互いに競い合いながら学習し、生成器は本物に近いデータを作ろうとする",
+      "文章の一部を隠して予測させることで学習する",
+      "過去の学習データを圧縮してから復元する自己符号化器",
+      "人間のフィードバックをもとに強化学習で調整する"
+    ],
+    "correctAnswers": [0],
+    "explanation": "GANは生成器(Generator)と識別器(Discriminator)が競い合いながら学習を進める仕組みである。",
+    "wrongChoiceExplanations": {},
+    "domain": "genAI",
+    "service": "GAN",
+    "difficulty": 1,
+    "tags": ["ドリル", "GAN"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-gen-06",
+    "question": "VAE(変分オートエンコーダ)の説明として正しいものはどれか。",
+    "choices": [
+      "生成器と識別器の2つのネットワークが競合して学習する",
+      "データを潜在空間に圧縮し、確率分布として表現してから復元する生成モデルである",
+      "文章中の単語同士の関連度を計算する仕組みである",
+      "人間の評価をもとに報酬モデルを作り強化学習する"
+    ],
+    "correctAnswers": [1],
+    "explanation": "VAEはデータを確率分布として潜在空間に圧縮し、そこから復元する生成モデルである。",
+    "wrongChoiceExplanations": {},
+    "domain": "genAI",
+    "service": "VAE",
+    "difficulty": 2,
+    "tags": ["ドリル", "VAE"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-gen-07",
+    "question": "Googleが開発したBERTの特徴として正しいものはどれか。",
+    "choices": [
+      "一方向(前から後ろ)にのみ文章を読み進めて次の単語を予測する",
+      "テキストから動画を生成する",
+      "文章を双方向(前後両方)から読み取って文脈を理解する",
+      "生成器と識別器が競い合って学習する"
+    ],
+    "correctAnswers": [2],
+    "explanation": "BERTは文章を前後双方向から読み取ることで文脈理解の精度を高めている。",
+    "wrongChoiceExplanations": {},
+    "domain": "genAI",
+    "service": "BERT",
+    "difficulty": 1,
+    "tags": ["ドリル", "BERT"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-gen-08",
+    "question": "自己回帰モデルの説明として正しいものはどれか。",
+    "choices": [
+      "文章の一部をランダムに隠して、隠された部分を推測させるモデルである",
+      "画像同士を比較して本物か偽物かを見分けるモデルである",
+      "2つの文が連続しているかどうかを判定するモデルである",
+      "それまでに生成した単語列をもとに、次に来る単語を順番に予測して生成していくモデルである"
+    ],
+    "correctAnswers": [3],
+    "explanation": "自己回帰モデルは、これまでに生成した単語列をもとに次の単語を順に予測して生成する。",
+    "wrongChoiceExplanations": {},
+    "domain": "genAI",
+    "service": "自己回帰モデル",
+    "difficulty": 2,
+    "tags": ["ドリル", "自己回帰モデル"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-gen-09",
+    "question": "RNNが抱える「文章が長くなるほど昔の情報を覚えていられない」という課題を改善するために考案されたのが【　】である。空欄に入る語句はどれか。",
+    "choices": ["LSTM(長短期記憶)", "Transformer", "BERT", "GAN"],
+    "correctAnswers": [0],
+    "explanation": "LSTMはRNNの弱点である長期依存の学習困難を改善するために考案された。",
+    "wrongChoiceExplanations": {},
+    "domain": "genAI",
+    "service": "LSTM",
+    "difficulty": 1,
+    "tags": ["ドリル", "LSTM"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-gen-10",
+    "question": "「GPT」は Generative Pre-trained 【　】 の略である。空欄に入る語句はどれか。",
+    "choices": ["Translator", "Transformer", "Turing", "Tokenizer"],
+    "correctAnswers": [1],
+    "explanation": "GPTはGenerative Pre-trained Transformerの略である。",
+    "wrongChoiceExplanations": {},
+    "domain": "genAI",
+    "service": "GPT",
+    "difficulty": 1,
+    "tags": ["ドリル", "GPT"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-gen-11",
+    "question": "人間が回答の良し悪しを評価し、そのフィードバックをもとに強化学習でモデルを調整する手法を【　】と呼ぶ。空欄に入る語句はどれか。",
+    "choices": ["MLM", "GAN", "RLHF(人間のフィードバックによる強化学習)", "NSP"],
+    "correctAnswers": [2],
+    "explanation": "RLHFは人間による評価(フィードバック)を使って強化学習でモデルの応答を調整する手法である。",
+    "wrongChoiceExplanations": {},
+    "domain": "genAI",
+    "service": "RLHF",
+    "difficulty": 2,
+    "tags": ["ドリル", "RLHF"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-gen-12",
+    "question": "BERTの事前学習で使われる、文章中の一部の単語をマスクして隠し、周囲の文脈からその単語を予測させる手法を【　】と呼ぶ。空欄に入る語句はどれか。",
+    "choices": ["NSP", "RLHF", "GAN", "MLM(マスク言語モデル)"],
+    "correctAnswers": [3],
+    "explanation": "MLMは文章中の一部の単語を隠し、周囲の文脈からその単語を予測させる事前学習手法である。",
+    "wrongChoiceExplanations": {},
+    "domain": "genAI",
+    "service": "MLM",
+    "difficulty": 2,
+    "tags": ["ドリル", "MLM"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-gen-13",
+    "question": "AIチャットボットに歴史上の人物について質問したところ、実在しない出来事をもっともらしい文章で回答してきた。この現象を何と呼ぶか。",
+    "choices": ["ハルシネーション", "ファインチューニング", "アライメント", "マルチモーダル"],
+    "correctAnswers": [0],
+    "explanation": "実際には存在しない情報をもっともらしく生成してしまう現象をハルシネーションと呼ぶ。",
+    "wrongChoiceExplanations": {},
+    "domain": "genAI",
+    "service": "ハルシネーション",
+    "difficulty": 1,
+    "tags": ["ドリル", "ハルシネーション"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-gen-14",
+    "question": "汎用的な事前学習済みモデルに対し、自社の医療用語データを追加で学習させて医療分野に特化した応答ができるよう調整した。この作業を何と呼ぶか。",
+    "choices": ["アライメント", "ファインチューニング", "ハルシネーション", "RLHF"],
+    "correctAnswers": [1],
+    "explanation": "既存の学習済みモデルに特定分野のデータを追加学習させることをファインチューニングと呼ぶ。",
+    "wrongChoiceExplanations": {},
+    "domain": "genAI",
+    "service": "ファインチューニング",
+    "difficulty": 1,
+    "tags": ["ドリル", "ファインチューニング"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-gen-15",
+    "question": "開発チームが、AIが有害な発言や差別的な回答をしないよう、人間の倫理観や意図に沿うように調整する取り組みを行った。この取り組みを何と呼ぶか。",
+    "choices": ["ファインチューニング", "ハルシネーション", "アライメント", "マルチモーダル"],
+    "correctAnswers": [2],
+    "explanation": "AIの応答が人間の意図や倫理観に沿うよう調整する取り組みをアライメントと呼ぶ。",
+    "wrongChoiceExplanations": {},
+    "domain": "genAI",
+    "service": "アライメント",
+    "difficulty": 1,
+    "tags": ["ドリル", "アライメント"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-gen-16",
+    "question": "翻訳AIが「その犬はボールを追いかけた。それは疲れていた。」という文を処理する際、「それ」が「犬」を指すことを文中の単語同士の関連度から計算する仕組みを何と呼ぶか。",
+    "choices": ["CNN", "GAN", "VAE", "Self-Attention(自己注意機構)"],
+    "correctAnswers": [3],
+    "explanation": "Self-Attentionは文中の単語同士の関連度を計算し、文脈上の結びつきを捉える仕組みである。",
+    "wrongChoiceExplanations": {},
+    "domain": "genAI",
+    "service": "Self-Attention",
+    "difficulty": 1,
+    "tags": ["ドリル", "Self-Attention"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-gen-17",
+    "question": "AIモデルの「パラメータ数」に関する説明として、誤っているものはどれか。",
+    "choices": [
+      "パラメータ数が多いほど必ず処理速度が速くなる",
+      "パラメータはモデルが学習によって調整する重みなどの数値である",
+      "一般にパラメータ数が多いほどモデルの表現力は高まりやすい",
+      "パラメータ数が多いモデルほど学習や推論に多くの計算資源を必要とする傾向がある"
+    ],
+    "correctAnswers": [0],
+    "explanation": "パラメータ数が増えると計算量も増えるため、一般に処理速度はむしろ遅くなりやすい。",
+    "wrongChoiceExplanations": {},
+    "domain": "genAI",
+    "service": "パラメータ",
+    "difficulty": 2,
+    "tags": ["ドリル", "パラメータ"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-gen-18",
+    "question": "生成AIサービスとその開発元の組み合わせとして、誤っているものはどれか。",
+    "choices": [
+      "ChatGPT - OpenAI",
+      "Claude - Microsoft",
+      "Gemini - Google",
+      "Copilot - Microsoft"
+    ],
+    "correctAnswers": [1],
+    "explanation": "ClaudeはAnthropicが開発した生成AIであり、Microsoftではない。",
+    "wrongChoiceExplanations": {},
+    "domain": "genAI",
+    "service": "主要サービス",
+    "difficulty": 1,
+    "tags": ["ドリル", "主要サービスと開発元"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-gen-19",
+    "question": "Transformerの仕組みに関する説明として、誤っているものはどれか。",
+    "choices": [
+      "Attention機構により文中の単語同士の関連度を計算する",
+      "並列処理がしやすく大規模な学習に向いている",
+      "文章を処理する際、RNNのように必ず1単語ずつ順番に処理しなければならない",
+      "GPTやBERTなど多くの生成AIモデルの基盤となっている"
+    ],
+    "correctAnswers": [2],
+    "explanation": "Transformerは並列処理が可能で、RNNのように単語を1つずつ順番に処理する必要はない。",
+    "wrongChoiceExplanations": {},
+    "domain": "genAI",
+    "service": "Transformer",
+    "difficulty": 2,
+    "tags": ["ドリル", "Transformer"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-gen-20",
+    "question": "BERTの事前学習で用いられるNSP(Next Sentence Prediction)に関する説明として、誤っているものはどれか。",
+    "choices": [
+      "2つの文が与えられたとき、それらが連続する文かどうかを判定するタスクである",
+      "BERTの事前学習に使われる手法の一つである",
+      "文章全体の文脈理解を助けるための学習タスクである",
+      "与えられた1文の中から隠された単語を予測するタスクである"
+    ],
+    "correctAnswers": [3],
+    "explanation": "単語を予測するのはMLMの役割であり、NSPは2つの文が連続するかどうかを判定するタスクである。",
+    "wrongChoiceExplanations": {},
+    "domain": "genAI",
+    "service": "NSP",
+    "difficulty": 2,
+    "tags": ["ドリル", "NSP"],
+    "beginnerNote": null
+  }
+]

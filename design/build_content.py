@@ -577,6 +577,26 @@ for bf in sorted(glob.glob(os.path.join(DESIGN, "batch_*.json"))):
     questions.extend(batch)
     print(f"merged {os.path.basename(bf)}: +{len(batch)}")
 
+# --- 反復ドリルの取り込み（design/drill_*.json）＋レッスンへ紐付け ---
+# ドリルは tag「ドリル」付き。ContentRepository.examPool が tag「ドリル」を除外するため
+# 模試には出ず、レッスン内の「反復ドリル（ランダム10問）」でのみ使われる。
+drill_by_domain = {}
+for df in sorted(glob.glob(os.path.join(DESIGN, "drill_*.json"))):
+    with open(df, encoding="utf-8") as f:
+        drills = json.load(f)
+    for q in drills:
+        if "ドリル" not in q.get("tags", []):
+            q.setdefault("tags", []).append("ドリル")
+        drill_by_domain.setdefault(q["domain"], []).append(q["id"])
+    questions.extend(drills)
+    print(f"merged {os.path.basename(df)}: +{len(drills)} (ドリル)")
+# 各レッスンへ同分野のドリルidを割り当て
+for l in lessons:
+    ids = drill_by_domain.get(l["domain"], [])
+    l["drillQuizIds"] = ids if ids else None
+if drill_by_domain:
+    print("ドリル割当:", {k: len(v) for k, v in drill_by_domain.items()})
+
 # --- 整合性検証 ---
 VALID = {"aiBasics", "genAI", "trends", "ethics", "prompt"}
 def validate(qs):
@@ -596,9 +616,11 @@ def validate(qs):
             ki = int(k)
             if not (0 <= ki < len(ch)): errs.append(f"{i} 不正wrongkey {k}")
             if ki in ca: errs.append(f"{i} wrongkeyが正解を指す {k}")
-        for idx in range(len(ch)):
-            if idx not in ca and str(idx) not in q.get("wrongChoiceExplanations", {}):
-                errs.append(f"{i} 選択肢{idx}の誤答解説なし")
+        # ドリルは短問のため誤答解説の完備は必須にしない（本問のみ必須）
+        if "ドリル" not in q.get("tags", []):
+            for idx in range(len(ch)):
+                if idx not in ca and str(idx) not in q.get("wrongChoiceExplanations", {}):
+                    errs.append(f"{i} 選択肢{idx}の誤答解説なし")
         if not q.get("explanation"): errs.append(f"{i} explanation空")
         if q.get("difficulty") not in (1, 2, 3): errs.append(f"{i} difficulty={q.get('difficulty')}")
     return errs

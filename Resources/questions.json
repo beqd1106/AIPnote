@@ -4092,5 +4092,2121 @@
    "AIエージェント"
   ],
   "beginnerNote": "MCPは、AIと様々なツールをつなぐための『共通の差込口』のようなものです。"
+ },
+ {
+  "id": "qd-ai-01",
+  "question": "あらかじめ正解（ラベル）が付与されたデータを使って学習する機械学習の手法はどれ？",
+  "choices": [
+   "教師なし学習",
+   "転移学習",
+   "教師あり学習",
+   "強化学習"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "入力とその正解ラベルのペアからパターンを学ぶのが教師あり学習であるため。",
+  "wrongChoiceExplanations": {},
+  "domain": "aiBasics",
+  "service": "機械学習の分類",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "機械学習の3分類"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-ai-02",
+  "question": "教師なし学習の説明として最も正しいものはどれ？",
+  "choices": [
+   "既存モデルを別タスクに転用する",
+   "正解ラベルを使って誤差を最小化する",
+   "報酬を最大化するように行動を学習する",
+   "正解ラベルのないデータからデータの構造やパターンを見つけ出す"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "教師なし学習はラベルなしデータの背後にある構造やパターンを見出す手法だから。",
+  "wrongChoiceExplanations": {},
+  "domain": "aiBasics",
+  "service": "教師なし学習",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "教師なし学習"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-ai-03",
+  "question": "将棋AIが対局を繰り返しながら、勝利という報酬を最大化するように行動を改善していく学習方式はどれに当たる？",
+  "choices": [
+   "強化学習",
+   "教師あり学習",
+   "クラスタリング",
+   "エキスパートシステム"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "試行錯誤の結果得られる報酬を最大化するように学習するのが強化学習の特徴であるため。",
+  "wrongChoiceExplanations": {},
+  "domain": "aiBasics",
+  "service": "強化学習",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "強化学習"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-ai-04",
+  "question": "クラスタリングとは、データを【　】に分類する手法である。空欄に入る言葉はどれ？",
+  "choices": [
+   "報酬の大小順",
+   "類似する性質を持つグループ",
+   "時系列順の因果関係",
+   "あらかじめ決めた正解ラベル通り"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "クラスタリングはラベルなしデータを類似度に基づいてグループ分けする教師なし学習の代表手法であるため。",
+  "wrongChoiceExplanations": {},
+  "domain": "aiBasics",
+  "service": "クラスタリング",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "クラスタリング"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-ai-05",
+  "question": "ディープラーニングの説明として正しいのはどれ？",
+  "choices": [
+   "1つのタスクで学習したモデルを別タスクに転用する手法",
+   "ルールベースで専門家の知識を記述する手法",
+   "多層構造のニューラルネットワークを用いて特徴量を自動的に学習する手法",
+   "正解ラベルを使わず類似データをグループ化する手法"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "ディープラーニングは多層のニューラルネットワークにより特徴量抽出まで自動で行う学習手法であるため。",
+  "wrongChoiceExplanations": {},
+  "domain": "aiBasics",
+  "service": "ディープラーニング",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "ディープラーニング"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-ai-06",
+  "question": "人間の脳の神経細胞（ニューロン）の仕組みを模したモデルを何という？",
+  "choices": [
+   "エキスパートシステム",
+   "クラスタリング",
+   "強化学習",
+   "ニューラルネットワーク"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "ニューロンとその結合を数理モデル化したものがニューラルネットワークであるため。",
+  "wrongChoiceExplanations": {},
+  "domain": "aiBasics",
+  "service": "ニューラルネットワーク",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "ニューラルネットワーク"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-ai-07",
+  "question": "訓練データに対しては高い精度を出すが、未知のデータに対しては精度が大きく落ちてしまう現象を何という？",
+  "choices": [
+   "過学習（オーバーフィッティング）",
+   "転移学習",
+   "シンギュラリティ",
+   "強化学習"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "訓練データに過度に適合し汎化性能が下がる現象を過学習と呼ぶため。",
+  "wrongChoiceExplanations": {},
+  "domain": "aiBasics",
+  "service": "過学習",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "過学習"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-ai-08",
+  "question": "ドロップアウトなどの正則化の説明として正しいのはどれ？",
+  "choices": [
+   "データをクラスタに分割する手法",
+   "過学習を抑え、モデルの汎化性能を高めるための手法",
+   "学習済みモデルを別タスクへ転用する手法",
+   "モデルの学習を早く終わらせるための手法"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "正則化やドロップアウトは、モデルが訓練データに過剰適合するのを防ぎ汎化性能を高める工夫であるため。",
+  "wrongChoiceExplanations": {},
+  "domain": "aiBasics",
+  "service": "正則化・ドロップアウト",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "正則化・ドロップアウト"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-ai-09",
+  "question": "あるタスクで学習した知識やモデルを、別の関連するタスクに応用する手法を何という？",
+  "choices": [
+   "エキスパートシステム",
+   "クラスタリング",
+   "転移学習",
+   "強化学習"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "既存の学習済みモデルの知識を別タスクに活かす手法が転移学習であるため。",
+  "wrongChoiceExplanations": {},
+  "domain": "aiBasics",
+  "service": "転移学習",
+  "difficulty": 2,
+  "tags": [
+   "ドリル",
+   "転移学習"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-ai-10",
+  "question": "弱いAI（ANI：特化型人工知能）とは、【　】AIのことである。空欄に入るのは？",
+  "choices": [
+   "感情を完全に再現できる",
+   "自己増殖が可能な",
+   "人間と同等以上の汎用的な知能を持つ",
+   "特定の分野・タスクに特化した"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "弱いAI（ANI）は画像認識や翻訳など特定タスクに特化したAIを指すため。",
+  "wrongChoiceExplanations": {},
+  "domain": "aiBasics",
+  "service": "弱いAI(ANI)",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "弱いAI(ANI)"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-ai-11",
+  "question": "強いAI（AGI：汎用人工知能）の説明として正しいのはどれ？",
+  "choices": [
+   "人間と同等以上に、幅広い分野で汎用的に思考・判断できるAI",
+   "特定のタスクのみを高精度にこなすAI",
+   "ルールベースで専門知識を記述したシステム",
+   "データをグループ分けするだけの手法"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "AGIは特定タスクに限らず人間のように汎用的に知的活動を行えるAIを指すため。",
+  "wrongChoiceExplanations": {},
+  "domain": "aiBasics",
+  "service": "強いAI(AGI)",
+  "difficulty": 2,
+  "tags": [
+   "ドリル",
+   "強いAI(AGI)"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-ai-12",
+  "question": "1956年に開催され、「人工知能（Artificial Intelligence）」という言葉が初めて使われたとされる会議は？",
+  "choices": [
+   "第五世代コンピュータ会議",
+   "ダートマス会議",
+   "チューリングテスト発表会",
+   "シンギュラリティサミット"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "1956年のダートマス会議で「人工知能」という用語が初めて提唱されたため。",
+  "wrongChoiceExplanations": {},
+  "domain": "aiBasics",
+  "service": "ダートマス会議",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "ダートマス会議"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-ai-13",
+  "question": "1950年代〜60年代の第一次AIブームは、主に【　】を中心に研究が進んだ時期である。",
+  "choices": [
+   "エキスパートシステムの実用化",
+   "ディープラーニング",
+   "推論・探索",
+   "ビッグデータの活用"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "第一次AIブームは迷路やパズルを解く推論・探索の研究が中心だったため。",
+  "wrongChoiceExplanations": {},
+  "domain": "aiBasics",
+  "service": "第一次AIブーム",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "第一次AIブーム"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-ai-14",
+  "question": "1980年代の第二次AIブームの説明として正しいのはどれ？",
+  "choices": [
+   "ディープラーニングにより画像認識が急速に発展した",
+   "汎用人工知能が実現した",
+   "推論・探索により迷路やパズルが解けるようになった",
+   "専門家の知識をルール化したエキスパートシステムが実用化された"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "第二次AIブームでは専門知識をルール化するエキスパートシステムが企業で実用化されたため。",
+  "wrongChoiceExplanations": {},
+  "domain": "aiBasics",
+  "service": "第二次AIブーム",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "第二次AIブーム"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-ai-15",
+  "question": "特定分野の専門家の知識をルールとして蓄積し、それに基づいて判断・助言を行うシステムを何という？",
+  "choices": [
+   "エキスパートシステム",
+   "転移学習",
+   "クラスタリング",
+   "ニューラルネットワーク"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "専門家の知識をIF-THENルールなどで表現し推論するシステムをエキスパートシステムと呼ぶため。",
+  "wrongChoiceExplanations": {},
+  "domain": "aiBasics",
+  "service": "エキスパートシステム",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "エキスパートシステム"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-ai-16",
+  "question": "ビッグデータとディープラーニングの発展により、画像認識・音声認識の精度が飛躍的に向上した現在まで続く時期はどれに当たる？",
+  "choices": [
+   "第一次AIブーム",
+   "第三次AIブーム",
+   "第二次AIブーム",
+   "AIの冬（停滞期）"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "2000年代以降、ビッグデータとディープラーニングにより発展したのが第三次AIブームであるため。",
+  "wrongChoiceExplanations": {},
+  "domain": "aiBasics",
+  "service": "第三次AIブーム",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "第三次AIブーム"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-ai-17",
+  "question": "シンギュラリティ（技術的特異点）に関する説明として誤っているのはどれ？",
+  "choices": [
+   "2045年に到来すると主張されることが多く「2045年問題」とも呼ばれる",
+   "レイ・カーツワイルが提唱した概念である",
+   "すでに世界共通の定義で到来時期が確定している",
+   "AIが人間の知能を超える転換点を指す概念である"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "シンギュラリティの到来時期や定義には諸説あり、世界共通で確定しているわけではないため。",
+  "wrongChoiceExplanations": {},
+  "domain": "aiBasics",
+  "service": "シンギュラリティ/2045年問題",
+  "difficulty": 2,
+  "tags": [
+   "ドリル",
+   "シンギュラリティ/2045年問題"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-ai-18",
+  "question": "機械学習の3分類（教師あり学習・教師なし学習・強化学習）に関する説明として誤っているのはどれ？",
+  "choices": [
+   "教師あり学習は正解ラベル付きデータを使って学習する",
+   "教師なし学習はラベルのないデータからパターンを見つける",
+   "強化学習は報酬を最大化するように行動を学習する",
+   "クラスタリングは強化学習の代表的な手法である"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "クラスタリングは教師なし学習の代表的な手法であり、強化学習の手法ではないため。",
+  "wrongChoiceExplanations": {},
+  "domain": "aiBasics",
+  "service": "機械学習の分類",
+  "difficulty": 2,
+  "tags": [
+   "ドリル",
+   "機械学習の3分類"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-eth-01",
+  "question": "「フィッシング」とは、実在する企業を装った偽メール・偽サイトで【　】を盗み取る手口である。空欄に入るのは？",
+  "choices": [
+   "ID・パスワードなどの認証情報",
+   "建物の設計図",
+   "会社の株価情報",
+   "従業員の勤怠データ"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "フィッシングは偽サイトへ誘導し、ID・パスワードやクレジットカード情報などの認証情報を盗み取る詐欺手口であるため。",
+  "wrongChoiceExplanations": {},
+  "domain": "ethics",
+  "service": "フィッシング",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "フィッシング"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-eth-02",
+  "question": "宅配便業者を名乗るSMSに記載されたURLを開くと偽サイトに誘導され、住所とクレジットカード番号の入力を求められた。この手口は？",
+  "choices": [
+   "不正競争防止法違反",
+   "スミッシング",
+   "マルウェア感染",
+   "ヴィッシング"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "SMS（ショートメッセージ）を悪用したフィッシング詐欺は「スミッシング」と呼ばれるため。",
+  "wrongChoiceExplanations": {},
+  "domain": "ethics",
+  "service": "スミッシング",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "スミッシング"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-eth-03",
+  "question": "銀行員を名乗る人物から電話があり、「不正利用を防ぐため」と口頭で暗証番号を聞き出された。この手口は？",
+  "choices": [
+   "スピアフィッシング",
+   "ランサムウェア",
+   "ヴィッシング",
+   "スミッシング"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "電話（Voice）を使って個人情報を聞き出す詐欺は「ヴィッシング」と呼ばれるため。",
+  "wrongChoiceExplanations": {},
+  "domain": "ethics",
+  "service": "ヴィッシング",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "ヴィッシング"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-eth-04",
+  "question": "取引先の担当者名や過去のやり取りの内容を巧妙に盛り込んだ偽メールが、特定の社員1人だけに送られてきた。この手口は？",
+  "choices": [
+   "マルウェア添付メール全般",
+   "不特定多数への一斉フィッシング",
+   "ヴィッシング",
+   "スピアフィッシング"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "特定の個人・組織を調査した上で狙い撃ちする標的型フィッシングを「スピアフィッシング」と呼ぶため。",
+  "wrongChoiceExplanations": {},
+  "domain": "ethics",
+  "service": "スピアフィッシング",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "スピアフィッシング"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-eth-05",
+  "question": "社内PCのファイルが突然暗号化され、「復旧してほしければ金銭を払え」という画面が表示された。この攻撃の種類は？",
+  "choices": [
+   "ランサムウェア",
+   "フィッシング",
+   "スミッシング",
+   "ソーシャルエンジニアリング"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "データを暗号化し身代金（ランサム）を要求するマルウェアは「ランサムウェア」と呼ばれるため。",
+  "wrongChoiceExplanations": {},
+  "domain": "ethics",
+  "service": "ランサムウェア",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "ランサムウェア"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-eth-06",
+  "question": "「ソーシャルエンジニアリング」の説明として最も適切なのは？",
+  "choices": [
+   "SNS上で流行を分析するマーケティング手法",
+   "人の心理的な隙や信頼を悪用して情報を盗み出す手口",
+   "ソフトウェアの脆弱性を突いてシステムに侵入する技術",
+   "AIを使って人間の会話を自動生成する技術"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "ソーシャルエンジニアリングは技術的手段ではなく、人の心理や行動の隙を突いて情報を騙し取る手口を指すため。",
+  "wrongChoiceExplanations": {},
+  "domain": "ethics",
+  "service": "ソーシャルエンジニアリング",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "ソーシャルエンジニアリング"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-eth-07",
+  "question": "個人情報保護法上の「個人情報」とは、生存する個人に関する情報であって、【　】ものを指す。空欄に入るのは？",
+  "choices": [
+   "会社が保有している",
+   "紙媒体で保存されている",
+   "特定の個人を識別できる",
+   "10年以上保存されている"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "個人情報保護法上の個人情報は、氏名等により特定の個人を識別できる生存する個人に関する情報と定義されているため。",
+  "wrongChoiceExplanations": {},
+  "domain": "ethics",
+  "service": "個人情報保護法",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "個人情報保護法"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-eth-08",
+  "question": "「要配慮個人情報」に該当するものとして最も適切なのは？",
+  "choices": [
+   "一般的な氏名と住所のみの情報",
+   "公開されている店舗の営業時間",
+   "会社の代表電話番号",
+   "病歴や犯罪歴など不当な差別・偏見が生じうる情報"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "要配慮個人情報は、人種・信条・病歴・犯罪歴など不当な差別や偏見を生じさせないよう取得・取扱いに特別な配慮を要する情報だから。",
+  "wrongChoiceExplanations": {},
+  "domain": "ethics",
+  "service": "要配慮個人情報",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "要配慮個人情報"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-eth-09",
+  "question": "「匿名加工情報」に関する説明として誤っているものはどれ？",
+  "choices": [
+   "元の個人情報に復元することが可能でなければならない",
+   "特定の個人を識別できないよう加工されている",
+   "一定の手続きを経れば本人同意なしに第三者提供できる",
+   "個人情報保護法で定められた分類の一つである"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "匿名加工情報は特定の個人を再識別・復元できないように加工した情報でなければならず、復元可能なものは要件を満たさないため。",
+  "wrongChoiceExplanations": {},
+  "domain": "ethics",
+  "service": "匿名加工情報",
+  "difficulty": 2,
+  "tags": [
+   "ドリル",
+   "匿名加工情報"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-eth-10",
+  "question": "次のうち「個人識別符号」に該当するものはどれ？",
+  "choices": [
+   "部署の名称",
+   "指紋認証データ",
+   "会社の設立年月日",
+   "製品のシリアル番号"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "指紋や顔認証データ、マイナンバー、パスポート番号など、それ単体で特定の個人を識別できる符号は個人識別符号に該当するため。",
+  "wrongChoiceExplanations": {},
+  "domain": "ethics",
+  "service": "個人識別符号",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "個人識別符号"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-eth-11",
+  "question": "著作権は、特許権と異なり出願や登録の手続きをしなくても【　】時点で自動的に発生する。空欄に入るのは？",
+  "choices": [
+   "著作物を販売した",
+   "著作物を登録した",
+   "著作物を創作した",
+   "著作物を公表した"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "著作権は無方式主義を採用しており、創作した時点で手続き不要のまま権利が発生するため。",
+  "wrongChoiceExplanations": {},
+  "domain": "ethics",
+  "service": "著作権",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "著作権"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-eth-12",
+  "question": "新しく開発した独自の技術的な発明を保護したい場合、出願すべき権利はどれ？",
+  "choices": [
+   "著作権",
+   "意匠権",
+   "商標権",
+   "特許権"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "自然法則を利用した高度な技術的アイデアである「発明」を保護する権利は特許権であるため。",
+  "wrongChoiceExplanations": {},
+  "domain": "ethics",
+  "service": "特許権",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "特許権"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-eth-13",
+  "question": "自社商品につけるロゴマークやブランド名を他社に使われないよう守りたい場合、出願すべき権利はどれ？",
+  "choices": [
+   "商標権",
+   "肖像権",
+   "意匠権",
+   "特許権"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "商品やサービスに使用するマーク・ネーミングを保護する権利は商標権であるため。",
+  "wrongChoiceExplanations": {},
+  "domain": "ethics",
+  "service": "商標権",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "商標権"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-eth-14",
+  "question": "製品の独自な形状・模様・色彩など「デザイン」そのものを保護したい場合、出願すべき権利はどれ？",
+  "choices": [
+   "パブリシティ権",
+   "意匠権",
+   "商標権",
+   "著作権"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "物品や画像等の美的な外観デザインを保護する権利は意匠権であるため。",
+  "wrongChoiceExplanations": {},
+  "domain": "ethics",
+  "service": "意匠権",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "意匠権"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-eth-15",
+  "question": "街中で無断で撮影された自分の写真が、本人の許可なくSNSに公開された。侵害されているのはどの権利か？",
+  "choices": [
+   "特許権",
+   "商標権",
+   "肖像権",
+   "著作権"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "無断で自分の容姿を撮影・公表されない権利は肖像権と呼ばれ、法律の明文規定はないが判例上人格権の一種として認められているため。",
+  "wrongChoiceExplanations": {},
+  "domain": "ethics",
+  "service": "肖像権",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "肖像権"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-eth-16",
+  "question": "「パブリシティ権」の説明として最も適切なのは？",
+  "choices": [
+   "誰でも自由に他人の写真を使用できる権利",
+   "国が個人の情報を収集する権利",
+   "著作物を無断で複製できる権利",
+   "著名人の氏名・肖像などが持つ顧客吸引力を排他的に利用できる権利"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "パブリシティ権は、著名人の氏名や肖像が持つ経済的な価値（顧客吸引力）を本人が独占的に利用できる権利であるため。",
+  "wrongChoiceExplanations": {},
+  "domain": "ethics",
+  "service": "パブリシティ権",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "パブリシティ権"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-eth-17",
+  "question": "不正競争防止法上「営業秘密」として保護されるには、秘密管理性・有用性に加えて【　】の要件を満たす必要がある。空欄に入るのは？",
+  "choices": [
+   "非公知性",
+   "無償性",
+   "公開性",
+   "国際性"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "営業秘密の3要件は秘密管理性・有用性・非公知性であり、公然と知られていないことが必要であるため。",
+  "wrongChoiceExplanations": {},
+  "domain": "ethics",
+  "service": "不正競争防止法",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "営業秘密"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-eth-18",
+  "question": "日本の「人間中心のAI社会原則」の考え方として誤っているものはどれ？",
+  "choices": [
+   "プライバシーやセキュリティの確保を重視する",
+   "AIの判断はすべて非公開とし説明責任を負わない",
+   "公平性・アカウンタビリティ・透明性を重視する",
+   "人間の尊厳が尊重される社会を目指す"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "AI社会原則はアカウンタビリティ（説明責任）と透明性を重視しており、判断根拠を非公開のまま説明責任を放棄する考え方とは相容れないため。",
+  "wrongChoiceExplanations": {},
+  "domain": "ethics",
+  "service": "AI社会原則",
+  "difficulty": 2,
+  "tags": [
+   "ドリル",
+   "AI社会原則"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-eth-19",
+  "question": "2025年6月に公布された、通称「AI新法」の性格として最も適切なのは？",
+  "choices": [
+   "AI利用を全面的に禁止する法律",
+   "違反者に懲役刑を科す規制法",
+   "罰則を伴わず基本計画の策定などを定める理念法",
+   "個人情報保護法を廃止する法律"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "AI新法（人工知能関連技術の研究開発及び活用の推進に関する法律）は罰則規定を持たず、国の基本計画策定などを定めるソフトロー的な理念法であるため。",
+  "wrongChoiceExplanations": {},
+  "domain": "ethics",
+  "service": "AI新法",
+  "difficulty": 2,
+  "tags": [
+   "ドリル",
+   "AI新法"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-eth-20",
+  "question": "社外秘の顧客リストを、そのまま無料の生成AIサービスに貼り付けて要約させようとしている同僚がいる。最も適切な指摘はどれ？",
+  "choices": [
+   "生成AIは情報を一切記録しないため安全である",
+   "無料サービスなら何を入力しても問題ない",
+   "要約結果を確認しなければ問題ない",
+   "入力内容が学習等に利用される可能性があり機密情報を入力すべきでない"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "生成AIサービスに入力した内容は学習データ等に利用されたり外部に流出したりするリスクがあるため、機密情報や個人情報の入力は避けるべきであるため。",
+  "wrongChoiceExplanations": {},
+  "domain": "ethics",
+  "service": "生成AI利用",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "生成AIの機密情報入力"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-gen-01",
+  "question": "画像に写っている物体が何かを認識するタスクに最も適したニューラルネットワークはどれか。",
+  "choices": [
+   "CNN",
+   "BERT",
+   "RNN",
+   "GAN"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "CNNは畳み込み処理で画像の局所的な特徴を捉えるのに優れているため画像認識に広く使われる。",
+  "wrongChoiceExplanations": {},
+  "domain": "genAI",
+  "service": "CNN",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "CNN"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-gen-02",
+  "question": "テキストだけでなく画像や音声など複数の種類のデータを同時に扱えるAIの性質を何と呼ぶか。",
+  "choices": [
+   "シングルモーダル",
+   "マルチモーダル",
+   "ファインチューニング",
+   "アライメント"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "複数の種類のデータ(テキスト・画像・音声など)を扱えるAIをマルチモーダルAIと呼ぶ。",
+  "wrongChoiceExplanations": {},
+  "domain": "genAI",
+  "service": "マルチモーダル",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "マルチモーダル"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-gen-03",
+  "question": "OpenAIが発表した、テキストの指示から動画を生成するモデルはどれか。",
+  "choices": [
+   "BERT",
+   "Copilot",
+   "Sora",
+   "Gemini"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "SoraはOpenAIが発表したテキストから動画を生成するモデルである。",
+  "wrongChoiceExplanations": {},
+  "domain": "genAI",
+  "service": "Sora",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "Sora"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-gen-04",
+  "question": "文章や音声など、順序が意味を持つ時系列データの処理に適したニューラルネットワークはどれか。",
+  "choices": [
+   "VAE",
+   "CNN",
+   "GAN",
+   "RNN(再帰型ニューラルネットワーク)"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "RNNは前の情報を記憶しながら処理するため、時系列データの扱いに適している。",
+  "wrongChoiceExplanations": {},
+  "domain": "genAI",
+  "service": "RNN",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "RNN"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-gen-05",
+  "question": "GAN(敵対的生成ネットワーク)の説明として正しいものはどれか。",
+  "choices": [
+   "生成器と識別器が互いに競い合いながら学習し、生成器は本物に近いデータを作ろうとする",
+   "人間のフィードバックをもとに強化学習で調整する",
+   "文章の一部を隠して予測させることで学習する",
+   "過去の学習データを圧縮してから復元する自己符号化器"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "GANは生成器(Generator)と識別器(Discriminator)が競い合いながら学習を進める仕組みである。",
+  "wrongChoiceExplanations": {},
+  "domain": "genAI",
+  "service": "GAN",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "GAN"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-gen-06",
+  "question": "VAE(変分オートエンコーダ)の説明として正しいものはどれか。",
+  "choices": [
+   "文章中の単語同士の関連度を計算する仕組みである",
+   "データを潜在空間に圧縮し、確率分布として表現してから復元する生成モデルである",
+   "生成器と識別器の2つのネットワークが競合して学習する",
+   "人間の評価をもとに報酬モデルを作り強化学習する"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "VAEはデータを確率分布として潜在空間に圧縮し、そこから復元する生成モデルである。",
+  "wrongChoiceExplanations": {},
+  "domain": "genAI",
+  "service": "VAE",
+  "difficulty": 2,
+  "tags": [
+   "ドリル",
+   "VAE"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-gen-07",
+  "question": "Googleが開発したBERTの特徴として正しいものはどれか。",
+  "choices": [
+   "テキストから動画を生成する",
+   "一方向(前から後ろ)にのみ文章を読み進めて次の単語を予測する",
+   "文章を双方向(前後両方)から読み取って文脈を理解する",
+   "生成器と識別器が競い合って学習する"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "BERTは文章を前後双方向から読み取ることで文脈理解の精度を高めている。",
+  "wrongChoiceExplanations": {},
+  "domain": "genAI",
+  "service": "BERT",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "BERT"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-gen-08",
+  "question": "自己回帰モデルの説明として正しいものはどれか。",
+  "choices": [
+   "文章の一部をランダムに隠して、隠された部分を推測させるモデルである",
+   "2つの文が連続しているかどうかを判定するモデルである",
+   "画像同士を比較して本物か偽物かを見分けるモデルである",
+   "それまでに生成した単語列をもとに、次に来る単語を順番に予測して生成していくモデルである"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "自己回帰モデルは、これまでに生成した単語列をもとに次の単語を順に予測して生成する。",
+  "wrongChoiceExplanations": {},
+  "domain": "genAI",
+  "service": "自己回帰モデル",
+  "difficulty": 2,
+  "tags": [
+   "ドリル",
+   "自己回帰モデル"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-gen-09",
+  "question": "RNNが抱える「文章が長くなるほど昔の情報を覚えていられない」という課題を改善するために考案されたのが【　】である。空欄に入る語句はどれか。",
+  "choices": [
+   "LSTM(長短期記憶)",
+   "BERT",
+   "Transformer",
+   "GAN"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "LSTMはRNNの弱点である長期依存の学習困難を改善するために考案された。",
+  "wrongChoiceExplanations": {},
+  "domain": "genAI",
+  "service": "LSTM",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "LSTM"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-gen-10",
+  "question": "「GPT」は Generative Pre-trained 【　】 の略である。空欄に入る語句はどれか。",
+  "choices": [
+   "Turing",
+   "Transformer",
+   "Tokenizer",
+   "Translator"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "GPTはGenerative Pre-trained Transformerの略である。",
+  "wrongChoiceExplanations": {},
+  "domain": "genAI",
+  "service": "GPT",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "GPT"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-gen-11",
+  "question": "人間が回答の良し悪しを評価し、そのフィードバックをもとに強化学習でモデルを調整する手法を【　】と呼ぶ。空欄に入る語句はどれか。",
+  "choices": [
+   "NSP",
+   "GAN",
+   "RLHF(人間のフィードバックによる強化学習)",
+   "MLM"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "RLHFは人間による評価(フィードバック)を使って強化学習でモデルの応答を調整する手法である。",
+  "wrongChoiceExplanations": {},
+  "domain": "genAI",
+  "service": "RLHF",
+  "difficulty": 2,
+  "tags": [
+   "ドリル",
+   "RLHF"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-gen-12",
+  "question": "BERTの事前学習で使われる、文章中の一部の単語をマスクして隠し、周囲の文脈からその単語を予測させる手法を【　】と呼ぶ。空欄に入る語句はどれか。",
+  "choices": [
+   "RLHF",
+   "GAN",
+   "NSP",
+   "MLM(マスク言語モデル)"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "MLMは文章中の一部の単語を隠し、周囲の文脈からその単語を予測させる事前学習手法である。",
+  "wrongChoiceExplanations": {},
+  "domain": "genAI",
+  "service": "MLM",
+  "difficulty": 2,
+  "tags": [
+   "ドリル",
+   "MLM"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-gen-13",
+  "question": "AIチャットボットに歴史上の人物について質問したところ、実在しない出来事をもっともらしい文章で回答してきた。この現象を何と呼ぶか。",
+  "choices": [
+   "ハルシネーション",
+   "ファインチューニング",
+   "アライメント",
+   "マルチモーダル"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "実際には存在しない情報をもっともらしく生成してしまう現象をハルシネーションと呼ぶ。",
+  "wrongChoiceExplanations": {},
+  "domain": "genAI",
+  "service": "ハルシネーション",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "ハルシネーション"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-gen-14",
+  "question": "汎用的な事前学習済みモデルに対し、自社の医療用語データを追加で学習させて医療分野に特化した応答ができるよう調整した。この作業を何と呼ぶか。",
+  "choices": [
+   "RLHF",
+   "ファインチューニング",
+   "アライメント",
+   "ハルシネーション"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "既存の学習済みモデルに特定分野のデータを追加学習させることをファインチューニングと呼ぶ。",
+  "wrongChoiceExplanations": {},
+  "domain": "genAI",
+  "service": "ファインチューニング",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "ファインチューニング"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-gen-15",
+  "question": "開発チームが、AIが有害な発言や差別的な回答をしないよう、人間の倫理観や意図に沿うように調整する取り組みを行った。この取り組みを何と呼ぶか。",
+  "choices": [
+   "マルチモーダル",
+   "ファインチューニング",
+   "アライメント",
+   "ハルシネーション"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "AIの応答が人間の意図や倫理観に沿うよう調整する取り組みをアライメントと呼ぶ。",
+  "wrongChoiceExplanations": {},
+  "domain": "genAI",
+  "service": "アライメント",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "アライメント"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-gen-16",
+  "question": "翻訳AIが「その犬はボールを追いかけた。それは疲れていた。」という文を処理する際、「それ」が「犬」を指すことを文中の単語同士の関連度から計算する仕組みを何と呼ぶか。",
+  "choices": [
+   "GAN",
+   "CNN",
+   "VAE",
+   "Self-Attention(自己注意機構)"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "Self-Attentionは文中の単語同士の関連度を計算し、文脈上の結びつきを捉える仕組みである。",
+  "wrongChoiceExplanations": {},
+  "domain": "genAI",
+  "service": "Self-Attention",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "Self-Attention"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-gen-17",
+  "question": "AIモデルの「パラメータ数」に関する説明として、誤っているものはどれか。",
+  "choices": [
+   "パラメータ数が多いほど必ず処理速度が速くなる",
+   "パラメータ数が多いモデルほど学習や推論に多くの計算資源を必要とする傾向がある",
+   "パラメータはモデルが学習によって調整する重みなどの数値である",
+   "一般にパラメータ数が多いほどモデルの表現力は高まりやすい"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "パラメータ数が増えると計算量も増えるため、一般に処理速度はむしろ遅くなりやすい。",
+  "wrongChoiceExplanations": {},
+  "domain": "genAI",
+  "service": "パラメータ",
+  "difficulty": 2,
+  "tags": [
+   "ドリル",
+   "パラメータ"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-gen-18",
+  "question": "生成AIサービスとその開発元の組み合わせとして、誤っているものはどれか。",
+  "choices": [
+   "Copilot - Microsoft",
+   "Claude - Microsoft",
+   "ChatGPT - OpenAI",
+   "Gemini - Google"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "ClaudeはAnthropicが開発した生成AIであり、Microsoftではない。",
+  "wrongChoiceExplanations": {},
+  "domain": "genAI",
+  "service": "主要サービス",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "主要サービスと開発元"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-gen-19",
+  "question": "Transformerの仕組みに関する説明として、誤っているものはどれか。",
+  "choices": [
+   "GPTやBERTなど多くの生成AIモデルの基盤となっている",
+   "並列処理がしやすく大規模な学習に向いている",
+   "文章を処理する際、RNNのように必ず1単語ずつ順番に処理しなければならない",
+   "Attention機構により文中の単語同士の関連度を計算する"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "Transformerは並列処理が可能で、RNNのように単語を1つずつ順番に処理する必要はない。",
+  "wrongChoiceExplanations": {},
+  "domain": "genAI",
+  "service": "Transformer",
+  "difficulty": 2,
+  "tags": [
+   "ドリル",
+   "Transformer"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-gen-20",
+  "question": "BERTの事前学習で用いられるNSP(Next Sentence Prediction)に関する説明として、誤っているものはどれか。",
+  "choices": [
+   "2つの文が与えられたとき、それらが連続する文かどうかを判定するタスクである",
+   "文章全体の文脈理解を助けるための学習タスクである",
+   "BERTの事前学習に使われる手法の一つである",
+   "与えられた1文の中から隠された単語を予測するタスクである"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "単語を予測するのはMLMの役割であり、NSPは2つの文が連続するかどうかを判定するタスクである。",
+  "wrongChoiceExplanations": {},
+  "domain": "genAI",
+  "service": "NSP",
+  "difficulty": 2,
+  "tags": [
+   "ドリル",
+   "NSP"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-01",
+  "question": "「n-gram」とは、直前の【　】語の並びの出現頻度を統計的に数えて次の単語を予測する古典的な言語モデルの手法である。空欄に入るのは？",
+  "choices": [
+   "いくつかの",
+   "画像内の",
+   "音声波形の",
+   "すべての文書中の"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "n-gramモデルは直前のいくつかの単語の並びの出現頻度を数えて次の単語を予測する統計的手法です。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "LMとLLM",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "n-gram"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-02",
+  "question": "LLMが大量のテキストデータから言語の基本パターンを幅広く学習する最初の工程を何と呼ぶ？",
+  "choices": [
+   "アライメント",
+   "プレトレーニング（事前学習）",
+   "プロンプトエンジニアリング",
+   "ファインチューニング"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "プレトレーニング（事前学習）は大量のテキストで言語の基本構造を幅広く学ばせる最初の工程です。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "LMとLLM",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "プレトレーニング"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-03",
+  "question": "生成AIモデルの挙動を調整する、学習前に人間が設定する設定値の総称は？",
+  "choices": [
+   "トークン",
+   "コーパス",
+   "ハイパーパラメータ",
+   "エンベディング"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "ハイパーパラメータは学習や生成の挙動を制御するために人間が事前に設定する値の総称です。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "ハイパーパラメータ",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "ハイパーパラメータ"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-04",
+  "question": "出力の多様性・ランダム性を調整するハイパーパラメータで、値を高くするほど意外性のある表現が出やすくなるものは？",
+  "choices": [
+   "エポック数",
+   "Top-p",
+   "トークン数",
+   "Temperature"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "Temperatureは出力のランダム性を調整するパラメータで、値を上げるほど多様で意外性のある出力になります。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "Temperature/Top-p",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "Temperature"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-05",
+  "question": "レポートの誤字脱字や言い回しを直してほしいとき、プロンプトに含めるべき指示として適切なのは？",
+  "choices": [
+   "この文章を校正して、誤字脱字や表現の不自然な箇所を直して",
+   "この文章の最新の統計データを教えて",
+   "この文章を絵画風に評論して",
+   "この文章を200文字ちょうどに要約して"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "校正は誤字脱字や表現の誤りを直す作業で、生成AIが得意とする実践的な活用法の一つです。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "実践技法（校正）",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "校正"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-06",
+  "question": "プロンプトの基本4要素のうち、「AIに与える背景情報や前提条件」を指すものはどれ？",
+  "choices": [
+   "Instruction（指示）",
+   "Context（背景情報）",
+   "Input Data（入力データ）",
+   "Output Indicator（出力形式）"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "Contextはタスクの背景や前提条件をAIに伝える要素です。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "プロンプトの4要素",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "プロンプト4要素"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-07",
+  "question": "プロンプトの4要素のうち、「表を作って」「箇条書きで」のように出力の見せ方を指定する要素は？",
+  "choices": [
+   "Instruction（指示）",
+   "Context（背景情報）",
+   "Output Indicator（出力形式）",
+   "Input Data（入力データ）"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "Output Indicatorは出力の形式や見せ方をAIに指定する要素です。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "プロンプトの4要素",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "プロンプト4要素"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-08",
+  "question": "例を一切与えずに、指示文だけでタスクを実行させるプロンプティング手法を何と呼ぶ？",
+  "choices": [
+   "ファインチューニング",
+   "アライメント",
+   "Few-Shotプロンプティング",
+   "Zero-Shotプロンプティング"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "Zero-Shotプロンプティングは例を与えずに指示だけでタスクを実行させる手法です。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "Zero-Shot/Few-Shot",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "Zero-Shot"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-09",
+  "question": "「Few-Shotプロンプティング」とは、タスクの実行前にいくつかの【　】をプロンプト内に提示する手法である。空欄に入るのは？",
+  "choices": [
+   "入出力の例",
+   "学習率の数値",
+   "エラーログ",
+   "APIキー"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "Few-Shotプロンプティングは望ましい入出力の例をいくつか示すことで、AIの応答の精度や形式を安定させる手法です。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "Zero-Shot/Few-Shot",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "Few-Shot"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-10",
+  "question": "会議の議事録を「決定事項」「次回までのタスク」のように整理させたい。この活用法に最も近いのは？",
+  "choices": [
+   "翻訳",
+   "情報の整理",
+   "キャッチコピー生成",
+   "例え話への変換"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "議事録の要点を項目ごとに整理させる使い方は「情報の整理」に該当する実践技法です。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "実践技法（整理）",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "情報の整理"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-11",
+  "question": "難解な専門用語を、小学生でも理解できるように身近な比喩で説明してもらう活用法は？",
+  "choices": [
+   "文字数指定要約",
+   "計算問題の依頼",
+   "例え話への変換",
+   "数字への変換"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "専門的な内容を身近な比喩で言い換えさせる使い方は「例え話への変換」です。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "実践技法（例え話）",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "例え話"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-12",
+  "question": "アンケートの自由記述回答を要約し、傾向を数値やパーセンテージで示してもらう活用法は？",
+  "choices": [
+   "話者設定",
+   "アジェンダ作成",
+   "校正",
+   "数字への変換"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "定性的な回答を割合や件数などの数値表現に変換させる使い方が「数字への変換」です。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "実践技法（数字変換）",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "数字への変換"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-13",
+  "question": "「あなたはベテランの営業マネージャーです」のように役割を与えてから回答させる技法を何と呼ぶ？",
+  "choices": [
+   "話者設定（ロールプレイ）",
+   "Zero-Shotプロンプティング",
+   "プレトレーニング",
+   "n-gram"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "AIに特定の役割・立場を与えて回答させる技法は話者設定（ロールプレイ）と呼ばれます。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "実践技法（話者設定）",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "話者設定"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-14",
+  "question": "新商品のキャッチコピー案を10個出してほしいとき、活用したいビジネス応用は？",
+  "choices": [
+   "計算の依頼",
+   "ブレインストーミング支援",
+   "翻訳",
+   "議事録の校正"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "アイデアを多数出させる使い方はブレインストーミング支援としてキャッチコピー案作成にも活用できます。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "ビジネス応用",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "ブレスト"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-15",
+  "question": "長い会議の音声書き起こしから「決定事項」「懸念点」「次のアクション」を項目ごとに抜き出させたい。これは何の活用例？",
+  "choices": [
+   "正確な文字数指定の要約",
+   "芸術作品の批評",
+   "タスク抽出",
+   "最新ニュースの取得"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "テキストから必要な項目やタスクを抜き出させる使い方はタスク抽出の代表例です。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "ビジネス応用（タスク抽出）",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "タスク抽出"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-16",
+  "question": "生成AIへの依頼として、現状のAIが不得意で結果が信頼しにくいものはどれ？",
+  "choices": [
+   "話者を専門家に設定して説明させる",
+   "文章のトーンを丁寧語に整える",
+   "箇条書きへの変換",
+   "文章をちょうど100文字に収める厳密な文字数指定"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "生成AIはトークン単位で処理するため、文字数を正確に一致させる指定は不得意とされています。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "生成AIの不得意領域",
+  "difficulty": 2,
+  "tags": [
+   "ドリル",
+   "不得意領域"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-17",
+  "question": "生成AIの活用に関する次の記述のうち、誤っているものはどれ？",
+  "choices": [
+   "生成AIはリアルタイムの最新ニュースを常に正確に把握し断言できる",
+   "Few-Shotプロンプティングは例を示すことで出力形式を安定させやすい",
+   "校正やビジネスメールの下書き作成は生成AIの得意な活用例である",
+   "Temperatureは出力のランダム性を調整するハイパーパラメータである"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "生成AIは学習時点までの情報が中心で、最新情報の正確な把握は不得意とされるため誤りです。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "生成AIの不得意領域",
+  "difficulty": 2,
+  "tags": [
+   "ドリル",
+   "不得意領域"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-pr-18",
+  "question": "英語のビジネスメールを自然な日本語に変換してもらいたいとき、最も適した活用法は？",
+  "choices": [
+   "計算問題の解答",
+   "翻訳",
+   "厳密な文字数カウント",
+   "芸術作品の批評"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "言語間の変換は翻訳という代表的なビジネス応用で、生成AIが得意とする分野です。",
+  "wrongChoiceExplanations": {},
+  "domain": "prompt",
+  "service": "ビジネス応用（翻訳）",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "翻訳"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-tr-01",
+  "question": "テキスト生成AIの活用例として、最も適切なのはどれ？",
+  "choices": [
+   "写真から欠損した被写体の色を補正する",
+   "人物の声質を別人の声に変換する",
+   "議事録の要約や文章のドラフト作成",
+   "楽曲のメロディーラインを自動生成する"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "テキスト生成AIは文章の要約・作成・翻訳など言語処理タスクに強みを持つ。",
+  "wrongChoiceExplanations": {},
+  "domain": "trends",
+  "service": "テキスト生成AI",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "テキスト生成AI"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-tr-02",
+  "question": "画像生成AIの説明として正しいものはどれ？",
+  "choices": [
+   "動画のフレームレートを補間して滑らかにするAI",
+   "文章の誤字脱字を自動で校正するAI",
+   "既存の音声データを別の話者の声質に変換するAI",
+   "テキストなどの指示（プロンプト）から新しい画像を生成するAI"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "画像生成AIはプロンプトに基づき新規の画像コンテンツを生成する生成AIの一種である。",
+  "wrongChoiceExplanations": {},
+  "domain": "trends",
+  "service": "画像生成AI",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "画像生成AI"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-tr-03",
+  "question": "音楽生成AIとは、テキストの指示などから【　】を自動で作り出す生成AIである。空欄に入る言葉は？",
+  "choices": [
+   "メロディーや伴奏を含む楽曲",
+   "表計算ソフトの関数式",
+   "3Dモデルのポリゴンデータ",
+   "文章の要約"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "音楽生成AIはメロディーや伴奏などを含む楽曲そのものを生成する。",
+  "wrongChoiceExplanations": {},
+  "domain": "trends",
+  "service": "音楽生成AI",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "音楽生成AI"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-tr-04",
+  "question": "ナレーターの声質のまま、収録していない新しい原稿を読み上げた音声を作りたい。使うべき技術はどれ？",
+  "choices": [
+   "データ拡張（オーグメンテーション）",
+   "音声生成AI（音声合成・声質変換）",
+   "画像生成AI",
+   "ベクトルデータベース"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "音声生成AIは特定の声質を学習し、新しいテキストを読み上げる音声を合成できる。",
+  "wrongChoiceExplanations": {},
+  "domain": "trends",
+  "service": "音声生成AI",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "音声生成AI"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-tr-05",
+  "question": "動画生成AIの活用シーンとして適切なのはどれ？",
+  "choices": [
+   "会計帳簿の仕訳を自動作成する",
+   "音声データからノイズだけを検出して数値化する",
+   "テキストの指示から短尺のプロモーション映像を自動生成する",
+   "PDF文書を暗号化して保存する"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "動画生成AIはテキストや画像から映像コンテンツを自動生成する用途に使われる。",
+  "wrongChoiceExplanations": {},
+  "domain": "trends",
+  "service": "動画生成AI",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "動画生成AI"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-tr-06",
+  "question": "動画生成AIツールとその開発元の組み合わせとして、誤っているものはどれ？",
+  "choices": [
+   "Sora はOpenAIが開発した動画生成AIである",
+   "Veo3はGoogleが開発した動画生成AIである",
+   "Veo3は静止画ではなく動画を生成するツールである",
+   "SoraはGoogleが開発した動画生成AIである"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "SoraはOpenAIが開発した動画生成AIであり、Googleではない。",
+  "wrongChoiceExplanations": {},
+  "domain": "trends",
+  "service": "動画生成AIツール",
+  "difficulty": 2,
+  "tags": [
+   "ドリル",
+   "動画生成AIツール"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-tr-07",
+  "question": "生成AIにおける「データ拡張（オーグメンテーション）」の説明として正しいものはどれ？",
+  "choices": [
+   "既存データに加工を加えて水増しし、学習データの量や多様性を増やす手法",
+   "生成AIが作った文章を人間が校正する作業",
+   "画像データを完全に削除してモデルを軽量化する手法",
+   "音声データを暗号化してセキュリティを高める手法"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "データ拡張は既存データに変換・加工を加えて学習データを増やし、モデルの性能向上に役立てる手法である。",
+  "wrongChoiceExplanations": {},
+  "domain": "trends",
+  "service": "データ拡張",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "データ拡張"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-tr-08",
+  "question": "生成AIによるリマスタリングとは、古い映像や音声などのコンテンツを【　】する技術のことである。空欄は？",
+  "choices": [
+   "完全にゼロから新規制作",
+   "高画質・高音質に修復・改善",
+   "テキストデータに変換",
+   "他人の作品として偽装"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "リマスタリングは生成AIを用いて古い映像・音声の画質や音質を修復・向上させる技術である。",
+  "wrongChoiceExplanations": {},
+  "domain": "trends",
+  "service": "リマスタリング",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "リマスタリング"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-tr-09",
+  "question": "ある動画で、実在の人物の顔と声をAIで精巧に合成し、本人が発言していないことを話しているように見せていた。この技術に該当するのはどれ？",
+  "choices": [
+   "データ拡張",
+   "リマスタリング",
+   "ディープフェイク",
+   "ベクトルデータベース"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "実在人物の映像・音声をAIで合成し、本人が発言していないことを発言したように見せる技術はディープフェイクと呼ばれる。",
+  "wrongChoiceExplanations": {},
+  "domain": "trends",
+  "service": "ディープフェイク",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "ディープフェイク"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-tr-10",
+  "question": "「ディスインフォメーション」の説明として正しいものはどれ？",
+  "choices": [
+   "AIが生成した正確な統計データ",
+   "誤りと気づかずに誤って広められる情報",
+   "暗号化されたやり取りができない情報",
+   "受け手を欺く意図を持って、意図的に発信される偽情報"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "ディスインフォメーションは発信者に欺く意図がある偽情報を指す。",
+  "wrongChoiceExplanations": {},
+  "domain": "trends",
+  "service": "ディスインフォメーション",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "ディスインフォメーション"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-tr-11",
+  "question": "RAG（検索拡張生成）とは、生成AIが回答を作る際に外部の情報源を【　】し、その内容を踏まえて回答を生成する仕組みである。空欄は？",
+  "choices": [
+   "検索",
+   "圧縮",
+   "削除",
+   "暗号化"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "RAGは外部情報源を検索し、その検索結果を踏まえて回答を生成する仕組みである。",
+  "wrongChoiceExplanations": {},
+  "domain": "trends",
+  "service": "RAG",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "RAG"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-tr-12",
+  "question": "RAGにおける「チャンク」の説明として正しいものはどれ？",
+  "choices": [
+   "生成AIが出力する誤った情報のこと",
+   "検索しやすくするために文書を分割した小さな単位",
+   "画像生成AIが使うノイズ除去の工程",
+   "音声データを暗号化する単位"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "チャンクはRAGで検索精度を高めるために文書を分割した小さなテキスト単位である。",
+  "wrongChoiceExplanations": {},
+  "domain": "trends",
+  "service": "RAG",
+  "difficulty": 2,
+  "tags": [
+   "ドリル",
+   "RAG"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-tr-13",
+  "question": "RAGで使われる「ベクトルデータベース」の説明として正しいものはどれ？",
+  "choices": [
+   "画像ファイルのみを保存する専用ストレージ",
+   "行と列だけで構成される表計算専用のデータベース",
+   "文章などを数値ベクトルに変換して格納し、意味的な類似度で検索できるデータベース",
+   "パスワードを暗号化して管理する認証システム"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "ベクトルデータベースはテキスト等をベクトル化して格納し、意味的な類似度検索を可能にする。",
+  "wrongChoiceExplanations": {},
+  "domain": "trends",
+  "service": "ベクトルデータベース",
+  "difficulty": 2,
+  "tags": [
+   "ドリル",
+   "RAG"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-tr-14",
+  "question": "社内マニュアルの最新版を検索して根拠を示しながら回答するチャットボットを作りたい。ハルシネーション（もっともらしい誤り）を減らすために有効な仕組みはどれ？",
+  "choices": [
+   "モデルの温度パラメータを最大値に設定する",
+   "学習データを一切与えずに回答させる",
+   "出力を全て英語に翻訳してから表示する",
+   "RAG（検索拡張生成）を組み込み、最新の社内文書を検索してから回答させる"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "RAGは最新の外部文書を検索し根拠にして回答するため、ハルシネーションの低減や最新情報への対応に有効である。",
+  "wrongChoiceExplanations": {},
+  "domain": "trends",
+  "service": "RAG",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "RAG"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-tr-15",
+  "question": "自律的にタスクを計画・実行するAIエージェントサービスに関する記述として、誤っているものはどれ？",
+  "choices": [
+   "AIエージェントは常に人間が1つずつ細かく指示しなければ何も実行できない",
+   "AIエージェントはツールの呼び出しや情報収集を自律的に組み合わせて作業を進められる",
+   "GenSpark、Manus、Skywork AIはいずれも自律的にタスクを計画・実行するAIエージェントサービスである",
+   "AIエージェントは目標に対して自ら計画を立て、複数の作業を実行できる"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "AIエージェントは自ら計画を立ててタスクを実行できる点が特徴であり、常に細かい逐一の指示が必要というのは誤りである。",
+  "wrongChoiceExplanations": {},
+  "domain": "trends",
+  "service": "AIエージェント",
+  "difficulty": 2,
+  "tags": [
+   "ドリル",
+   "AIエージェント"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "qd-tr-16",
+  "question": "MCP（Model Context Protocol）とは、AIモデルが外部のツールやデータソースと連携するための【　】である。空欄は？",
+  "choices": [
+   "画像を圧縮するファイル形式",
+   "標準化された接続の仕組み（プロトコル）",
+   "動画のフレーム補間技術",
+   "音声を暗号化するアルゴリズム"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "MCPはAIモデルが外部ツールやデータソースと連携するための標準化されたプロトコルである。",
+  "wrongChoiceExplanations": {},
+  "domain": "trends",
+  "service": "MCP",
+  "difficulty": 1,
+  "tags": [
+   "ドリル",
+   "MCP"
+  ],
+  "beginnerNote": null
  }
 ]

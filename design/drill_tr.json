@@ -1,0 +1,290 @@
+[
+  {
+    "id": "qd-tr-01",
+    "question": "テキスト生成AIの活用例として、最も適切なのはどれ？",
+    "choices": [
+      "議事録の要約や文章のドラフト作成",
+      "写真から欠損した被写体の色を補正する",
+      "楽曲のメロディーラインを自動生成する",
+      "人物の声質を別人の声に変換する"
+    ],
+    "correctAnswers": [0],
+    "explanation": "テキスト生成AIは文章の要約・作成・翻訳など言語処理タスクに強みを持つ。",
+    "wrongChoiceExplanations": {},
+    "domain": "trends",
+    "service": "テキスト生成AI",
+    "difficulty": 1,
+    "tags": ["ドリル", "テキスト生成AI"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-tr-02",
+    "question": "画像生成AIの説明として正しいものはどれ？",
+    "choices": [
+      "既存の音声データを別の話者の声質に変換するAI",
+      "テキストなどの指示（プロンプト）から新しい画像を生成するAI",
+      "文章の誤字脱字を自動で校正するAI",
+      "動画のフレームレートを補間して滑らかにするAI"
+    ],
+    "correctAnswers": [1],
+    "explanation": "画像生成AIはプロンプトに基づき新規の画像コンテンツを生成する生成AIの一種である。",
+    "wrongChoiceExplanations": {},
+    "domain": "trends",
+    "service": "画像生成AI",
+    "difficulty": 1,
+    "tags": ["ドリル", "画像生成AI"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-tr-03",
+    "question": "音楽生成AIとは、テキストの指示などから【　】を自動で作り出す生成AIである。空欄に入る言葉は？",
+    "choices": [
+      "表計算ソフトの関数式",
+      "3Dモデルのポリゴンデータ",
+      "メロディーや伴奏を含む楽曲",
+      "文章の要約"
+    ],
+    "correctAnswers": [2],
+    "explanation": "音楽生成AIはメロディーや伴奏などを含む楽曲そのものを生成する。",
+    "wrongChoiceExplanations": {},
+    "domain": "trends",
+    "service": "音楽生成AI",
+    "difficulty": 1,
+    "tags": ["ドリル", "音楽生成AI"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-tr-04",
+    "question": "ナレーターの声質のまま、収録していない新しい原稿を読み上げた音声を作りたい。使うべき技術はどれ？",
+    "choices": [
+      "画像生成AI",
+      "データ拡張（オーグメンテーション）",
+      "ベクトルデータベース",
+      "音声生成AI（音声合成・声質変換）"
+    ],
+    "correctAnswers": [3],
+    "explanation": "音声生成AIは特定の声質を学習し、新しいテキストを読み上げる音声を合成できる。",
+    "wrongChoiceExplanations": {},
+    "domain": "trends",
+    "service": "音声生成AI",
+    "difficulty": 1,
+    "tags": ["ドリル", "音声生成AI"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-tr-05",
+    "question": "動画生成AIの活用シーンとして適切なのはどれ？",
+    "choices": [
+      "会計帳簿の仕訳を自動作成する",
+      "テキストの指示から短尺のプロモーション映像を自動生成する",
+      "音声データからノイズだけを検出して数値化する",
+      "PDF文書を暗号化して保存する"
+    ],
+    "correctAnswers": [1],
+    "explanation": "動画生成AIはテキストや画像から映像コンテンツを自動生成する用途に使われる。",
+    "wrongChoiceExplanations": {},
+    "domain": "trends",
+    "service": "動画生成AI",
+    "difficulty": 1,
+    "tags": ["ドリル", "動画生成AI"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-tr-06",
+    "question": "動画生成AIツールとその開発元の組み合わせとして、誤っているものはどれ？",
+    "choices": [
+      "Sora はOpenAIが開発した動画生成AIである",
+      "Veo3はGoogleが開発した動画生成AIである",
+      "SoraはGoogleが開発した動画生成AIである",
+      "Veo3は静止画ではなく動画を生成するツールである"
+    ],
+    "correctAnswers": [2],
+    "explanation": "SoraはOpenAIが開発した動画生成AIであり、Googleではない。",
+    "wrongChoiceExplanations": {},
+    "domain": "trends",
+    "service": "動画生成AIツール",
+    "difficulty": 2,
+    "tags": ["ドリル", "動画生成AIツール"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-tr-07",
+    "question": "生成AIにおける「データ拡張（オーグメンテーション）」の説明として正しいものはどれ？",
+    "choices": [
+      "生成AIが作った文章を人間が校正する作業",
+      "画像データを完全に削除してモデルを軽量化する手法",
+      "音声データを暗号化してセキュリティを高める手法",
+      "既存データに加工を加えて水増しし、学習データの量や多様性を増やす手法"
+    ],
+    "correctAnswers": [3],
+    "explanation": "データ拡張は既存データに変換・加工を加えて学習データを増やし、モデルの性能向上に役立てる手法である。",
+    "wrongChoiceExplanations": {},
+    "domain": "trends",
+    "service": "データ拡張",
+    "difficulty": 1,
+    "tags": ["ドリル", "データ拡張"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-tr-08",
+    "question": "生成AIによるリマスタリングとは、古い映像や音声などのコンテンツを【　】する技術のことである。空欄は？",
+    "choices": [
+      "高画質・高音質に修復・改善",
+      "完全にゼロから新規制作",
+      "他人の作品として偽装",
+      "テキストデータに変換"
+    ],
+    "correctAnswers": [0],
+    "explanation": "リマスタリングは生成AIを用いて古い映像・音声の画質や音質を修復・向上させる技術である。",
+    "wrongChoiceExplanations": {},
+    "domain": "trends",
+    "service": "リマスタリング",
+    "difficulty": 1,
+    "tags": ["ドリル", "リマスタリング"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-tr-09",
+    "question": "ある動画で、実在の人物の顔と声をAIで精巧に合成し、本人が発言していないことを話しているように見せていた。この技術に該当するのはどれ？",
+    "choices": [
+      "データ拡張",
+      "リマスタリング",
+      "ベクトルデータベース",
+      "ディープフェイク"
+    ],
+    "correctAnswers": [3],
+    "explanation": "実在人物の映像・音声をAIで合成し、本人が発言していないことを発言したように見せる技術はディープフェイクと呼ばれる。",
+    "wrongChoiceExplanations": {},
+    "domain": "trends",
+    "service": "ディープフェイク",
+    "difficulty": 1,
+    "tags": ["ドリル", "ディープフェイク"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-tr-10",
+    "question": "「ディスインフォメーション」の説明として正しいものはどれ？",
+    "choices": [
+      "誤りと気づかずに誤って広められる情報",
+      "AIが生成した正確な統計データ",
+      "受け手を欺く意図を持って、意図的に発信される偽情報",
+      "暗号化されたやり取りができない情報"
+    ],
+    "correctAnswers": [2],
+    "explanation": "ディスインフォメーションは発信者に欺く意図がある偽情報を指す。",
+    "wrongChoiceExplanations": {},
+    "domain": "trends",
+    "service": "ディスインフォメーション",
+    "difficulty": 1,
+    "tags": ["ドリル", "ディスインフォメーション"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-tr-11",
+    "question": "RAG（検索拡張生成）とは、生成AIが回答を作る際に外部の情報源を【　】し、その内容を踏まえて回答を生成する仕組みである。空欄は？",
+    "choices": [
+      "検索",
+      "暗号化",
+      "削除",
+      "圧縮"
+    ],
+    "correctAnswers": [0],
+    "explanation": "RAGは外部情報源を検索し、その検索結果を踏まえて回答を生成する仕組みである。",
+    "wrongChoiceExplanations": {},
+    "domain": "trends",
+    "service": "RAG",
+    "difficulty": 1,
+    "tags": ["ドリル", "RAG"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-tr-12",
+    "question": "RAGにおける「チャンク」の説明として正しいものはどれ？",
+    "choices": [
+      "生成AIが出力する誤った情報のこと",
+      "検索しやすくするために文書を分割した小さな単位",
+      "画像生成AIが使うノイズ除去の工程",
+      "音声データを暗号化する単位"
+    ],
+    "correctAnswers": [1],
+    "explanation": "チャンクはRAGで検索精度を高めるために文書を分割した小さなテキスト単位である。",
+    "wrongChoiceExplanations": {},
+    "domain": "trends",
+    "service": "RAG",
+    "difficulty": 2,
+    "tags": ["ドリル", "RAG"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-tr-13",
+    "question": "RAGで使われる「ベクトルデータベース」の説明として正しいものはどれ？",
+    "choices": [
+      "行と列だけで構成される表計算専用のデータベース",
+      "画像ファイルのみを保存する専用ストレージ",
+      "パスワードを暗号化して管理する認証システム",
+      "文章などを数値ベクトルに変換して格納し、意味的な類似度で検索できるデータベース"
+    ],
+    "correctAnswers": [3],
+    "explanation": "ベクトルデータベースはテキスト等をベクトル化して格納し、意味的な類似度検索を可能にする。",
+    "wrongChoiceExplanations": {},
+    "domain": "trends",
+    "service": "ベクトルデータベース",
+    "difficulty": 2,
+    "tags": ["ドリル", "RAG"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-tr-14",
+    "question": "社内マニュアルの最新版を検索して根拠を示しながら回答するチャットボットを作りたい。ハルシネーション（もっともらしい誤り）を減らすために有効な仕組みはどれ？",
+    "choices": [
+      "モデルの温度パラメータを最大値に設定する",
+      "学習データを一切与えずに回答させる",
+      "RAG（検索拡張生成）を組み込み、最新の社内文書を検索してから回答させる",
+      "出力を全て英語に翻訳してから表示する"
+    ],
+    "correctAnswers": [2],
+    "explanation": "RAGは最新の外部文書を検索し根拠にして回答するため、ハルシネーションの低減や最新情報への対応に有効である。",
+    "wrongChoiceExplanations": {},
+    "domain": "trends",
+    "service": "RAG",
+    "difficulty": 1,
+    "tags": ["ドリル", "RAG"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-tr-15",
+    "question": "自律的にタスクを計画・実行するAIエージェントサービスに関する記述として、誤っているものはどれ？",
+    "choices": [
+      "GenSpark、Manus、Skywork AIはいずれも自律的にタスクを計画・実行するAIエージェントサービスである",
+      "AIエージェントは目標に対して自ら計画を立て、複数の作業を実行できる",
+      "AIエージェントは常に人間が1つずつ細かく指示しなければ何も実行できない",
+      "AIエージェントはツールの呼び出しや情報収集を自律的に組み合わせて作業を進められる"
+    ],
+    "correctAnswers": [2],
+    "explanation": "AIエージェントは自ら計画を立ててタスクを実行できる点が特徴であり、常に細かい逐一の指示が必要というのは誤りである。",
+    "wrongChoiceExplanations": {},
+    "domain": "trends",
+    "service": "AIエージェント",
+    "difficulty": 2,
+    "tags": ["ドリル", "AIエージェント"],
+    "beginnerNote": null
+  },
+  {
+    "id": "qd-tr-16",
+    "question": "MCP（Model Context Protocol）とは、AIモデルが外部のツールやデータソースと連携するための【　】である。空欄は？",
+    "choices": [
+      "標準化された接続の仕組み（プロトコル）",
+      "画像を圧縮するファイル形式",
+      "音声を暗号化するアルゴリズム",
+      "動画のフレーム補間技術"
+    ],
+    "correctAnswers": [0],
+    "explanation": "MCPはAIモデルが外部ツールやデータソースと連携するための標準化されたプロトコルである。",
+    "wrongChoiceExplanations": {},
+    "domain": "trends",
+    "service": "MCP",
+    "difficulty": 1,
+    "tags": ["ドリル", "MCP"],
+    "beginnerNote": null
+  }
+]
