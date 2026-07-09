@@ -568,6 +568,47 @@ def dump(name, data):
         json.dump(data, f, ensure_ascii=False, indent=1)
     print(f"{name}: {len(data)} items")
 
+# --- 増量バッチの取り込み（design/batch_*.json をマージ）---
+import glob
+DESIGN = os.path.dirname(__file__)
+for bf in sorted(glob.glob(os.path.join(DESIGN, "batch_*.json"))):
+    with open(bf, encoding="utf-8") as f:
+        batch = json.load(f)
+    questions.extend(batch)
+    print(f"merged {os.path.basename(bf)}: +{len(batch)}")
+
+# --- 整合性検証 ---
+VALID = {"aiBasics", "genAI", "trends", "ethics", "prompt"}
+def validate(qs):
+    errs, seen = [], set()
+    for q in qs:
+        i = q.get("id", "?")
+        if i in seen: errs.append(f"重複id {i}")
+        seen.add(i)
+        if q.get("domain") not in VALID: errs.append(f"{i} 不正domain {q.get('domain')}")
+        ch = q.get("choices", [])
+        if len(ch) != 4: errs.append(f"{i} choices={len(ch)}")
+        ca = q.get("correctAnswers", [])
+        if not ca: errs.append(f"{i} correctAnswers空")
+        for c in ca:
+            if not (0 <= c < len(ch)): errs.append(f"{i} 不正correct {c}")
+        for k in q.get("wrongChoiceExplanations", {}):
+            ki = int(k)
+            if not (0 <= ki < len(ch)): errs.append(f"{i} 不正wrongkey {k}")
+            if ki in ca: errs.append(f"{i} wrongkeyが正解を指す {k}")
+        for idx in range(len(ch)):
+            if idx not in ca and str(idx) not in q.get("wrongChoiceExplanations", {}):
+                errs.append(f"{i} 選択肢{idx}の誤答解説なし")
+        if not q.get("explanation"): errs.append(f"{i} explanation空")
+        if q.get("difficulty") not in (1, 2, 3): errs.append(f"{i} difficulty={q.get('difficulty')}")
+    return errs
+
+_errs = validate(questions)
+if _errs:
+    print("=== 検証エラー（未修正）===")
+    for e in _errs[:50]: print("  -", e)
+    raise SystemExit(f"検証エラー {len(_errs)}件。修正が必要。")
+
 questions = balance_positions(questions)
 dump("questions.json", questions)
 dump("terms.json", terms)
