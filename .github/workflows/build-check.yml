@@ -9,6 +9,11 @@ name: build-check
 on:
   workflow_dispatch:
 
+# 同じワークフローの実行が重なったら古い方をキャンセルし、無駄なmacOS分数消費を防ぐ。
+concurrency:
+  group: build-check
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: macos-15
