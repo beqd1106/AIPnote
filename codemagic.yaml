@@ -53,7 +53,7 @@ workflows:
         bundle_identifier: com.beqd1106.aipnote
       vars:
         XCODE_SCHEME: "AIPnote"
-        APP_ID: "6782375703"          # App Store Connect のアプリApple ID（ビルド番号採番に使用）
+        APP_ID: "6789576927"          # App Store Connect のアプリApple ID（ビルド番号採番に使用）
       xcode: latest
       cocoapods: default
     # バージョンタグ(v*)のpushで自動起動。手動Startも可。
@@ -74,8 +74,8 @@ workflows:
       - name: Set build number
         script: |
           cd "$CM_BUILD_DIR"
-          # GitHub Actions で既に build8 まで配信済み。CIをまたいでも番号が逆行しないよう、
           # TestFlight の最新ビルド番号を取得して +1 する（App Store Connect の単調増加要件を満たす）。
+          # 新規アプリはビルドが無いため 0 → build 1 となる。
           LATEST=$(app-store-connect get-latest-testflight-build-number "$APP_ID" 2>/dev/null || echo 0)
           NEXT=$(( ${LATEST:-0} + 1 ))
           echo "TestFlight latest build: ${LATEST:-0} -> setting build number to $NEXT"
