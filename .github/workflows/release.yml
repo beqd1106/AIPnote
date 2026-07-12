@@ -10,7 +10,7 @@ name: release-testflight
 #   ASC_KEY_P8               … API キー(.p8)の中身
 #   CERTIFICATE_PRIVATE_KEY  … 配布証明書用のRSA秘密鍵(PEM)
 #
-# 事前にブラウザで1回だけ: App Store Connect にアプリ枠(バンドルID com.beqd1106.aipnote)を作成済み。
+# 事前にブラウザで1回だけ: App Store Connect にアプリ枠(バンドルID com.beqd1106.aipnoteapp)を作成済み。
 
 on:
   workflow_dispatch: {}
@@ -20,7 +20,7 @@ env:
   APP_STORE_CONNECT_KEY_IDENTIFIER: ${{ secrets.ASC_KEY_ID }}
   APP_STORE_CONNECT_PRIVATE_KEY: ${{ secrets.ASC_KEY_P8 }}
   CERTIFICATE_PRIVATE_KEY: ${{ secrets.CERTIFICATE_PRIVATE_KEY }}
-  BUNDLE_ID: com.beqd1106.aipnote
+  BUNDLE_ID: com.beqd1106.aipnoteapp
 
 jobs:
   release:

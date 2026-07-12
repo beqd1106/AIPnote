@@ -39,7 +39,7 @@ workflows:
   # 事前準備(すべてブラウザ):
   #   1. App Store Connect で「Integrations用 APIキー(App Manager権限)」を発行
   #   2. Codemagic の Teams > Integrations > App Store Connect に登録（名前: AppStoreConnect）
-  #   3. App Store Connect でアプリを新規作成し、Bundle ID を com.beqd1106.aipnote に一致させる
+  #   3. App Store Connect でアプリを新規作成し、Bundle ID を com.beqd1106.aipnoteapp に一致させる
   #   4. （初回のみ）Apple Developer の Identifiers に上記 Bundle ID を登録
   ios-testflight:
     name: iOS build & TestFlight
@@ -50,7 +50,7 @@ workflows:
     environment:
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: com.beqd1106.aipnote
+        bundle_identifier: com.beqd1106.aipnoteapp
       vars:
         XCODE_SCHEME: "AIPnote"
         APP_ID: "6789576927"          # App Store Connect のアプリApple ID（ビルド番号採番に使用）

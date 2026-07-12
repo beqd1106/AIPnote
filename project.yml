@@ -28,7 +28,7 @@ targets:
         buildPhase: resources
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.beqd1106.aipnote
+        PRODUCT_BUNDLE_IDENTIFIER: com.beqd1106.aipnoteapp
         TARGETED_DEVICE_FAMILY: "1"        # iPhone専用（iPad向き要件を回避）
         GENERATE_INFOPLIST_FILE: NO        # 手書きInfo.plistで向き要件を確実にクリア
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
@@ -58,5 +58,5 @@ targets:
       - target: AIPnote
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.beqd1106.aipnote.tests
+        PRODUCT_BUNDLE_IDENTIFIER: com.beqd1106.aipnoteapp.tests
         GENERATE_INFOPLIST_FILE: YES
