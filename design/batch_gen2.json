@@ -1,0 +1,897 @@
+[
+ {
+  "id": "q-gen-201",
+  "question": "ボルツマンマシンに関する説明として、最も適切なものはどれか。",
+  "choices": [
+   "統計力学のエネルギーモデルに着想を得た、確率的なニューロン間結合を持つ生成モデルである",
+   "画像分類に特化した畳み込み層を持つニューラルネットワークである",
+   "系列データを一方向に処理し、次の単語を予測する自己回帰モデルである",
+   "エンコーダとデコーダで潜在変数を扱う生成モデルである"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "ボルツマンマシンは統計力学のエネルギー関数に着想を得た確率的な無向グラフ型のニューラルネットワークで、深層学習以前からある生成モデルの源流の一つとされる。",
+  "wrongChoiceExplanations": {
+   "1": "これはCNN（畳み込みニューラルネットワーク）の説明である。",
+   "2": "これはGPTなどの自己回帰モデルの説明である。",
+   "3": "これはVAE（変分オートエンコーダ）の説明である。"
+  },
+  "domain": "genAI",
+  "service": "ボルツマンマシン",
+  "difficulty": 2,
+  "tags": [
+   "ボルツマンマシン",
+   "生成モデルの歴史",
+   "エネルギー関数"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-202",
+  "question": "自己回帰モデル（Autoregressive Model）の説明として最も適切なものはどれか。",
+  "choices": [
+   "画像全体を一度に潜在空間へ圧縮し、そこから再構成するモデルである",
+   "これまでに生成した要素を条件として、次の要素を逐次的に予測・生成するモデルである",
+   "エネルギー関数を最小化することで安定状態を学習する確率的モデルである",
+   "文章全体を双方向に読み込み、マスクされた単語を予測するモデルである"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "GPTなどは代表的な自己回帰モデルであり、直前までの系列を条件として次のトークンを予測する処理を繰り返すことで文章を生成する。",
+  "wrongChoiceExplanations": {
+   "0": "これはVAEの説明である。",
+   "2": "これはボルツマンマシンの説明である。",
+   "3": "これはBERTのMLM（マスク言語モデル）の説明である。"
+  },
+  "domain": "genAI",
+  "service": "自己回帰モデル",
+  "difficulty": 2,
+  "tags": [
+   "自己回帰モデル",
+   "GPT",
+   "生成モデルの歴史"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-203",
+  "question": "CNN（畳み込みニューラルネットワーク）が特に得意とするタスクはどれか。",
+  "choices": [
+   "文章全体の文脈を双方向に考慮した穴埋め予測",
+   "統計力学的エネルギーに基づくデータ生成",
+   "画像の特徴抽出や画像認識",
+   "系列データにおける超長期の依存関係の保持"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "CNNはフィルタによる畳み込み演算でエッジや模様などの局所的な特徴を抽出するモデルで、画像認識分野で発展してきた。",
+  "wrongChoiceExplanations": {
+   "0": "これはBERTのような双方向モデルの得意分野である。",
+   "1": "これはボルツマンマシンの説明である。",
+   "3": "これはLSTMが対応しようとした課題である。"
+  },
+  "domain": "genAI",
+  "service": "CNN",
+  "difficulty": 1,
+  "tags": [
+   "CNN",
+   "畳み込みニューラルネットワーク",
+   "画像認識"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-204",
+  "question": "VAE（変分オートエンコーダ）の基本構成として正しいものはどれか。",
+  "choices": [
+   "直前の単語のみを参照して次の単語を予測する仕組みで構成される",
+   "Self-AttentionとFeed Forward層のみで構成される",
+   "ゲート機構により長期記憶と短期記憶を切り替える仕組みで構成される",
+   "入力データを潜在変数の確率分布に変換するエンコーダと、そこからサンプリングした潜在ベクトルを元のデータ空間に復元するデコーダで構成される"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "VAEは入力を潜在変数の確率分布（平均・分散）に変換するエンコーダと、そこからサンプリングした潜在ベクトルを元のデータ空間に復元するデコーダから構成される生成モデルである。",
+  "wrongChoiceExplanations": {
+   "0": "これは自己回帰モデルの説明である。",
+   "1": "これはTransformerの構成要素の説明である。",
+   "2": "これはLSTMの説明である。"
+  },
+  "domain": "genAI",
+  "service": "VAE",
+  "difficulty": 2,
+  "tags": [
+   "VAE",
+   "変分オートエンコーダ",
+   "エンコーダデコーダ"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-205",
+  "question": "VAEにおける「潜在ベクトル（潜在変数）」に関する記述のうち、誤っているものはどれか。",
+  "choices": [
+   "潜在ベクトルは入力データと全く同じ次元数を持ち、情報の欠落なく保持する",
+   "潜在ベクトルは、入力データの本質的な特徴を圧縮した低次元の表現である",
+   "デコーダは潜在空間上の点をサンプリングし、それを基に元のデータ空間へと復元する",
+   "VAEでは潜在変数を単一の固定値としてではなく、平均と分散を持つ確率分布として学習する"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "潜在ベクトルは通常、入力よりも低次元に圧縮された表現であり、次元圧縮によって本質的な特徴を抽出することが目的である。そのため「入力と全く同じ次元数で情報の欠落がない」という記述は誤り。",
+  "wrongChoiceExplanations": {
+   "1": "潜在ベクトルが入力の本質的特徴を圧縮した低次元表現であるという説明は正しい。",
+   "2": "デコーダが潜在空間からサンプリングして復元するという説明は正しい。",
+   "3": "VAEが潜在変数を確率分布として学習するのは正しい特徴である。"
+  },
+  "domain": "genAI",
+  "service": "VAE(潜在ベクトル)",
+  "difficulty": 3,
+  "tags": [
+   "VAE",
+   "潜在ベクトル",
+   "潜在変数"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-206",
+  "question": "RNN（再帰型ニューラルネットワーク）が抱える代表的な課題として最も適切なものはどれか。",
+  "choices": [
+   "画像データの空間的特徴を抽出できない",
+   "系列が長くなるほど勾配が消失・爆発しやすく、長期的な依存関係の学習が困難になる",
+   "事前学習にマスク単語予測タスクを利用できない",
+   "潜在変数を確率分布として扱えない"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "RNNは系列を逐次処理する際に、系列が長くなるほど勾配が消失・爆発しやすくなり、離れた位置の情報同士の依存関係を学習しにくいという課題を持つ。",
+  "wrongChoiceExplanations": {
+   "0": "これはCNNの得意分野に関する話であり、RNN固有の課題ではない。",
+   "2": "これはBERTの事前学習タスクに関する話であり、RNN固有の課題ではない。",
+   "3": "これはVAEの構造に関する話であり、RNN固有の課題ではない。"
+  },
+  "domain": "genAI",
+  "service": "RNN",
+  "difficulty": 2,
+  "tags": [
+   "RNN",
+   "勾配消失",
+   "長期依存"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-207",
+  "question": "LSTM（Long Short-Term Memory）がRNNの課題をどのように解決しているか、最も適切な説明はどれか。",
+  "choices": [
+   "畳み込みフィルタを用いて空間的特徴を抽出することで解決している",
+   "潜在変数を確率分布として扱うことで解決している",
+   "入力ゲート・忘却ゲート・出力ゲートという仕組みで情報の保持と忘却を制御し、長期的な依存関係を学習しやすくしている",
+   "Self-Attentionにより系列全体を一度に参照することで解決している"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "LSTMは入力ゲート・忘却ゲート・出力ゲートというゲート機構を導入し、情報の保持と忘却を制御することで、RNNが抱える長期的な依存関係の学習困難を緩和している。",
+  "wrongChoiceExplanations": {
+   "0": "これはCNNの仕組みの説明である。",
+   "1": "これはVAEの仕組みの説明である。",
+   "3": "これはTransformerのSelf-Attentionの仕組みの説明である。"
+  },
+  "domain": "genAI",
+  "service": "LSTM",
+  "difficulty": 2,
+  "tags": [
+   "LSTM",
+   "ゲート機構",
+   "長期依存"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-208",
+  "question": "Transformerというアーキテクチャを提案した論文「Attention Is All You Need」について、正しい説明はどれか。",
+  "choices": [
+   "2018年にOpenAIによって発表され、BERTの後継として提案された",
+   "2020年にMetaによって発表され、RNNの改良版として提案された",
+   "2015年にAnthropicによって発表され、画像生成モデルとして提案された",
+   "2017年にGoogleの研究者らによって発表され、再帰構造や畳み込みを用いずAttention機構のみで系列変換を行う手法を提案した"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "「Attention Is All You Need」は2017年にGoogleの研究者らが発表した論文で、再帰構造や畳み込みを用いずAttention機構のみで系列変換を行うTransformerを提案した。",
+  "wrongChoiceExplanations": {
+   "0": "発表元・年ともに誤り。OpenAIによるものではなく、BERTの後継でもない。",
+   "1": "発表元・年ともに誤り。RNNの改良版でもない。",
+   "2": "Anthropicは2021年に設立された企業であり、2015年時点では存在しない。年代・発表元ともに誤り。"
+  },
+  "domain": "genAI",
+  "service": "Transformer",
+  "difficulty": 2,
+  "tags": [
+   "Transformer",
+   "Attention Is All You Need",
+   "Google"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-209",
+  "question": "Self-Attention（自己注意機構）の働きに関する説明として、最も適切なものはどれか。",
+  "choices": [
+   "系列内の各単語について、同じ系列内の他の全単語との関連度を計算し、重み付けした情報を統合して各単語の表現を更新する",
+   "直前の1単語のみを参照して次の単語の出現確率を計算する",
+   "入力画像に対して畳み込みフィルタをスライドさせながら特徴マップを生成する",
+   "潜在空間上でランダムにサンプリングした点をデコーダに入力する"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "Self-Attentionは、系列内の各単語について同じ系列内の他の全単語との関連度（注意重み）を計算し、それに基づいて情報を統合し各単語の表現を更新する仕組みである。",
+  "wrongChoiceExplanations": {
+   "1": "これはより単純な自己回帰的な予測の説明であり、Self-Attentionのように系列全体を同時に参照する仕組みではない。",
+   "2": "これはCNNの畳み込み演算の説明である。",
+   "3": "これはVAEのデコーダに関する説明である。"
+  },
+  "domain": "genAI",
+  "service": "Self-Attention",
+  "difficulty": 3,
+  "tags": [
+   "Self-Attention",
+   "Transformer",
+   "Attention機構"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-210",
+  "question": "Transformerにおいて位置エンコーディング（Positional Encoding）が必要とされる理由として、最も適切なものはどれか。",
+  "choices": [
+   "畳み込み演算では位置情報が失われるため、それを補うために必要となるから",
+   "Self-Attentionの計算自体には単語の並び順の情報が含まれないため、単語の位置情報を別途埋め込む必要があるから",
+   "RNNのように逐次的に処理する際に、隠れ状態が消失するのを防ぐために必要となるから",
+   "マスク単語予測において、マスクされた単語の位置を伏せるために必要となるから"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "Self-Attentionは系列内の全要素を同時に並列処理するため、そのままでは単語の並び順（位置関係）の情報を持たない。そのため位置エンコーディングを別途加えることで、単語の順序情報をモデルに与えている。",
+  "wrongChoiceExplanations": {
+   "0": "位置エンコーディングはCNNの課題を補うためのものではなく、Transformer固有の仕組みである。",
+   "2": "これはRNN・LSTMに関する話であり、Transformerの位置エンコーディングの理由ではない。",
+   "3": "位置エンコーディングは位置を伏せるためではなく、位置情報をモデルに与えるためのものである。"
+  },
+  "domain": "genAI",
+  "service": "位置エンコーディング",
+  "difficulty": 3,
+  "tags": [
+   "位置エンコーディング",
+   "Positional Encoding",
+   "Transformer"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-211",
+  "question": "GPT（Generative Pre-trained Transformer）のアーキテクチャに関する説明として正しいものはどれか。",
+  "choices": [
+   "Transformerのエンコーダ部分のみを用いて構成されており、文章全体を双方向に読み込む",
+   "エンコーダとデコーダの両方を用いて、翻訳のように入力系列を別の系列に変換する",
+   "Transformerのデコーダ部分のみを用いて構成されており、直前までの単語列から次の単語を予測する",
+   "畳み込み層のみで構成されており、Attention機構を持たない"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "GPTはTransformerのデコーダ部分のみを用いて構成されており、直前までの単語列を条件として次の単語を予測する自己回帰的な生成を行う。",
+  "wrongChoiceExplanations": {
+   "0": "これはBERTのアーキテクチャの説明である。",
+   "1": "これは原論文の翻訳タスク向けTransformer（エンコーダ・デコーダ構成）の説明である。",
+   "3": "GPTはAttention機構（Self-Attention）を中核とするデコーダ構成であり、畳み込み層のみで構成されるわけではない。"
+  },
+  "domain": "genAI",
+  "service": "GPT(アーキテクチャ)",
+  "difficulty": 1,
+  "tags": [
+   "GPT",
+   "デコーダ",
+   "Transformer"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-212",
+  "question": "BERT（Bidirectional Encoder Representations from Transformers）に関する説明として正しいものはどれか。",
+  "choices": [
+   "Transformerのデコーダ部分のみを用いて構成され、次の単語を逐次的に生成する",
+   "Googleではなく OpenAI が開発した、文章生成に特化したモデルである",
+   "RNNとCNNを組み合わせたハイブリッドモデルである",
+   "Transformerのエンコーダ部分のみを用いて構成され、文章を双方向から読み込むことで文脈を理解する"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "BERTはTransformerのエンコーダ部分のみを用いて構成され、文章を左右双方向から読み込むことで文脈理解に優れたモデルであり、Googleが開発した。",
+  "wrongChoiceExplanations": {
+   "0": "これはGPTのアーキテクチャの説明である。",
+   "1": "BERTを開発したのはOpenAIではなくGoogleであり、文章生成に特化したモデルでもない。",
+   "2": "BERTはRNNやCNNではなく、Transformerのエンコーダをベースとする。"
+  },
+  "domain": "genAI",
+  "service": "BERT(アーキテクチャ)",
+  "difficulty": 1,
+  "tags": [
+   "BERT",
+   "エンコーダ",
+   "Transformer"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-213",
+  "question": "BERTの事前学習タスクの一つである「MLM（Masked Language Model）」の説明として最も適切なものはどれか。",
+  "choices": [
+   "文章中の一部の単語をマスク（隠す）し、周囲の文脈から元の単語を予測させるタスクである",
+   "2つの文が連続する文かどうかを判定させるタスクである",
+   "直前の単語列のみから次の単語を予測させるタスクである",
+   "画像の一部を欠損させ、元の画素値を復元させるタスクである"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "MLMは文章中の一部の単語をマスクし、その前後の文脈（双方向の情報）から元の単語を予測させることでBERTに文脈理解力を学習させる事前学習タスクである。",
+  "wrongChoiceExplanations": {
+   "1": "これはBERTのもう一つの事前学習タスクであるNSPの説明である。",
+   "2": "これはGPTのような自己回帰モデルの学習方法の説明である。",
+   "3": "これは画像の欠損補完に関する説明であり、MLMとは無関係である。"
+  },
+  "domain": "genAI",
+  "service": "MLM",
+  "difficulty": 2,
+  "tags": [
+   "BERT",
+   "MLM",
+   "事前学習タスク"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-214",
+  "question": "BERTの事前学習タスクの一つである「NSP（Next Sentence Prediction）」の説明として最も適切なものはどれか。",
+  "choices": [
+   "文中の単語をマスクして、その単語を予測させるタスクである",
+   "与えられた2つの文が、実際に連続する文かどうかを2値で判定させるタスクである",
+   "次に来る単語を1つずつ生成させるタスクである",
+   "文全体を要約させるタスクである"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "NSPは与えられた2つの文が実際に連続する文（隣接する文）かどうかを2値分類で判定させる事前学習タスクで、文と文の関係性の理解をBERTに学習させる目的で導入された。",
+  "wrongChoiceExplanations": {
+   "0": "これはBERTのもう一つの事前学習タスクであるMLMの説明である。",
+   "2": "これはGPTのような自己回帰モデルの説明である。",
+   "3": "要約タスクはNSPとは異なるタスクである。"
+  },
+  "domain": "genAI",
+  "service": "NSP",
+  "difficulty": 2,
+  "tags": [
+   "BERT",
+   "NSP",
+   "事前学習タスク"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-215",
+  "question": "RoBERTaがBERTを改良した点として、最も適切なものはどれか。",
+  "choices": [
+   "Transformerのデコーダ部分を新たに追加し、文章生成能力を獲得した",
+   "パラメータを大幅に削減するため、全ての層でパラメータを共有する構造に変更した",
+   "NSP（Next Sentence Prediction）タスクを取り除き、より大規模なデータとバッチサイズ、長い学習時間で事前学習を行うことで性能を向上させた",
+   "Attention機構を廃止し、畳み込み層に置き換えることで高速化した"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "RoBERTaはBERTのNSPタスクを取り除き、より大規模なデータ・より大きなバッチサイズ・より長い学習時間で事前学習を行うなどの調整により性能を向上させたモデルである。",
+  "wrongChoiceExplanations": {
+   "0": "RoBERTaもBERT同様エンコーダのみの構成であり、デコーダを追加したわけではない。",
+   "1": "全層でのパラメータ共有による軽量化はALBERTの特徴であり、RoBERTaの改良点ではない。",
+   "3": "RoBERTaはAttention機構（Transformer構造）をそのまま踏襲しており、畳み込み層に置き換えてはいない。"
+  },
+  "domain": "genAI",
+  "service": "RoBERTa",
+  "difficulty": 3,
+  "tags": [
+   "RoBERTa",
+   "BERT改良",
+   "事前学習"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-216",
+  "question": "ALBERTがBERTと比較してパラメータ数を削減するために採用した工夫として、最も適切なものはどれか。",
+  "choices": [
+   "NSPタスクを新たに追加し、文単位の学習を強化した",
+   "モデル全体をデコーダのみの構造に変更した",
+   "学習データ量を10分の1に削減した",
+   "埋め込み層の行列を分解する「Factorized Embedding Parameterization」と、層間でパラメータを共有する「Cross-layer Parameter Sharing」を導入した"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "ALBERTは埋め込み層の行列を分解するFactorized Embedding Parameterizationと、Transformer層間でパラメータを共有するCross-layer Parameter Sharingを導入することでBERTに比べパラメータ数を大幅に削減した。",
+  "wrongChoiceExplanations": {
+   "0": "ALBERTはNSPではなく、より難しい文順序判定タスクであるSOP（Sentence Order Prediction）を採用している。",
+   "1": "ALBERTもBERT同様エンコーダのみの構成であり、デコーダのみの構造ではない。",
+   "2": "パラメータ削減は学習データ量の削減ではなく、モデル構造上の工夫によって実現されている。"
+  },
+  "domain": "genAI",
+  "service": "ALBERT",
+  "difficulty": 3,
+  "tags": [
+   "ALBERT",
+   "BERT改良",
+   "軽量化"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-217",
+  "question": "2018年にOpenAIが発表した最初のGPT（GPT-1）に関する説明として正しいものはどれか。",
+  "choices": [
+   "「教師なし事前学習と教師ありファインチューニング」を組み合わせたアプローチで、Transformerのデコーダ構造を採用した",
+   "1750億パラメータを持ち、few-shot学習能力で注目を集めた",
+   "画像とテキストの両方を扱えるマルチモーダルモデルとして発表された",
+   "BERTの後継モデルとして、双方向の文脈理解を目的に開発された"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "GPT-1は大量のテキストによる教師なし事前学習と、タスクごとの教師ありファインチューニングを組み合わせたアプローチを提案し、Transformerのデコーダ構造を採用した最初のGPTである。",
+  "wrongChoiceExplanations": {
+   "1": "1750億パラメータ・few-shot学習能力で注目されたのはGPT-3である。",
+   "2": "画像とテキストを扱うマルチモーダル対応はGPT-4以降の特徴である。",
+   "3": "GPT-1はBERTの後継ではなく、BERTと同時期に独立して開発されたモデルであり、双方向の文脈理解を目的としたものでもない。"
+  },
+  "domain": "genAI",
+  "service": "GPT-1",
+  "difficulty": 2,
+  "tags": [
+   "GPT-1",
+   "OpenAI",
+   "GPT系譜"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-218",
+  "question": "GPT-2（2019年発表）の最大モデルのパラメータ数として正しいものはどれか。",
+  "choices": [
+   "約1.5億（150M）",
+   "約15億（1.5B）",
+   "約1750億（175B）",
+   "約1兆（1T）"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "GPT-2の最大モデルは約15億（1.5B）パラメータであり、前身のGPT-1（約1.17億パラメータ）から大幅に規模が拡大された。",
+  "wrongChoiceExplanations": {
+   "0": "約1.5億パラメータはGPT-1に近い規模であり、GPT-2の最大モデルの規模ではない。",
+   "2": "約1750億パラメータはGPT-3の規模である。",
+   "3": "約1兆パラメータという規模のGPTモデルは公表されていない。"
+  },
+  "domain": "genAI",
+  "service": "GPT-2",
+  "difficulty": 3,
+  "tags": [
+   "GPT-2",
+   "パラメータ数",
+   "GPT系譜"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-219",
+  "question": "GPT-3（2020年発表）のパラメータ数として正しいものはどれか。",
+  "choices": [
+   "約1.5億（150M）",
+   "約15億（1.5B）",
+   "約1750億（175B）",
+   "約5000億（500B）"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "GPT-3は約1750億（175B）パラメータを持ち、大規模なfew-shot学習能力によって生成AIブームの土台となったモデルである。",
+  "wrongChoiceExplanations": {
+   "0": "約1.5億パラメータはGPT-1に近い規模であり、GPT-3の規模ではない。",
+   "1": "約15億パラメータはGPT-2の最大モデルの規模である。",
+   "3": "約5000億パラメータという規模はGPT-3の公表値ではない。"
+  },
+  "domain": "genAI",
+  "service": "GPT-3",
+  "difficulty": 3,
+  "tags": [
+   "GPT-3",
+   "パラメータ数",
+   "GPT系譜"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-220",
+  "question": "2022年11月に公開され、世間に生成AIブームをもたらした「ChatGPT」の初期リリース時のベースモデルとして正しいものはどれか。",
+  "choices": [
+   "GPT-2",
+   "GPT-4",
+   "GPT-4o",
+   "GPT-3.5"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "2022年11月に公開された初期のChatGPTは、GPT-3.5をベースとしたモデルであった。GPT-4は2023年3月、GPT-4oは2024年5月に発表されており、時期が異なる。",
+  "wrongChoiceExplanations": {
+   "0": "GPT-2は2019年発表の旧モデルであり、ChatGPTの初期ベースモデルではない。",
+   "1": "GPT-4は2023年3月に発表されたモデルであり、ChatGPT公開時点（2022年11月）にはまだ存在しない。",
+   "2": "GPT-4oは2024年5月に発表されたモデルであり、ChatGPT公開時点にはまだ存在しない。"
+  },
+  "domain": "genAI",
+  "service": "ChatGPT/GPT-3.5",
+  "difficulty": 2,
+  "tags": [
+   "ChatGPT",
+   "GPT-3.5",
+   "GPT系譜"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-221",
+  "question": "2024年5月に発表された「GPT-4o」の「o」が意味するものと、その特徴として最も適切なものはどれか。",
+  "choices": [
+   "「omni」を意味し、テキスト・音声・画像を単一のモデルでネイティブに処理できるマルチモーダルモデルである",
+   "「online」を意味し、常時インターネット検索を行うモデルである",
+   "「open」を意味し、オープンソースとして公開されたモデルである",
+   "「offline」を意味し、ローカル環境でのみ動作するモデルである"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "GPT-4oの「o」は「omni（オムニ、すべて）」を意味し、テキスト・音声・画像といった複数のモダリティを単一のモデルでネイティブに処理できることが特徴である。",
+  "wrongChoiceExplanations": {
+   "1": "「o」は常時検索を意味する「online」ではない。",
+   "2": "GPT-4oはオープンソースとして公開されたモデルではない。",
+   "3": "「o」はオフライン動作を意味するものではなく、API・クラウド経由で提供されるモデルである。"
+  },
+  "domain": "genAI",
+  "service": "GPT-4o",
+  "difficulty": 2,
+  "tags": [
+   "GPT-4o",
+   "マルチモーダル",
+   "OpenAI"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-222",
+  "question": "OpenAIが2024年9月に発表した「o1」モデルの特徴として、最も適切なものはどれか。",
+  "choices": [
+   "画像や音声を扱えず、テキストのみに特化した最初のGPTモデルである",
+   "回答前に内部で段階的な思考（Chain of Thought）を行い、数学やコーディングなど複雑な推論タスクの精度を高めたモデルである",
+   "Transformerを使わず、RNNベースで構築された初のモデルである",
+   "パラメータ数を極限まで削減した軽量モデルで、モバイル端末での動作に特化している"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "o1は回答を出す前にモデル内部で段階的な思考（Chain of Thought）を行うことで、数学・科学・コーディングなど複雑な推論を要するタスクの精度を高めた推論特化モデルである。",
+  "wrongChoiceExplanations": {
+   "0": "テキストのみに特化した「最初のGPTモデル」はGPT-1であり、o1の説明ではない。",
+   "2": "o1もTransformerベースのモデルであり、RNNベースではない。",
+   "3": "o1は推論精度を高めるために計算リソースを多く使う設計であり、モバイル向けの軽量モデルではない。"
+  },
+  "domain": "genAI",
+  "service": "o1",
+  "difficulty": 3,
+  "tags": [
+   "o1",
+   "推論モデル",
+   "Chain of Thought"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-223",
+  "question": "RLHF（Reinforcement Learning from Human Feedback）に関する説明として、最も適切なものはどれか。",
+  "choices": [
+   "ラベル付けされたデータを一切使わず、教師なし学習のみでモデルを事前学習する手法である",
+   "画像データから特徴量を抽出するための畳み込み処理を強化する手法である",
+   "人間の評価者によるフィードバックをもとに報酬モデルを構築し、それを用いて強化学習によりモデルの出力を人間の好みに近づける手法である",
+   "マスクされた単語を予測させることでモデルの文脈理解力を強化する手法である"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "RLHFは人間の評価者によるフィードバック（出力の良し悪しの評価）をもとに報酬モデルを構築し、それを用いた強化学習によってモデルの出力を人間の好みや意図に近づける手法で、ChatGPTなどの学習にも用いられている。",
+  "wrongChoiceExplanations": {
+   "0": "RLHFは人間のフィードバック（一種の教師信号）を用いる点が特徴であり、教師なし学習のみの手法ではない。",
+   "1": "これはCNNに関する説明であり、RLHFとは無関係である。",
+   "3": "これはBERTのMLMに関する説明であり、RLHFとは異なる手法である。"
+  },
+  "domain": "genAI",
+  "service": "RLHF",
+  "difficulty": 2,
+  "tags": [
+   "RLHF",
+   "強化学習",
+   "人間フィードバック"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-224",
+  "question": "生成AIにおける「アライメント（Alignment）」の説明として、最も適切なものはどれか。",
+  "choices": [
+   "モデルのパラメータ数を人間が指定した数値に合わせて調整すること",
+   "学習データの文章の位置情報を揃えること",
+   "複数のGPUの計算タイミングを同期させること",
+   "AIの出力や振る舞いを、人間の意図や価値観、安全性の基準に沿ったものにすること"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "アライメントとは、AIの出力や振る舞いを人間の意図・価値観・安全性の基準に沿ったものにする取り組みを指し、RLHFなどはそのための代表的な手法の一つである。",
+  "wrongChoiceExplanations": {
+   "0": "アライメントはパラメータ数の調整を指す言葉ではない。",
+   "1": "これは位置エンコーディングなどとは異なる概念であり、アライメントの説明ではない。",
+   "2": "これは分散学習における計算同期の話であり、アライメントとは無関係である。"
+  },
+  "domain": "genAI",
+  "service": "アライメント",
+  "difficulty": 2,
+  "tags": [
+   "アライメント",
+   "AI安全性"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-226",
+  "question": "生成AIにおける「ハルシネーション」とは何か。",
+  "choices": [
+   "AIが同じ回答を何度も繰り返してしまう現象",
+   "AIがもっともらしいが事実ではない、誤った情報を生成してしまう現象",
+   "AIの学習が途中で停止してしまう現象",
+   "AIが入力内容を無視して無関係な言語で応答してしまう現象"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "ハルシネーションとは、生成AIがもっともらしく見えるが事実に基づかない誤った情報を生成してしまう現象を指し、生成AI活用における代表的な課題の一つである。",
+  "wrongChoiceExplanations": {
+   "0": "同じ回答を繰り返す現象はハルシネーションの定義ではない。",
+   "2": "学習が途中で停止する現象はハルシネーションとは無関係である。",
+   "3": "無関係な言語で応答する現象は誤訳・誤生成の一種ではあるが、ハルシネーションの定義そのものではない。"
+  },
+  "domain": "genAI",
+  "service": "ハルシネーション",
+  "difficulty": 1,
+  "tags": [
+   "ハルシネーション",
+   "生成AIの課題"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-227",
+  "question": "生成AIにおける「マルチモーダル」の意味として最も適切なものはどれか。",
+  "choices": [
+   "複数のGPUを同時に用いて並列計算を行うこと",
+   "複数のユーザーが同時に同じモデルへアクセスできること",
+   "テキストだけでなく、画像・音声・動画など複数の種類のデータを組み合わせて入力・処理・出力できること",
+   "複数言語の翻訳のみに対応していること"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "マルチモーダルとは、テキストだけでなく画像・音声・動画など複数の種類（モダリティ）のデータを組み合わせて入力・処理・出力できる性質を指し、GPT-4oなどが代表例である。",
+  "wrongChoiceExplanations": {
+   "0": "複数GPUの並列計算はハードウェア面の話であり、マルチモーダルの意味ではない。",
+   "1": "複数ユーザーの同時アクセスはシステム運用の話であり、マルチモーダルの意味ではない。",
+   "3": "多言語翻訳への対応は「多言語対応」であり、マルチモーダル（複数モダリティ対応）とは異なる概念である。"
+  },
+  "domain": "genAI",
+  "service": "マルチモーダル",
+  "difficulty": 1,
+  "tags": [
+   "マルチモーダル",
+   "生成AI基礎"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-228",
+  "question": "ChatGPTの「Code Interpreter」（現在は高度なデータ分析機能として提供）に関する説明として、最も適切なものはどれか。",
+  "choices": [
+   "ユーザーが作成したカスタムGPTを公開・共有するための機能である",
+   "ブラウザを自動操作してWebタスクを代行する機能である",
+   "テキストから動画を生成する機能である",
+   "サンドボックス環境でPythonコードを実際に生成・実行し、データ分析やファイル処理、グラフ作成などを行える機能である"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "Code Interpreterは、ChatGPT内のサンドボックス環境でPythonコードを実際に生成・実行できる機能で、データ分析、ファイル処理、グラフ作成などに活用できる。",
+  "wrongChoiceExplanations": {
+   "0": "これはGPTsの説明である。",
+   "1": "これはOperatorの説明である。",
+   "2": "これはSoraの説明である。"
+  },
+  "domain": "genAI",
+  "service": "Code Interpreter",
+  "difficulty": 2,
+  "tags": [
+   "Code Interpreter",
+   "ChatGPT機能",
+   "データ分析"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-229",
+  "question": "2023年11月のOpenAI DevDayで発表された「GPTs」に関する説明として、最も適切なものはどれか。",
+  "choices": [
+   "プログラミングの知識がなくても、特定の目的に特化したカスタムChatGPTを誰でも作成・共有できる機能である",
+   "ブラウザを自律的に操作してタスクを実行するエージェント機能である",
+   "テキストから写実的な動画を生成するモデルである",
+   "コードを自動生成し、ソフトウェア開発を代行するエージェントである"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "GPTsは、プログラミングの知識がなくても特定の目的（役割・知識・指示）に特化したカスタムChatGPTを誰でも作成・共有できる機能で、2023年11月のOpenAI DevDayで発表された。",
+  "wrongChoiceExplanations": {
+   "1": "これはOperatorの説明である。",
+   "2": "これはSoraの説明である。",
+   "3": "これはCodexの説明である。"
+  },
+  "domain": "genAI",
+  "service": "GPTs",
+  "difficulty": 2,
+  "tags": [
+   "GPTs",
+   "ChatGPT機能",
+   "カスタムGPT"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-230",
+  "question": "OpenAIが2025年1月にリサーチプレビューとして発表した「Operator」に関する説明として、最も適切なものはどれか。",
+  "choices": [
+   "カスタムGPTを作成・共有するための機能である",
+   "Webブラウザを自律的に操作し、フォーム入力や予約、買い物など人間に代わってオンライン上のタスクを実行するエージェントである",
+   "テキスト入力から動画を生成するモデルである",
+   "コードの自動補完に特化したIDE統合ツールである"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "OperatorはOpenAIが発表したエージェント機能で、Webブラウザを自律的に操作し、フォーム入力・予約・買い物など人間に代わってオンライン上のタスクを実行できる。",
+  "wrongChoiceExplanations": {
+   "0": "これはGPTsの説明である。",
+   "2": "これはSoraの説明である。",
+   "3": "これはCodexやGitHub Copilotのようなコーディング支援ツールに近い説明であり、Operatorの説明ではない。"
+  },
+  "domain": "genAI",
+  "service": "Operator",
+  "difficulty": 3,
+  "tags": [
+   "Operator",
+   "OpenAI",
+   "エージェント"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-231",
+  "question": "OpenAIの「Codex」に関する説明として、最も適切なものはどれか。",
+  "choices": [
+   "テキストから写実的な映像を生成する動画生成モデルである",
+   "ブラウザを自律操作してWebタスクを代行するエージェントである",
+   "GPT-3をベースにコード生成に特化して調整されたモデルで、GitHub Copilotの初期バージョンにも採用され、後にクラウド上でソフトウェア開発タスクを代行するエージェントとしても展開された",
+   "BERTをベースに、コードの穴埋め問題に特化したモデルである"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "CodexはGPT-3をベースにコード生成に特化して調整されたモデルで、GitHub Copilotの初期バージョンの基盤としても採用された。後年、クラウド上でソフトウェア開発タスクを代行するエージェントの名称としても展開されている。",
+  "wrongChoiceExplanations": {
+   "0": "これはSoraの説明である。",
+   "1": "これはOperatorの説明である。",
+   "3": "CodexはBERTではなくGPT系（デコーダのみの自己回帰モデル）をベースにしている。"
+  },
+  "domain": "genAI",
+  "service": "Codex",
+  "difficulty": 3,
+  "tags": [
+   "Codex",
+   "OpenAI",
+   "コード生成"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-232",
+  "question": "主要な生成AIサービスとその開発元の組み合わせとして、誤っているものはどれか。",
+  "choices": [
+   "ChatGPT － OpenAI",
+   "Gemini － Google",
+   "Claude － Anthropic",
+   "Copilot － Google"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "Copilotの主な開発元はGoogleではなくMicrosoftである（GitHub CopilotおよびMicrosoft Copilot）。よって「Copilot－Google」という組み合わせは誤り。",
+  "wrongChoiceExplanations": {
+   "0": "ChatGPTの開発元はOpenAIであり、この組み合わせは正しい。",
+   "1": "Geminiの開発元はGoogle（Google DeepMind）であり、この組み合わせは正しい。",
+   "2": "Claudeの開発元はAnthropicであり、この組み合わせは正しい。"
+  },
+  "domain": "genAI",
+  "service": "生成AI開発元",
+  "difficulty": 1,
+  "tags": [
+   "ChatGPT",
+   "Gemini",
+   "Claude",
+   "Copilot",
+   "開発元"
+  ],
+  "beginnerNote": null
+ },
+ {
+  "id": "q-gen-233",
+  "question": "2024年2月にOpenAIが発表した「Sora」に関する説明として、最も適切なものはどれか。",
+  "choices": [
+   "テキストプロンプトから、最大1分程度の高精細でリアルな動画を生成できるモデルである",
+   "ブラウザを自律的に操作するエージェントである",
+   "カスタムGPTを作成するための機能である",
+   "コード生成に特化したモデルである"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "Soraは2024年2月にOpenAIが発表したテキストから動画を生成するモデルで、テキストプロンプトをもとに最大1分程度の高精細でリアルな動画を生成できる。",
+  "wrongChoiceExplanations": {
+   "1": "これはOperatorの説明である。",
+   "2": "これはGPTsの説明である。",
+   "3": "これはCodexの説明である。"
+  },
+  "domain": "genAI",
+  "service": "Sora",
+  "difficulty": 2,
+  "tags": [
+   "Sora",
+   "動画生成",
+   "OpenAI"
+  ],
+  "beginnerNote": null
+ }
+]

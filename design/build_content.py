@@ -633,14 +633,32 @@ if _errs:
 
 questions = balance_positions(questions)
 dump("questions.json", questions)
+
+# 追加用語カードをマージ（design/terms_extra*.json）。id・term重複は除外。
+for tf in sorted(glob.glob(os.path.join(DESIGN, "terms_extra*.json"))):
+    extra = json.load(open(tf, encoding="utf-8"))
+    sid = {t["id"] for t in terms}; strm = {t["term"] for t in terms}; added = 0
+    for t in extra:
+        if t["id"] in sid or t["term"] in strm: continue
+        terms.append(t); sid.add(t["id"]); strm.add(t["term"]); added += 1
+    print(f"merged {os.path.basename(tf)}: +{added} terms")
 dump("terms.json", terms)
 dump("lessons.json", lessons)
 dump("services.json", services)
 
-# 用語集（glossary）は当面空にする（loadOptionalなので空でも安全）
+# 用語集（glossary/ツールチップ）：design/glossary_source*.json から生成。
+# 長い語を優先マッチできるよう term.count 降順で保持（GlossaryTextの仕様）。
+gsrc = []
+for gf in sorted(glob.glob(os.path.join(DESIGN, "glossary_source*.json"))):
+    gsrc += json.load(open(gf, encoding="utf-8"))
+seen = set(); gout = []
+for g in gsrc:
+    if g["term"] in seen: continue
+    seen.add(g["term"]); gout.append({"term": g["term"], "explanation": g["explanation"]})
+gout.sort(key=lambda x: len(x["term"]), reverse=True)
 with open(os.path.join(BASE, "glossary.json"), "w", encoding="utf-8") as f:
-    json.dump([], f, ensure_ascii=False)
-print("glossary.json: cleared")
+    json.dump(gout, f, ensure_ascii=False, indent=1)
+print(f"glossary.json: {len(gout)} entries")
 
 # ざっくり分野別問題数
 from collections import Counter
