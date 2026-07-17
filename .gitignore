@@ -8,3 +8,6 @@ xcuserdata/
 .DS_Store
 
 # XcodeGen が生成するため .xcodeproj はコミットしない
+
+# build_content.py が生成する作業用ダンプ（fix_choices を作る際の参照元）
+design/_source_questions.json

@@ -625,6 +625,30 @@ def validate(qs):
         if q.get("difficulty") not in (1, 2, 3): errs.append(f"{i} difficulty={q.get('difficulty')}")
     return errs
 
+# --- 選択肢の書き換えパッチ（design/fix_choices*.json）---
+# 「正解だけ文章が長い＝消去法で当てられる」癖を是正するため、選択肢の文言だけを差し替える。
+# 形式：[{"id": "q-xx-001", "choices": [4つ]}]。順序は元データのまま（＝correctAnswers・
+# wrongChoiceExplanations のindexは不変）。この後の balance_positions で位置は均等化される。
+_fixed = 0
+for ff in sorted(glob.glob(os.path.join(DESIGN, "fix_choices*.json"))):
+    fixes = {f["id"]: f["choices"] for f in json.load(open(ff, encoding="utf-8"))}
+    for q in questions:
+        new = fixes.pop(q["id"], None)
+        if new is None:
+            continue
+        if len(new) != len(q["choices"]):
+            raise SystemExit(f"fix適用エラー {q['id']}: 選択肢数が {len(q['choices'])} → {len(new)}")
+        q["choices"] = new
+        _fixed += 1
+    if fixes:
+        raise SystemExit(f"fix適用エラー: 存在しないid {sorted(fixes)[:5]}")
+if _fixed:
+    print(f"選択肢パッチ適用: {_fixed}問")
+
+# 作業用：シャッフル前（元データ順）の問題を書き出す。fix_choices を作る際の参照元。
+with open(os.path.join(DESIGN, "_source_questions.json"), "w", encoding="utf-8") as f:
+    json.dump(questions, f, ensure_ascii=False, indent=1)
+
 _errs = validate(questions)
 if _errs:
     print("=== 検証エラー（未修正）===")
