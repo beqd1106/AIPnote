@@ -34,7 +34,9 @@ final class ContentRepository {
         var kwByDomain: [ExamDomain: [(lesson: Lesson, keywords: Set<String>)]] = [:]
         for lesson in lessons {
             var kw = Set<String>()
-            for qid in lesson.quizIds {
+            // 確認問題（10問）だけでなくランダム問題も対象にする。確認問題を絞った分、
+            // ここを狭めると「問題→解説レッスン」のリンクとキーワードが痩せてしまうため。
+            for qid in lesson.quizIds + (lesson.drillQuizIds ?? []) {
                 qToLesson[qid] = lesson
                 if let q = byId[qid] {
                     kw.insert(Self.normKeyword(q.service))
@@ -58,7 +60,7 @@ final class ContentRepository {
     func question(id: String) -> QuizQuestion? { questionsById[id] }
 
     /// 指定した問題に最も関連する解説レッスンを返す（問題→レッスンの相互リンク用）。
-    /// ①その問題を確認問題に含むレッスン → ②同分野でタグ/サービスが最も重なるレッスン → ③同分野の先頭。
+    /// ①その問題を確認問題・ランダム問題に含むレッスン → ②同分野でタグ/サービスが最も重なるレッスン → ③同分野の先頭。
     func lesson(forQuestion q: QuizQuestion) -> Lesson? {
         if let l = lessonByQuestionId[q.id] { return l }
         let candidates = lessonKeywordsByDomain[q.domain] ?? []

@@ -627,6 +627,43 @@ SUBLESSONS = [
      {"heading":"生成AIの不得意","body":"正確な文字数の指定、複雑で厳密な計算、学習時点より後の最新情報、芸術作品の主観的な批評などは苦手です。重要な文書は出力をそのまま使わず、必ず人間が事実確認と最終判断を行うことが前提です。"}]),
 ]
 
+CHECK_QUIZ_SIZE = 10  # 1レッスンの「確認問題」の問題数
+
+def pick_check_quiz(ids, qmap, size=CHECK_QUIZ_SIZE):
+    """レッスンに紐づく本問から、確認問題として出す size 問を選ぶ。
+    小テーマ(service)ごとにまとめてラウンドロビンで拾うことで論点の偏りを防ぎ、
+    各テーマ内はやさしい問題から採る。返り値は (確認問題, あふれ)。
+    乱数を使わず決定的に選ぶ（再実行しても同じ結果になる）。"""
+    groups = {}
+    for qid in ids:
+        groups.setdefault(qmap[qid]["service"], []).append(qid)
+    for k in groups:
+        groups[k].sort(key=lambda i: (qmap[i]["difficulty"], i))
+    order, row = [], 0
+    while True:
+        added = False
+        for lst in groups.values():
+            if row < len(lst):
+                order.append(lst[row]); added = True
+        if not added:
+            break
+        row += 1
+    # 同じ論点が確認問題に二重で入らないよう、代表タグが重複する候補は後回しにする
+    check, deferred, seen = [], [], set()
+    for qid in order:
+        tags = qmap[qid].get("tags") or []
+        key = tags[0] if tags else qmap[qid]["service"]
+        if len(check) < size and key not in seen:
+            check.append(qid); seen.add(key)
+        else:
+            deferred.append(qid)
+    # 論点がsize種類に満たなければ、後回しにした候補から順に補う
+    while len(check) < size and deferred:
+        check.append(deferred.pop(0))
+    # 確認問題はやさしい順に並べ、学習直後でも取り組みやすくする
+    check.sort(key=lambda i: (qmap[i]["difficulty"], i))
+    return check, deferred
+
 def build_lessons_aip(all_qs):
     """service へのキーワード最長一致で本問・ドリルをサブレッスンへ割当てる。
     最長一致にすることで GPT-4o(→l-gen6) と単独GPT(→l-gen5) を正しく分ける。
@@ -657,16 +694,29 @@ def build_lessons_aip(all_qs):
         key = "_drill" if "ドリル" in q.get("tags", []) else "_quiz"
         sl[key].append(q["id"])
 
+    # --- 確認問題は CHECK_QUIZ_SIZE 問に絞り、あふれた本問はランダム問題へ回す ---
+    # レッスン直後の確認問題が数十問あると重すぎるため。除外ではなく移動なので、
+    # あふれた本問は「ランダム問題」で出題され、模試プール（tag「ドリル」以外）にも残る。
+    qmap = {q["id"]: q for q in all_qs}
+    total_check = total_rand = 0
+    for sl in SUBLESSONS:
+        check, rest = pick_check_quiz(sl["_quiz"], qmap)
+        sl["_check"] = check
+        sl["_rand"] = rest + sl["_drill"]   # あふれた本問＋反復ドリル
+        total_check += len(check); total_rand += len(sl["_rand"])
+
     lessons = []
     for sl in SUBLESSONS:
         lessons.append({
             "id":sl["id"],"title":sl["title"],"domain":sl["domain"],
             "estimatedMinutes":sl["minutes"],"summary":sl["summary"],
-            "sections":sl["sections"],"quizIds":sl["_quiz"],
+            "sections":sl["sections"],"quizIds":sl["_check"],
             "challengeQuizIds":None,
-            "drillQuizIds":sl["_drill"] if sl["_drill"] else None,
+            "drillQuizIds":sl["_rand"] if sl["_rand"] else None,
         })
+    sizes = sorted(len(l["quizIds"]) for l in lessons)
     print(f"レッスン: {len(lessons)}本／フォールバック割当 {fallback}件")
+    print(f"  確認問題 計{total_check}問（1レッスン {sizes[0]}〜{sizes[-1]}問）／ランダム問題 計{total_rand}問")
     return lessons
 
 lessons = []  # 実体は questions 確定後に build_lessons_aip で生成（下部）

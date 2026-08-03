@@ -164,7 +164,7 @@ struct LessonDetailView: View {
                         }
                     }
 
-                    // 反復ドリル（5パターン）
+                    // ランダム問題（確認問題からあふれた本問＋反復ドリル）
                     if !drillIds.isEmpty { drillCard }
 
                     // 中級チャレンジ（腕試し）
@@ -190,7 +190,7 @@ struct LessonDetailView: View {
                            showLessonLink: false)
         }
         .navigationDestination(isPresented: $showDrill) {
-            QuizPlayerView(title: "反復ドリル・\(lesson.title)",
+            QuizPlayerView(title: "ランダム問題・\(lesson.title)",
                            questions: drillQuestions,
                            showLessonLink: false)
         }
@@ -203,20 +203,20 @@ struct LessonDetailView: View {
         showDrill = true
     }
 
-    // 反復ドリル（同じ知識を5パターンで問い、定着させる）
+    // ランダム問題（確認問題に入りきらなかった本問＋反復ドリルをまとめて毎回シャッフル出題）
     private var drillCard: some View {
         Card {
             VStack(alignment: .leading, spacing: Theme.Space.s) {
                 HStack(spacing: 6) {
                     Image(systemName: "arrow.triangle.2.circlepath").foregroundStyle(Theme.teal)
-                    Text("反復ドリル").font(.system(size: 16, weight: .bold)).foregroundStyle(Theme.navy)
-                    Text("5パターン")
+                    Text("ランダム問題").font(.system(size: 16, weight: .bold)).foregroundStyle(Theme.navy)
+                    Text("繰り返し")
                         .font(.system(size: 10, weight: .bold)).foregroundStyle(Theme.teal)
                         .padding(.horizontal, 6).padding(.vertical, 2)
                         .background(Theme.teal.opacity(0.12)).clipShape(Capsule())
                     Spacer()
                 }
-                Text("同じ内容を5つの角度（用途・説明・シナリオ・穴埋め・誤り探し）で出題。毎回ランダムに\(drillSessionSize)問出るので、繰り返すほど定着します。")
+                Text("このレッスンの範囲から毎回ランダムに\(drillSessionSize)問出題します。確認問題より幅広い論点を、用途・説明・シナリオ・穴埋め・誤り探しなど多様な角度で問うので、繰り返すほど定着します。")
                     .font(.system(size: 13)).foregroundStyle(Theme.inkSoft)
                     .fixedSize(horizontal: false, vertical: true)
                 Button {

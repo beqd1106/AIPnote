@@ -49,7 +49,7 @@ struct MockExamStartView: View {
                 infoRow("doc.text.fill", "出題数", "\(fullCount)問（公式配点に近い比率）")
                 infoRow("timer", "制限時間", "\(minutes(for: fullCount))分")
                 infoRow("chart.pie.fill", "結果", "分野別スコアと弱点を表示")
-                Text("反復ドリルは除外し、本番に近い難易度で出題します。※本番は60問・60分・四肢択一（IBT）。合格ラインは非公表（正答率の目安は約70%）。最新はGUGA公式でご確認ください。")
+                Text("基礎固め用のドリル問題は除外し、本番に近い難易度で出題します。※本番は60問・60分・四肢択一（IBT）。合格ラインは非公表（正答率の目安は約70%）。最新はGUGA公式でご確認ください。")
                     .font(.system(size: 12)).foregroundStyle(Theme.inkSoft)
                 PrimaryButton(title: "本番模試を始める", icon: "play.fill") {
                     run = MockRunConfig(title: "模擬試験",
@@ -437,7 +437,7 @@ struct MockExamResultView: View {
             if result.correctRate >= 0.7 {
                 return ["この分野は good です。他の分野のミニ模試や本番模試に挑戦しましょう。"]
             }
-            return ["この分野は反復ドリルと中級チャレンジで固め直すのがおすすめです。"]
+            return ["この分野はレッスンの確認問題とランダム問題で固め直すのがおすすめです。"]
         }
     }
 }
