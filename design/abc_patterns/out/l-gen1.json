@@ -1,0 +1,422 @@
+[
+ {
+  "id": "b-gen1-01",
+  "question": "与えられたデータがどのクラスに当たるかを当てることを主な役割とするモデルはどれか。",
+  "choices": [
+   "生成モデル",
+   "回帰モデル",
+   "識別モデル",
+   "言語モデル"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "結論は識別モデルです。入力されたデータが、たとえば猫か犬かといったどのクラスに属するかを判定する役割を持ちます。新しい文章や画像を作り出す生成モデルとは目的が異なり、生成AIは後者の側に位置づけられます。",
+  "wrongChoiceExplanations": {
+   "0": "生成モデルは、学習データをもとに新しいコンテンツを作り出すモデルです。",
+   "1": "回帰モデルは、売上など連続した数値を予測するためのモデルです。",
+   "3": "言語モデルは、文章中の語のつながりを扱うモデルで、クラス当てが主目的ではありません。"
+  },
+  "domain": "genAI",
+  "service": "生成AIの基礎",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "生成AIの基礎"
+  ],
+  "beginnerNote": "「作る」のではなく「どれに当たるか判定する」側の役割に注目しましょう。",
+  "basis": "レッスン本文『与えられたデータがどのクラスかを当てる識別モデルとは区別されます』"
+ },
+ {
+  "id": "b-gen1-02",
+  "question": "生成AIが新しいコンテンツを作るとき、そのもとになるものはどれか。",
+  "choices": [
+   "過去に学習した大量のデータ",
+   "利用者ごとの契約料金プラン",
+   "通信回線ごとの速度の記録",
+   "端末ごとの画面サイズ情報"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "結論は、過去に学習した大量のデータです。生成AIは学習データから文章や画像の特徴・パターンを身につけ、その知識で新しい出力を生み出します。料金や端末、回線などの利用環境の情報は、コンテンツを生み出す材料にはなりません。",
+  "wrongChoiceExplanations": {
+   "1": "契約料金プランは利用条件に関する情報で、生成の材料ではありません。",
+   "2": "通信速度の記録は、生成結果の内容を決める情報ではありません。",
+   "3": "画面サイズは表示の都合に関わる情報で、生成の材料ではありません。"
+  },
+  "domain": "genAI",
+  "service": "生成AIの基礎",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "生成AIの基礎"
+  ],
+  "beginnerNote": "生成AIは何を『勉強して』から新しいものを作るのかを思い出しましょう。",
+  "basis": "レッスン本文『学習データをもとに文章・画像・音声・動画など新しいコンテンツを生み出す』"
+ },
+ {
+  "id": "b-gen1-03",
+  "question": "モデルのパラメータ数の規模が、一般に影響を与えるものはどれか。",
+  "choices": [
+   "アプリ画面の色合い",
+   "利用者ごとの契約形態",
+   "開発元企業の所在地",
+   "生成結果の質や性能"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "結論は、生成結果の質や性能です。パラメータはモデルの振る舞いを決める無数の数値で、一般に規模が大きいほど複雑な表現を学べます。ただし処理速度の向上を保証するものではなく、画面の色や企業情報とは無関係です。",
+  "wrongChoiceExplanations": {
+   "0": "画面の色合いはUIデザインの話で、パラメータ数とは関係がありません。",
+   "1": "契約形態は料金や利用条件の話で、パラメータ数とは関係がありません。",
+   "2": "企業の所在地はモデルの性能を決める要素ではありません。"
+  },
+  "domain": "genAI",
+  "service": "パラメータ",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "パラメータ"
+  ],
+  "beginnerNote": "数値の数が増えると、モデルのどんな力が変わるのかを考えてみましょう。",
+  "basis": "レッスン本文『その規模が性能に影響します』"
+ },
+ {
+  "id": "b-gen1-04",
+  "question": "対話型の生成AIサービス「ChatGPT」を提供している企業はどれか。",
+  "choices": [
+   "Google",
+   "OpenAI",
+   "Microsoft",
+   "Anthropic"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "結論はOpenAIです。ChatGPTはOpenAIが提供する対話型の生成AIサービスです。GeminiはGoogle、ClaudeはAnthropic、CopilotはMicrosoftが提供しており、サービス名と開発元の対応は頻出なので混同しないようにします。",
+  "wrongChoiceExplanations": {
+   "0": "Googleは、生成AIサービス「Gemini」を提供する企業です。",
+   "2": "Microsoftは、業務製品と連携する「Copilot」を提供する企業です。",
+   "3": "Anthropicは、生成AIサービス「Claude」を提供する企業です。"
+  },
+  "domain": "genAI",
+  "service": "生成AI開発元",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "生成AI開発元"
+  ],
+  "beginnerNote": "『GPT』という名前を生み出した会社はどこかを思い出しましょう。",
+  "basis": "レッスン本文『ChatGPTはOpenAI』"
+ },
+ {
+  "id": "b-gen1-05",
+  "question": "生成AIサービス「Claude」を提供している企業はどれか。",
+  "choices": [
+   "OpenAI",
+   "Google",
+   "Anthropic",
+   "Microsoft"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "結論はAnthropicです。ClaudeはAnthropicが開発・提供する生成AIサービスです。ChatGPTはOpenAI、GeminiはGoogle、CopilotはMicrosoftと、サービスごとに提供元が異なるため、組み合わせで整理して覚えます。",
+  "wrongChoiceExplanations": {
+   "0": "OpenAIは、ChatGPTを提供する企業です。",
+   "1": "Googleは、Geminiを提供する企業です。",
+   "3": "Microsoftは、Copilotを提供する企業です。"
+  },
+  "domain": "genAI",
+  "service": "その他の主要生成AI",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "その他の主要生成AI"
+  ],
+  "beginnerNote": "他の3社は別のサービス名と結びつけて覚えているはずです。残る1社を考えましょう。",
+  "basis": "レッスン本文『ClaudeはAnthropic』"
+ },
+ {
+  "id": "b-gen1-06",
+  "question": "生成AIサービス「Gemini」を提供している企業はどれか。",
+  "choices": [
+   "Google",
+   "Anthropic",
+   "OpenAI",
+   "Microsoft"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "結論はGoogleです。GeminiはGoogleが提供する生成AIで、文章に加えて画像や音声なども扱えます。ChatGPTはOpenAI、ClaudeはAnthropic、CopilotはMicrosoftが提供しており、サービス名ごとに開発元が異なる点を区別します。",
+  "wrongChoiceExplanations": {
+   "1": "Anthropicは、Claudeを提供する企業です。",
+   "2": "OpenAIは、ChatGPTを提供する企業です。",
+   "3": "Microsoftは、Copilotを提供する企業です。"
+  },
+  "domain": "genAI",
+  "service": "生成AI開発元",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "生成AI開発元"
+  ],
+  "beginnerNote": "検索サービスで知られる大手IT企業の名前を思い浮かべましょう。",
+  "basis": "レッスン本文『GeminiはGoogle』"
+ },
+ {
+  "id": "b-gen1-07",
+  "question": "業務で使えるAIアシスタント「Copilot」を提供している企業はどれか。",
+  "choices": [
+   "Google",
+   "Anthropic",
+   "OpenAI",
+   "Microsoft"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "結論はMicrosoftです。CopilotはMicrosoftが提供するAIアシスタントで、同社の業務製品と連携して使えます。基盤にはOpenAIのモデルとの連携が活用されていますが、サービスの提供元はOpenAIではない点に注意します。",
+  "wrongChoiceExplanations": {
+   "0": "Googleは、Geminiを提供する企業です。",
+   "1": "Anthropicは、Claudeを提供する企業です。",
+   "2": "OpenAIはChatGPTの提供元で、Copilotを提供する企業ではありません。"
+  },
+  "domain": "genAI",
+  "service": "その他の主要生成AI",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "その他の主要生成AI"
+  ],
+  "beginnerNote": "オフィス系ソフトやWindowsを手がける企業を考えましょう。",
+  "basis": "レッスン本文『CopilotはMicrosoftが提供します』"
+ },
+ {
+  "id": "b-gen1-08",
+  "question": "生成AIが新しく生み出すコンテンツの例として、適切な組み合わせはどれか。",
+  "choices": [
+   "気温・湿度・風速などの観測値",
+   "文章・画像・音声・動画",
+   "会計帳簿に記された確定金額",
+   "顧客の氏名・住所などの個人情報"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "結論は、文章・画像・音声・動画です。生成AIは学習データをもとに、こうした形式の新しいコンテンツを作り出します。観測値や確定した金額、個人情報は実在する記録であり、生成AIが新しく作り出す対象の例ではありません。",
+  "wrongChoiceExplanations": {
+   "0": "観測値は計測によって得られる実際の記録です。",
+   "2": "確定金額は会計上の事実を記録したもので、生成物ではありません。",
+   "3": "個人情報は実在する人の情報で、生成AIが作り出す対象ではありません。"
+  },
+  "domain": "genAI",
+  "service": "生成AIの基礎",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "生成AIの基礎"
+  ],
+  "beginnerNote": "『新しく作られる』ものはどんな形式のデータかを考えましょう。",
+  "basis": "レッスン本文『文章・画像・音声・動画など新しいコンテンツを生み出す』"
+ },
+ {
+  "id": "b-gen1-09",
+  "question": "Microsoftが提供するCopilotの基盤で、連携が活用されているモデルの提供元はどこか。",
+  "choices": [
+   "OpenAI",
+   "Google",
+   "Amazon",
+   "Apple"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "結論はOpenAIです。Copilotの基盤にはOpenAIのモデルとの連携が活用されています。Copilot自体はMicrosoftが提供するサービスで、モデルの提供元と、サービスを提供する企業を分けて整理しておくことが大切です。",
+  "wrongChoiceExplanations": {
+   "1": "Googleは、自社のGeminiを提供する企業で、Copilot基盤の連携先として本文では挙げられていません。",
+   "2": "Amazonは、本文でCopilotとの連携先として挙げられていません。",
+   "3": "Appleは、本文でCopilotとの連携先として挙げられていません。"
+  },
+  "domain": "genAI",
+  "service": "その他の主要生成AI",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "その他の主要生成AI"
+  ],
+  "beginnerNote": "ChatGPTを提供している企業との関係を思い出しましょう。",
+  "basis": "レッスン本文『Copilotの基盤にはOpenAIのモデルとの連携が活用されています』"
+ },
+ {
+  "id": "b-gen1-10",
+  "question": "モデルの振る舞いを決める、内部の無数の数値を何というか。",
+  "choices": [
+   "データセット",
+   "トークン",
+   "パラメータ",
+   "プロンプト"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "結論はパラメータです。学習を通じて調整されるモデル内部の数値で、入力に対してどう振る舞うかを決め、その規模が性能に影響します。データセットは学習に使うデータのまとまり、プロンプトは利用者が与える指示文であり、モデルの内部にある数値とは別物です。",
+  "wrongChoiceExplanations": {
+   "0": "データセットは、学習のために集めて整理した大量のデータのまとまりです。",
+   "1": "トークンは、文章をAIが処理するときの区切りの単位です。",
+   "3": "プロンプトは、利用者がAIに与える指示や質問の文章です。"
+  },
+  "domain": "genAI",
+  "service": "パラメータ",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "パラメータ"
+  ],
+  "beginnerNote": "学習の中で少しずつ調整され、モデルの中に蓄えられていくものです。",
+  "basis": "レッスン本文『モデルの振る舞いを決める無数の数値をパラメータと呼び、その規模が性能に影響します』"
+ },
+ {
+  "id": "b-gen1-11",
+  "question": "文章などの指示から動画を生成するAI「Sora」を提供している企業はどれか。",
+  "choices": [
+   "Google",
+   "Anthropic",
+   "Microsoft",
+   "OpenAI"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "結論はOpenAIです。SoraはOpenAIが提供する動画生成AIで、ChatGPTと同じ企業のサービスです。動画に限らず、生成AIは文章・画像・音声など幅広いコンテンツを扱え、サービスごとの提供元を区別して覚えることが大切です。",
+  "wrongChoiceExplanations": {
+   "0": "Googleは、Geminiなどを提供する企業です。",
+   "1": "Anthropicは、文章中心の生成AI「Claude」を提供する企業です。",
+   "2": "Microsoftは、業務製品と連携する「Copilot」を提供する企業です。"
+  },
+  "domain": "genAI",
+  "service": "生成AI開発元",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "生成AI開発元"
+  ],
+  "beginnerNote": "ChatGPTと同じ会社が手がけた、動画向けのサービスです。",
+  "basis": "シラバス『Sora』／既存問題『Sora：Google は誤り』"
+ },
+ {
+  "id": "b-gen1-12",
+  "question": "「GPT」の頭文字「G」は、何を表す英単語の頭文字か。",
+  "choices": [
+   "General",
+   "Generative",
+   "Global",
+   "Graphical"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "結論はGenerative（生成的）です。GPTはGenerative Pre-trained Transformerの略で、学習した内容をもとに新しいテキストを生み出すモデルであることを表します。General（汎用）と混同しやすいので、生成AIの名前の由来として覚えます。",
+  "wrongChoiceExplanations": {
+   "0": "General（汎用）は、GPTの略語には含まれません。",
+   "2": "Global（世界的な）は、GPTの略語には含まれません。",
+   "3": "Graphical（図形的な）は、GPTの略語には含まれません。"
+  },
+  "domain": "genAI",
+  "service": "GPT",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "GPT"
+  ],
+  "beginnerNote": "生成AIの『生成』にあたる英語を思い出しましょう。",
+  "basis": "既存問題『GPTはGenerative Pre-trained Transformerの略』"
+ },
+ {
+  "id": "b-gen1-13",
+  "question": "ChatGPTのようなAIの土台となる、人間の言葉を処理する技術分野はどれか。",
+  "choices": [
+   "自然言語処理",
+   "画像認識技術",
+   "音声合成技術",
+   "信号処理技術"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "結論は自然言語処理（NLP）です。日常的に使う言葉をコンピュータに処理させ、理解や生成を行わせる技術分野で、ChatGPTのような文章を扱うAIの土台になります。画像や音声、信号を扱う分野とは対象のデータが異なります。",
+  "wrongChoiceExplanations": {
+   "1": "画像認識技術は、画像に写るものを認識する技術分野です。",
+   "2": "音声合成技術は、文字から人間らしい音声を作る技術分野です。",
+   "3": "信号処理技術は、電気信号などの時系列データを加工する技術分野です。"
+  },
+  "domain": "genAI",
+  "service": "生成AIの基礎",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "生成AIの基礎"
+  ],
+  "beginnerNote": "対象が画像や音声ではなく、人が話し書く『ことば』である分野です。",
+  "basis": "シラバス『自然言語処理（NLP）』"
+ },
+ {
+  "id": "b-gen1-14",
+  "question": "モデルの学習のために収集・整理された大量のデータのまとまりを何というか。",
+  "choices": [
+   "パラメータ",
+   "アルゴリズム",
+   "データセット",
+   "プロンプト"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "結論はデータセットです。モデルの学習に使うために集めて整理した大量のデータのまとまりを指します。パラメータは学習で調整される内部の数値、プロンプトは利用者がAIに与える指示であり、学習用データの集まりとは別のものです。",
+  "wrongChoiceExplanations": {
+   "0": "パラメータは、学習を通じて調整されるモデル内部の数値です。",
+   "1": "アルゴリズムは、問題を解くための手順や計算方法のことです。",
+   "3": "プロンプトは、利用者がAIに与える指示や入力文のことです。"
+  },
+  "domain": "genAI",
+  "service": "生成AIの基礎",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "生成AIの基礎"
+  ],
+  "beginnerNote": "データそのものを『集めて整理した束』を指す言葉です。",
+  "basis": "シラバス『データセット』／レッスン本文『学習データ』"
+ },
+ {
+  "id": "b-gen1-15",
+  "question": "学習済みのモデルに入力を与えて、出力を得る段階を何というか。",
+  "choices": [
+   "学習",
+   "評価",
+   "収集",
+   "推論"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "結論は推論（生成）です。すでに学習を終えたモデルに質問などを入力し、答えを出力させる段階を指します。モデルを作るために大量のデータからパラメータを調整する段階は「学習」で、利用者が使うのは推論の段階です。",
+  "wrongChoiceExplanations": {
+   "0": "学習は、データからパラメータを調整してモデルを作る段階です。",
+   "1": "評価は、作ったモデルの性能を確かめる作業です。",
+   "2": "収集は、学習に使うデータを集める作業です。"
+  },
+  "domain": "genAI",
+  "service": "生成AIの基礎",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "生成AIの基礎"
+  ],
+  "beginnerNote": "利用者がチャットで質問して返答をもらうのは、どちらの段階でしょうか。",
+  "basis": "既存問題『学習はモデルを作る段階、生成は入力を与えて出力を得る段階』"
+ }
+]

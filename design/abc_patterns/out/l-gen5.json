@@ -1,0 +1,422 @@
+[
+ {
+  "id": "b-gen5-01",
+  "question": "GPTが用いているTransformerの構造はどれか。",
+  "choices": [
+   "Transformerのエンコーダ構造",
+   "Transformerのエンコーダとデコーダの両方",
+   "Transformerのデコーダ構造",
+   "RNNを何層も重ねた再帰型の構造"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "GPTはTransformerのデコーダ構造を使うモデルです。デコーダは直前までの単語列から次の単語を生成していく役割を持つため、文章生成に向いています。文脈理解に強いBERTがエンコーダ構造を使う点と対比して区別します。",
+  "wrongChoiceExplanations": {
+   "0": "エンコーダ構造を使うのはGPTではなくBERTです。",
+   "1": "エンコーダとデコーダの両方を使う構成は元のTransformer全体の形で、GPTはデコーダ側のみを使います。",
+   "3": "RNNはTransformer登場以前の手法で、GPTの構造ではありません。"
+  },
+  "domain": "genAI",
+  "service": "GPTとBERTの違い",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "GPTとBERTの違い"
+  ],
+  "beginnerNote": "GPTは「生成」に強いモデルです。生成する側の部品はエンコーダとデコーダのどちらかを考えてみましょう。",
+  "basis": "レッスン本文『GPTはTransformerのデコーダ構造を用いて文章生成に強み』"
+ },
+ {
+  "id": "b-gen5-02",
+  "question": "BERTが用いているTransformerの構造はどれか。",
+  "choices": [
+   "Transformerのエンコーダ構造",
+   "Transformerのデコーダ構造",
+   "画像処理向けの畳み込み構造",
+   "Transformerのエンコーダとデコーダの両方"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "BERTはTransformerのエンコーダ構造を使うモデルです。エンコーダは入力文全体を読み取って意味の表現を作る部品で、文脈の理解に向いています。文章の生成が得意なGPTがデコーダ構造を使う点と取り違えないようにします。",
+  "wrongChoiceExplanations": {
+   "1": "デコーダ構造を使うのは文章生成が得意なGPTです。",
+   "2": "畳み込み構造は主に画像処理で使われ、BERTは言語モデルでTransformerを使います。",
+   "3": "エンコーダとデコーダの両方を備えるのは元のTransformerの全体像で、BERTはエンコーダ側のみです。"
+  },
+  "domain": "genAI",
+  "service": "GPTとBERTの違い",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "GPTとBERTの違い"
+  ],
+  "beginnerNote": "BERTは「理解」に強いモデルです。入力を読み取って意味をつかむ側の部品を思い出しましょう。",
+  "basis": "レッスン本文『BERTはエンコーダ構造を用いて文脈理解に強みを持ちます』"
+ },
+ {
+  "id": "b-gen5-03",
+  "question": "BERTの名称にある「Bidirectional」が表す特徴はどれか。",
+  "choices": [
+   "文章を前から後ろへ一方向にだけ読む",
+   "画像と文章の両方を同時に扱える",
+   "文章を翻訳して別の言語に出力できる",
+   "文中の単語を前後両方の文脈から読み取る"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "Bidirectionalは「双方向」の意味で、BERTは文中の単語を前後両方の文脈から読み取って意味を捉えます。一方向に次の単語を予測していくGPTとの違いで、文脈理解に強いとされる理由のひとつです。",
+  "wrongChoiceExplanations": {
+   "0": "前から後ろへの一方向で読むのは、次の単語を順に予測するGPTの性質です。",
+   "1": "画像と文章を同時に扱う能力は、Bidirectionalの意味ではありません。",
+   "2": "翻訳は用途のひとつにすぎず、Bidirectionalは読み取りの向きを表します。"
+  },
+  "domain": "genAI",
+  "service": "GPTとBERTの違い",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "GPTとBERTの違い"
+  ],
+  "beginnerNote": "Bidirectionalは「どの向きに文脈を見るか」を示す語です。bi-は2つを表す接頭辞です。",
+  "basis": "シラバス『BERT（Bidirectional Encoder Representations from Transformers）』"
+ },
+ {
+  "id": "b-gen5-04",
+  "question": "文章の続きを書く、文章を新しく生成する、といった用途に向くモデルはどれか。",
+  "choices": [
+   "BERT",
+   "GPT",
+   "RoBERTa",
+   "ALBERT"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "文章の生成に強いのはGPTです。Transformerのデコーダ構造で、直前までの文脈から次の単語を予測し続けることで、自然な文章を作り出せます。BERT系のモデルは文脈理解を得意とする点で区別します。",
+  "wrongChoiceExplanations": {
+   "0": "BERTはエンコーダ構造で、生成よりも文脈の理解を得意とします。",
+   "2": "RoBERTaはBERTの改良版で、理解寄りの性格はBERTと同じです。",
+   "3": "ALBERTもBERTの改良版で、パラメータ数を抑えた理解寄りのモデルです。"
+  },
+  "domain": "genAI",
+  "service": "GPTとBERTの違い",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "GPTとBERTの違い"
+  ],
+  "beginnerNote": "「Generative」という語に注目すると、生成を得意とするのはどのモデルか分かります。",
+  "basis": "レッスン本文『GPTは…文章生成に強みを持ち』"
+ },
+ {
+  "id": "b-gen5-05",
+  "question": "文章の分類や、文の意味をつかむ文脈理解が得意なモデルはどれか。",
+  "choices": [
+   "GPTシリーズ全般",
+   "InstructGPT",
+   "BERT",
+   "画像生成用の拡散モデル"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "文脈理解に強いのはBERTです。エンコーダ構造で文全体を双方向から読み取るため、文章の分類や検索意図の理解といったタスクに向いています。文章生成が得意なGPTとは、デコーダとエンコーダという構造の違いにより得意分野が分かれます。",
+  "wrongChoiceExplanations": {
+   "0": "GPTは生成が得意で、文脈理解よりも文章を作る用途に強みがあります。",
+   "1": "InstructGPTはGPTを人間の指示に沿うよう調整したモデルで、理解用途の代表ではありません。",
+   "3": "拡散モデルは主に画像生成に使われる手法で、文脈理解のモデルではありません。"
+  },
+  "domain": "genAI",
+  "service": "GPTとBERTの違い",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "GPTとBERTの違い"
+  ],
+  "beginnerNote": "読み取った結果を「分類」や「理解」に使いたい場面を想像し、エンコーダ構造のモデルを選びましょう。",
+  "basis": "レッスン本文『BERTはエンコーダ構造を用いて文脈理解に強みを持ちます』"
+ },
+ {
+  "id": "b-gen5-06",
+  "question": "文中の単語を隠して、その単語を予測させるBERTの事前学習はどれか。",
+  "choices": [
+   "MLM（マスク言語モデル）",
+   "NSP（次文予測）",
+   "RLHF（人間のフィードバックによる強化学習）",
+   "ファインチューニング（追加学習）"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "文中の単語を隠して予測させるのはMLM（マスク言語モデル）です。前後の文脈から隠れた単語を当てる練習をするので、BERTが双方向の文脈を学べます。2文のつながりを判定するNSPは、単語ではなく文を単位とする別のタスクです。",
+  "wrongChoiceExplanations": {
+   "1": "NSPは単語ではなく、2つの文が連続するかどうかを判定するタスクです。",
+   "2": "RLHFは人間の評価を使ってモデルの出力を調整する手法で、BERTの事前学習ではありません。",
+   "3": "ファインチューニングは事前学習の後に特定タスクで行う追加学習です。"
+  },
+  "domain": "genAI",
+  "service": "BERTの事前学習(MLM)",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "BERTの事前学習(MLM)"
+  ],
+  "beginnerNote": "一部を隠して当てさせる穴埋めのような練習です。隠される単位が単語か文かに注目しましょう。",
+  "basis": "レッスン本文『文中の単語を隠して予測させるMLM』"
+ },
+ {
+  "id": "b-gen5-07",
+  "question": "2つの文が連続しているかどうかを判定させる、BERTの事前学習はどれか。",
+  "choices": [
+   "RLHF（人間のフィードバックによる強化学習）",
+   "MLM（マスク言語モデル）",
+   "ファインチューニング（追加学習）",
+   "NSP（次文予測）"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "2つの文が連続するかを判定させるのはNSP（次文予測）です。文と文のつながりを学ぶことで、文章間の関係を理解する力を養います。単語を隠して当てるMLMと、単語を単位にするMLMと、文を単位にするNSPという違いで区別します。",
+  "wrongChoiceExplanations": {
+   "0": "RLHFは人間の評価で出力を調整する手法で、文の連続判定とは無関係です。",
+   "1": "MLMは文中の単語を隠して予測するタスクで、文同士の関係は問いません。",
+   "2": "ファインチューニングは特定タスクのデータを使った追加学習で、BERTの事前学習タスクではありません。"
+  },
+  "domain": "genAI",
+  "service": "BERTの事前学習(NSP)",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "BERTの事前学習(NSP)"
+  ],
+  "beginnerNote": "判定の対象は単語の穴埋めではなく、文と文の関係です。単位に注目しましょう。",
+  "basis": "レッスン本文『2文が連続するか判定するNSP（次文予測）』"
+ },
+ {
+  "id": "b-gen5-08",
+  "question": "RoBERTaやALBERTは、どのようなモデルとして位置づけられるか。",
+  "choices": [
+   "GPTを小型化したモデル",
+   "BERTの改良版",
+   "画像認識用のモデル",
+   "人間のフィードバックで調整したモデル"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "RoBERTaとALBERTはBERTを改良したモデルです。RoBERTaは学習方法を見直して性能を高め、ALBERTはパラメータ数を抑えるなど、いずれもBERTを土台にしています。GPT系列の派生ではありません。",
+  "wrongChoiceExplanations": {
+   "0": "GPTはデコーダ構造の別系統で、RoBERTaやALBERTはその小型版ではなくBERT系です。",
+   "2": "どちらも言語を扱うモデルで、画像認識専用ではありません。",
+   "3": "人間のフィードバックによる調整はRLHFの話で、これらの位置づけとは異なります。"
+  },
+  "domain": "genAI",
+  "service": "RoBERTa",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "RoBERTa"
+  ],
+  "beginnerNote": "どちらの名前にも「BERT」の文字が含まれています。ルーツになったモデルを考えましょう。",
+  "basis": "レッスン本文『RoBERTaやALBERTはBERTの改良版です』"
+ },
+ {
+  "id": "b-gen5-09",
+  "question": "ファインチューニングの前に、大量のテキストで広く言語の知識を学ばせる段階はどれか。",
+  "choices": [
+   "事前学習",
+   "アライメント",
+   "プロンプト入力",
+   "推論（出力の生成）"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "大量のデータで汎用的な言語知識を身につけさせる段階が事前学習です。そのうえで特定タスクのデータを使って追加学習するのがファインチューニングで、事前学習の後に行います。GPTの「Pre-trained」も事前学習を指します。",
+  "wrongChoiceExplanations": {
+   "1": "アライメントは出力を人間の意図や価値観に沿わせる調整で、広く言語を学ぶ段階ではありません。",
+   "2": "プロンプト入力は利用者が指示を与える操作で、学習の段階ではありません。",
+   "3": "推論は学習済みモデルが回答を出す段階で、知識を学ぶ段階ではありません。"
+  },
+  "domain": "genAI",
+  "service": "ファインチューニング",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "ファインチューニング"
+  ],
+  "beginnerNote": "「Pre」は「前もって」の意味です。追加の学習より先に行う学習を考えましょう。",
+  "basis": "レッスン本文『汎用モデルに特定タスクのデータで追加学習』（その前段としての事前学習）"
+ },
+ {
+  "id": "b-gen5-10",
+  "question": "BERTを開発した企業はどれか。",
+  "choices": [
+   "OpenAI",
+   "Microsoft",
+   "Google",
+   "Anthropic"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "結論はGoogleです。BERTはGoogleが開発した、Transformerのエンコーダ構造による文脈理解に強いモデルです。文章生成が得意なGPTシリーズを開発したのはOpenAIで、似た時期に登場する別系統のモデルとして混同しやすいので、開発元ごとに整理しておきましょう。",
+  "wrongChoiceExplanations": {
+   "0": "OpenAIは、GPTシリーズやChatGPTの開発元です。",
+   "1": "Microsoftは、業務向けAIアシスタントCopilotの提供元です。",
+   "3": "Anthropicは、生成AIサービスClaudeの開発元です。"
+  },
+  "domain": "genAI",
+  "service": "GPTとBERTの違い",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "GPTとBERTの違い"
+  ],
+  "beginnerNote": "「Bidirectional」を名前に持つこのモデルは、検索サービスで広く知られる会社が作りました。",
+  "basis": "シラバス『BERTモデル』と既存問題『Googleが開発したBERTの特徴』"
+ },
+ {
+  "id": "b-gen5-11",
+  "question": "RLHFは、何の略称か。",
+  "choices": [
+   "Reinforcement Learning from Human Feedback",
+   "Recurrent Language Model with High Frequency",
+   "Random Learning for Hidden Features",
+   "Reasoning Layer with Hybrid Fine-tuning"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "RLHFはReinforcement Learning from Human Feedbackの略で、人間のフィードバックによる強化学習のことです。人間が出力を評価し、その評価をもとにモデルを調整することで、人の好みや意図に近づけます。",
+  "wrongChoiceExplanations": {
+   "1": "Recurrent Language Model…という語句は存在せず、RLHFの正式名称ではありません。",
+   "2": "Random Learning…という語句は存在せず、RLHFの正式名称ではありません。",
+   "3": "Reasoning Layer…という語句は存在せず、RLHFの正式名称ではありません。"
+  },
+  "domain": "genAI",
+  "service": "RLHF",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "RLHF"
+  ],
+  "beginnerNote": "最後のHFは「Human Feedback」。人間の何を使って学習する手法かを手がかりにしましょう。",
+  "basis": "レッスン本文『人間のフィードバックによる強化学習（RLHF）』"
+ },
+ {
+  "id": "b-gen5-12",
+  "question": "RLHFで、人間が担う役割として最も適切なものはどれか。",
+  "choices": [
+   "学習用の全テキストを人手ですべて書き起こす",
+   "Transformerの層の数や幅を設計する",
+   "モデルの出力を評価して、改善の手がかりを与える",
+   "モデル内部の重みの値を人手で直接書き換える"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "RLHFでは人間がモデルの出力の良し悪しを評価し、その評価が報酬となって強化学習でモデルが調整されます。人間は出力を評価するフィードバック役であり、構造の設計や全データの作成を担うわけではありません。",
+  "wrongChoiceExplanations": {
+   "0": "大量のテキスト全部を人が書くのではなく、人は出力への評価を与えます。",
+   "1": "層の数などの構造設計は開発者が行う工程で、RLHFにおける人間の役割ではありません。",
+   "3": "重みは強化学習によって自動的に更新され、人間が直接書き換えるのではありません。"
+  },
+  "domain": "genAI",
+  "service": "RLHF",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "RLHF"
+  ],
+  "beginnerNote": "Feedbackは「評価・反応」の意味です。人間が何に対してフィードバックするのかを考えましょう。",
+  "basis": "レッスン本文『人間のフィードバックによる強化学習（RLHF）などでモデルの出力を…』"
+ },
+ {
+  "id": "b-gen5-13",
+  "question": "事前学習済みモデルを土台にファインチューニングする利点はどれか。",
+  "choices": [
+   "追加データが一切不要で、すぐ目的に合わせられる",
+   "少ない追加データで目的の用途に適応しやすくなる",
+   "パラメータ数が自動的に増えて高性能になる",
+   "人間の評価を使わず有害な出力を完全に防げる"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "結論は、少ない追加データで目的に適応できることです。事前学習で広い言語知識を得たモデルに特定タスクのデータを足すため、一から学習するより時間と費用を抑えられます。出力を人間の価値観に沿わせるアライメントとは別の話です。",
+  "wrongChoiceExplanations": {
+   "0": "追加データは少なくて済みますが、特定タスクのデータでの追加学習そのものは必要です。",
+   "2": "パラメータ数はモデルの設計で決まり、追加学習で自動的に増えるものではありません。",
+   "3": "有害な出力を抑えるのはアライメントの狙いで、ファインチューニングで完全に防げるわけではありません。"
+  },
+  "domain": "genAI",
+  "service": "ファインチューニング",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "ファインチューニング"
+  ],
+  "beginnerNote": "すでに広く学んだモデルを使う場合と、ゼロから作る場合の手間を比べてみましょう。",
+  "basis": "レッスン本文『汎用モデルに特定タスクのデータで追加学習し性能を最適化するのがファインチューニング』"
+ },
+ {
+  "id": "b-gen5-14",
+  "question": "アライメントの手法としてRLHFが用いられたことで知られるモデルはどれか。",
+  "choices": [
+   "BERT",
+   "RoBERTa",
+   "ALBERT",
+   "InstructGPT"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "RLHFによるアライメントを用いたことで知られるのはInstructGPTです。GPTを人間の指示や意図に沿って応答するよう調整したモデルで、後の対話型AIの土台のひとつになりました。BERT系は理解用途のモデルで、この文脈には登場しません。",
+  "wrongChoiceExplanations": {
+   "0": "BERTはエンコーダ構造の理解用モデルで、RLHFによる調整で知られるモデルではありません。",
+   "1": "RoBERTaはBERTの学習方法を見直した改良版で、RLHFとは関係しません。",
+   "2": "ALBERTはパラメータ共有などで軽量化したBERT系で、RLHFとは関係しません。"
+  },
+  "domain": "genAI",
+  "service": "InstructGPTとアライメント",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "InstructGPTとアライメント"
+  ],
+  "beginnerNote": "名前に「Instruct（指示）」が入るモデルです。GPT系のどれが人間の指示に沿うよう調整されたかを考えましょう。",
+  "basis": "レッスン本文『アライメント…InstructGPTで用いられました』"
+ },
+ {
+  "id": "b-gen5-15",
+  "question": "ファインチューニングとアライメントの違いとして、正しいものはどれか。",
+  "choices": [
+   "どちらも文中の単語を隠して予測する学習である",
+   "ファインチューニングは人間への評価、アライメントは構造の変更を指す",
+   "ファインチューニングは用語、アライメントは別のモデル名である",
+   "前者は特定タスクの性能向上、後者は出力を人間の意図に沿わせることが主目的"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "ファインチューニングは特定タスクのデータで追加学習して性能を高めることが主目的で、アライメントはRLHFなどでモデルの出力を人間の意図や価値観に沿わせることが主目的です。目的が異なる別の概念として区別します。",
+  "wrongChoiceExplanations": {
+   "0": "単語を隠して予測するのはMLMで、どちらの説明にもなっていません。",
+   "1": "人間の評価を使うのはRLHFで、どちらも構造変更を指す言葉ではありません。",
+   "2": "どちらも学習や調整に関する用語であり、アライメントはモデル名ではありません。"
+  },
+  "domain": "genAI",
+  "service": "アライメント",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "アライメント"
+  ],
+  "beginnerNote": "一方は「何のために性能を上げるか」、もう一方は「何に沿わせるか」という目的の違いで整理しましょう。",
+  "basis": "レッスン本文『特定タスクのデータで追加学習し性能を最適化』『出力を人間の意図や価値観に沿わせる』"
+ }
+]

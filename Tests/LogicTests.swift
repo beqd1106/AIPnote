@@ -12,10 +12,91 @@ final class LogicTests: XCTestCase {
     }
 
     func testSpacedRepetitionResetsOnWrong() {
-        let r = SpacedRepetition.next(currentLevel: 3, correct: false)
+        let now = Date()
+        let r = SpacedRepetition.next(currentLevel: 3, correct: false, now: now)
         XCTAssertEqual(r.level, 0)               // 間違えたら段階0へ
-        let days = SpacedRepetition.interval(forLevel: 0)
-        XCTAssertEqual(days, 1)                   // 翌日再出題
+        XCTAssertEqual(r.nextDate, now)          // その場で復習対象になる
+    }
+
+    /// 間違えた問題はその日のうちに復習リストへ出てくる（翌日まで待たされない）
+    func testWrongAnswerBecomesDueImmediately() {
+        let now = Date()
+        let r = SpacedRepetition.next(currentLevel: 0, correct: false, now: now)
+        let item = ReviewItem(questionId: "q1", nextReviewDate: r.nextDate,
+                              reviewLevel: r.level, lastResultCorrect: false)
+        XCTAssertTrue(item.isDue, "間違えた問題はすぐ復習できる状態であるべき")
+    }
+
+    /// ヒントを使って正解した場合は段階を進めない（自力で解けたわけではないため）
+    func testHintedCorrectKeepsLevel() {
+        let plain = SpacedRepetition.next(currentLevel: 2, correct: true)
+        XCTAssertEqual(plain.level, 3)
+
+        let hinted = SpacedRepetition.next(currentLevel: 2, correct: true, usedHint: true)
+        XCTAssertEqual(hinted.level, 2, "ヒントつきの正解では段階を据え置く")
+    }
+
+    // MARK: - ヒント
+
+    private func makeQuestion(id: String = "q-hint",
+                              choices: [String] = ["選択肢A", "選択肢B", "選択肢C", "選択肢D"],
+                              correct: [Int] = [0],
+                              beginnerNote: String? = nil,
+                              service: String = "ストレージ") -> QuizQuestion {
+        QuizQuestion(id: id, question: "機械学習について正しいものはどれか。",
+                     choices: choices, correctAnswers: correct,
+                     explanation: "解説", wrongChoiceExplanations: [:],
+                     domain: .ml, service: service, difficulty: 2,
+                     tags: ["ストレージ"], beginnerNote: beginnerNote)
+    }
+
+    func testHintUsesBeginnerNoteWhenSafe() {
+        let q = makeQuestion(beginnerNote: "まずは保存する期間に注目しましょう。")
+        XCTAssertEqual(HintBuilder.focusHint(for: q), "まずは保存する期間に注目しましょう。")
+    }
+
+    /// 正解をそのまま書いている補足はヒントに使わない（答えが見えてしまうため）
+    func testHintDoesNotRevealAnswer() {
+        let q = makeQuestion(beginnerNote: "答えは選択肢Aです。")
+        let hint = HintBuilder.focusHint(for: q)
+        XCTAssertFalse(hint.contains("選択肢A"))
+        XCTAssertFalse(hint.isEmpty)
+    }
+
+    func testHintFallsBackToTheme() {
+        let q = makeQuestion(beginnerNote: nil)
+        XCTAssertTrue(HintBuilder.focusHint(for: q).contains("ストレージ"))
+    }
+
+    /// しぼり込みは正解を消さず、単一選択では2択まで減らす
+    func testEliminationKeepsCorrectAndLeavesTwoChoices() {
+        let q = makeQuestion()
+        let dropped = HintBuilder.eliminatedChoices(for: q)
+        XCTAssertFalse(dropped.contains(0), "正解を消してはいけない")
+        XCTAssertEqual(q.choices.count - dropped.count, 2, "単一選択は2択まで絞る")
+    }
+
+    /// 複数選択では正解をすべて残し、不正解の一部だけ消す
+    func testEliminationOnMultipleSelect() {
+        let q = makeQuestion(choices: ["A", "B", "C", "D", "E"], correct: [0, 1])
+        let dropped = HintBuilder.eliminatedChoices(for: q)
+        XCTAssertTrue(dropped.isDisjoint(with: [0, 1]))
+        XCTAssertFalse(dropped.isEmpty)
+        XCTAssertLessThan(dropped.count, 3)
+    }
+
+    /// 同じ問題なら何度開いても同じ選択肢が消える
+    func testEliminationIsDeterministic() {
+        let q = makeQuestion()
+        XCTAssertEqual(HintBuilder.eliminatedChoices(for: q),
+                       HintBuilder.eliminatedChoices(for: q))
+    }
+
+    /// 2択の問題では絞り込みを提示しない
+    func testEliminationUnavailableForTwoChoices() {
+        let q = makeQuestion(choices: ["はい", "いいえ"], correct: [0])
+        XCTAssertTrue(HintBuilder.eliminatedChoices(for: q).isEmpty)
+        XCTAssertFalse(HintBuilder.canEliminate(q))
     }
 
     func testSpacedRepetitionIntervalsAreIncreasing() {
@@ -79,5 +160,49 @@ final class LogicTests: XCTestCase {
         let week = PlanFactory.currentWeek(startedAt: start, plan: .standard8)
         XCTAssertLessThanOrEqual(week, 8)
         XCTAssertGreaterThanOrEqual(week, 1)
+    }
+
+    // MARK: - 学習カレンダー
+
+    func testStudyLevelThresholds() {
+        let day = Calendar.current.startOfDay(for: .now)
+        func level(_ q: Int, lessons: Int = 0) -> Int {
+            var r = DailyStudyRecord(day: day); r.questions = q; r.lessonsCompleted = lessons
+            return r.level
+        }
+        XCTAssertEqual(level(0), 0)
+        XCTAssertEqual(level(1), 1)
+        XCTAssertEqual(level(9), 1)
+        XCTAssertEqual(level(10), 2)
+        XCTAssertEqual(level(30), 3)
+        XCTAssertEqual(level(60), 4)
+        XCTAssertEqual(level(0, lessons: 2), 2)   // レッスン1つ＝5問分
+    }
+
+    func testEstimateMinutesIgnoresLongBreaks() {
+        let t0 = Date(timeIntervalSince1970: 0)
+        XCTAssertEqual(DailyStudyRecord.estimateMinutes([]), 0)
+        XCTAssertEqual(DailyStudyRecord.estimateMinutes([t0]), 1)
+        // 1分おきに5問 → 30秒 + 4分 ≒ 5分
+        let steady = (0..<5).map { t0.addingTimeInterval(Double($0) * 60) }
+        XCTAssertEqual(DailyStudyRecord.estimateMinutes(steady), 5)
+        // 2時間空いても休憩とみなし、空白は数えない
+        let withBreak = [t0, t0.addingTimeInterval(60), t0.addingTimeInterval(7200)]
+        XCTAssertEqual(DailyStudyRecord.estimateMinutes(withBreak), 2)
+    }
+
+    func testStudyRecordCSVFillsGapsAndHasHeader() throws {
+        let cal = Calendar.current
+        let today = cal.startOfDay(for: .now)
+        let twoDaysAgo = cal.date(byAdding: .day, value: -2, to: today)!
+        var r = DailyStudyRecord(day: twoDaysAgo); r.questions = 4; r.correct = 3
+        let url = try StudyRecordCSV.write(records: [twoDaysAgo: r])
+        let data = try Data(contentsOf: url)
+        XCTAssertEqual(Array(data.prefix(3)), [0xEF, 0xBB, 0xBF])   // Excel用のBOM（文字列に読むと自動で除かれる）
+        let text = String(decoding: data.dropFirst(3), as: UTF8.self)
+        let lines = text.components(separatedBy: "\r\n").filter { !$0.isEmpty }
+        XCTAssertTrue(lines[0].hasPrefix("日付,"))
+        XCTAssertEqual(lines.count, 4)               // 見出し＋3日分（学習しなかった日も入る）
+        XCTAssertTrue(lines[1].contains(",4,3,75,"))  // 4問中3問正解＝75%
     }
 }

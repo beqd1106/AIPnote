@@ -36,7 +36,7 @@ final class ContentRepository {
             var kw = Set<String>()
             // 確認問題（10問）だけでなくランダム問題も対象にする。確認問題を絞った分、
             // ここを狭めると「問題→解説レッスン」のリンクとキーワードが痩せてしまうため。
-            for qid in lesson.quizIds + (lesson.drillQuizIds ?? []) {
+            for qid in (lesson.basicQuizIds ?? []) + lesson.quizIds + (lesson.drillQuizIds ?? []) {
                 qToLesson[qid] = lesson
                 if let q = byId[qid] {
                     kw.insert(Self.normKeyword(q.service))
@@ -77,8 +77,9 @@ final class ContentRepository {
 
     /// 模試に使う代表的な問題プール。反復ドリル（基礎固め・変種が多い）は本番の難易度感から
     /// 外れるため除外し、基本問題・中級問題・オリジナル問題で本番に近い構成にする。
+    /// レッスン用のやさしい基礎問題も同じ理由で除外する。
     var examPool: [QuizQuestion] {
-        questions.filter { !$0.tags.contains("ドリル") }
+        questions.filter { !$0.tags.contains("ドリル") && !$0.tags.contains("基礎") }
     }
 
     func examPool(in domain: ExamDomain) -> [QuizQuestion] {

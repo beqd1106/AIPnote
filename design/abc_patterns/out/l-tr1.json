@@ -1,0 +1,422 @@
+[
+ {
+  "id": "b-tr1-01",
+  "question": "画像生成AIの代表的なサービスとして挙げられるのはどれですか。",
+  "choices": [
+   "Suno",
+   "Midjourney",
+   "ElevenLabs",
+   "Sora"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "Midjourneyは、文章による指示から画像を生成する代表的な画像生成AIサービスです。画像生成にはDALL·Eなども含まれます。Sunoは音楽、ElevenLabsは音声、Soraは動画と、種類ごとに代表サービスが分かれている点を区別しましょう。",
+  "wrongChoiceExplanations": {
+   "0": "Sunoは楽曲を生成する音楽生成AIサービスです。",
+   "2": "ElevenLabsは人の声のような音声を生成する音声生成AIサービスです。",
+   "3": "Soraは映像を生成する動画生成AIサービスです。"
+  },
+  "domain": "trends",
+  "service": "生成AIサービス",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "生成AIサービス"
+  ],
+  "beginnerNote": "生成物の種類（画像・音楽・音声・動画）ごとに代表サービスが決まっています。静止した絵を作るものを探しましょう。",
+  "basis": "レッスン本文『画像生成（Midjourney・DALL·E等）』"
+ },
+ {
+  "id": "b-tr1-02",
+  "question": "音楽生成AIの代表的なサービスとして挙げられるのはどれですか。",
+  "choices": [
+   "Midjourney",
+   "DALL·E",
+   "ElevenLabs",
+   "Suno"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "Sunoは、雰囲気やジャンルなどの指示から楽曲を生成する音楽生成AIサービスです。BGMづくりなどに使われます。MidjourneyやDALL·Eは画像、ElevenLabsは音声の生成サービスで、生成物の種類が異なります。",
+  "wrongChoiceExplanations": {
+   "0": "Midjourneyは画像を生成する画像生成AIサービスです。",
+   "1": "DALL·Eは画像を生成する画像生成AIサービスです。",
+   "2": "ElevenLabsは人の声のような音声を作る音声生成AIサービスです。"
+  },
+  "domain": "trends",
+  "service": "音楽生成AI",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "音楽生成AI"
+  ],
+  "beginnerNote": "メロディや伴奏を含む曲を作るサービスはどれかを考えます。名前の響きではなく生成物で判断しましょう。",
+  "basis": "レッスン本文『音楽生成（Suno等）』"
+ },
+ {
+  "id": "b-tr1-03",
+  "question": "音声生成AIの代表的なサービスとして挙げられるのはどれですか。",
+  "choices": [
+   "ElevenLabs",
+   "Suno",
+   "DALL·E",
+   "Sora"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "ElevenLabsは、テキストから人の声のような音声を生成する音声生成AIサービスで、ナレーションなどに使われます。Sunoは楽曲、DALL·Eは画像、Soraは動画の生成であり、音声とは生成物が違います。",
+  "wrongChoiceExplanations": {
+   "1": "Sunoは旋律や伴奏のある楽曲を作る音楽生成AIサービスです。",
+   "2": "DALL·Eは文章の指示から画像を作る画像生成AIサービスです。",
+   "3": "Soraは映像を作る動画生成AIサービスです。"
+  },
+  "domain": "trends",
+  "service": "音声生成AI",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "音声生成AI"
+  ],
+  "beginnerNote": "声やナレーションを作るサービスです。曲を作るものと取り違えないようにしましょう。",
+  "basis": "レッスン本文『音声生成（ElevenLabs等）』"
+ },
+ {
+  "id": "b-tr1-04",
+  "question": "動画生成AIの代表的なサービスとして挙げられるのはどれですか。",
+  "choices": [
+   "Midjourney",
+   "Suno",
+   "Veo",
+   "ElevenLabs"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "Veoは、テキストなどの指示から映像を生成する動画生成AIサービスです。同じ分野にはSoraもあります。Midjourneyは画像、Sunoは音楽、ElevenLabsは音声の生成であり、動画ではありません。",
+  "wrongChoiceExplanations": {
+   "0": "Midjourneyは静止画を生成する画像生成AIサービスです。",
+   "1": "Sunoは楽曲を生成する音楽生成AIサービスです。",
+   "3": "ElevenLabsは音声を生成する音声生成AIサービスです。"
+  },
+  "domain": "trends",
+  "service": "動画生成AI",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "動画生成AI"
+  ],
+  "beginnerNote": "動く映像を作るサービスを探します。Soraと同じ種類のものを選びましょう。",
+  "basis": "レッスン本文『動画生成（Sora・Veo等）』"
+ },
+ {
+  "id": "b-tr1-05",
+  "question": "DALL·Eが主に生成するコンテンツはどれですか。",
+  "choices": [
+   "音楽",
+   "画像",
+   "音声",
+   "動画"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "DALL·Eは、文章による指示から画像を生成する画像生成AIです。Midjourneyと同じ種類にあたります。音楽はSuno、音声はElevenLabs、動画はSoraやVeoなど、他の種類のサービスと混同しないようにしましょう。",
+  "wrongChoiceExplanations": {
+   "0": "音楽を生成するのはSunoなどの音楽生成AIです。",
+   "2": "音声を生成するのはElevenLabsなどの音声生成AIです。",
+   "3": "動画を生成するのはSoraやVeoなどの動画生成AIです。"
+  },
+  "domain": "trends",
+  "service": "画像生成AI",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "画像生成AI"
+  ],
+  "beginnerNote": "Midjourneyと同じ仲間のサービスです。何を作る種類か思い出しましょう。",
+  "basis": "レッスン本文『画像生成（Midjourney・DALL·E等）』"
+ },
+ {
+  "id": "b-tr1-06",
+  "question": "Soraが主に生成するコンテンツはどれですか。",
+  "choices": [
+   "動画",
+   "画像",
+   "音楽",
+   "音声"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "Soraは、テキストなどの指示から映像を生成する動画生成AIです。Veoと同じ種類にあたります。画像はMidjourneyやDALL·E、音楽はSuno、音声はElevenLabsが担当する分野で、Soraの生成物とは異なります。",
+  "wrongChoiceExplanations": {
+   "1": "画像を生成するのはMidjourneyやDALL·Eなどの画像生成AIです。",
+   "2": "音楽を生成するのはSunoなどの音楽生成AIです。",
+   "3": "音声を生成するのはElevenLabsなどの音声生成AIです。"
+  },
+  "domain": "trends",
+  "service": "動画生成AI",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "動画生成AI"
+  ],
+  "beginnerNote": "Veoと同じ仲間のサービスです。時間とともに動くコンテンツを思い浮かべましょう。",
+  "basis": "レッスン本文『動画生成（Sora・Veo等）』"
+ },
+ {
+  "id": "b-tr1-07",
+  "question": "生成AIの業務での活用例として、本文で挙げられているものはどれですか。",
+  "choices": [
+   "製品の実物を工場で量産する",
+   "配送トラックを現場で運転する",
+   "建物の基礎工事を現場で行う",
+   "文章の要約や下書きの作成"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "文章の要約や下書きの作成は、テキスト生成AIが得意とする業務での活用例です。ほかにBGMやナレーションの作成にも広がっています。一方、製品の量産・運転・工事のような物理的な作業は、生成AIが直接行うものではありません。",
+  "wrongChoiceExplanations": {
+   "0": "実物の製品を作るのは製造設備の役割で、生成AIが直接行う業務ではありません。",
+   "1": "トラックの運転は物理的な作業であり、生成AIの生成の対象ではありません。",
+   "2": "基礎工事は現場での物理的な作業で、生成AIが直接行うものではありません。"
+  },
+  "domain": "trends",
+  "service": "生成AIが出来ること",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "生成AIが出来ること"
+  ],
+  "beginnerNote": "生成AIが生み出すのはデータやコンテンツです。体を動かす現場作業ではない選択肢を探しましょう。",
+  "basis": "レッスン本文『文章の要約や下書き、BGMやナレーションの作成など業務での応用が広がっています』"
+ },
+ {
+  "id": "b-tr1-08",
+  "question": "SunoとElevenLabsの違いとして正しいものはどれですか。",
+  "choices": [
+   "Sunoは音声を、ElevenLabsは楽曲を生成する",
+   "Sunoは画像を、ElevenLabsは動画を生成する",
+   "Sunoは楽曲を、ElevenLabsは音声を生成する",
+   "Sunoは動画を、ElevenLabsは画像を生成する"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "Sunoは旋律や伴奏のある楽曲を作る音楽生成AI、ElevenLabsは人の声のような音声を作る音声生成AIです。どちらも「音」に関わりますが、曲と声という生成物の違いがあります。画像や動画は別のサービスの担当です。",
+  "wrongChoiceExplanations": {
+   "0": "生成物が逆です。Sunoが楽曲、ElevenLabsが音声を生成します。",
+   "1": "画像や動画を生成するのは、MidjourneyやSoraなど別のサービスです。",
+   "3": "動画や画像を生成するのは、SoraやDALL·Eなど別のサービスです。"
+  },
+  "domain": "trends",
+  "service": "生成AIサービス",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "生成AIサービス"
+  ],
+  "beginnerNote": "どちらも音に関わるサービスですが、曲を作るか声を作るかで分かれます。",
+  "basis": "レッスン本文『音楽生成（Suno等）、音声生成（ElevenLabs等）』"
+ },
+ {
+  "id": "b-tr1-09",
+  "question": "テキスト生成AIが主に生み出すコンテンツはどれですか。",
+  "choices": [
+   "楽曲や効果音の作成",
+   "文章や文書の作成",
+   "静止画の作成",
+   "映像の作成"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "テキスト生成AIは、指示や文脈に基づいて文章を生み出すAIで、要約や下書きの作成に使われ、議事録の整理にも役立ちます。楽曲は音楽生成AI、静止画は画像生成AI、映像は動画生成AIの役割で、生成物の種類ごとに分かれています。",
+  "wrongChoiceExplanations": {
+   "0": "楽曲や効果音などの音は、音楽生成AIや音声生成AIの役割です。",
+   "2": "静止画を作るのは画像生成AIの役割です。",
+   "3": "映像を作るのは動画生成AIの役割です。"
+  },
+  "domain": "trends",
+  "service": "テキスト生成AI",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "テキスト生成AI"
+  ],
+  "beginnerNote": "要約や下書きといった活用例から、何を出力する種類かを考えましょう。",
+  "basis": "レッスン本文『テキスト・画像・音楽・音声・動画など多様なコンテンツ』『文章の要約や下書き』"
+ },
+ {
+  "id": "b-tr1-10",
+  "question": "MidjourneyとSoraの違いとして正しいものはどれですか。",
+  "choices": [
+   "Midjourneyは画像を、Soraは動画を生成する",
+   "Midjourneyは動画を、Soraは画像を生成する",
+   "Midjourneyは音声を、Soraは音楽を生成する",
+   "Midjourneyは音楽を、Soraは音声を生成する"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "Midjourneyは画像を作る画像生成AI、Soraは映像を作る動画生成AIです。どちらも見た目に関わる生成ですが、静止した画像か動く映像かが違います。音楽や音声はSunoやElevenLabsの分野です。",
+  "wrongChoiceExplanations": {
+   "1": "生成物が逆です。Midjourneyが画像、Soraが動画を生成します。",
+   "2": "音声や音楽を生成するのは、ElevenLabsやSunoなど別のサービスです。",
+   "3": "音楽や音声を生成するのは、SunoやElevenLabsなど別のサービスです。"
+  },
+  "domain": "trends",
+  "service": "生成AIサービス",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "生成AIサービス"
+  ],
+  "beginnerNote": "どちらも見た目に関わるサービスですが、止まっているか動くかが分かれ目です。",
+  "basis": "レッスン本文『画像生成（Midjourney・DALL·E等）…動画生成（Sora・Veo等）』"
+ },
+ {
+  "id": "b-tr1-11",
+  "question": "生成の種類とサービスの組み合わせとして正しいものはどれですか。",
+  "choices": [
+   "画像生成：Sora",
+   "動画生成：ElevenLabs",
+   "音楽生成：Suno",
+   "音声生成：Midjourney"
+  ],
+  "correctAnswers": [
+   2
+  ],
+  "explanation": "音楽生成の代表サービスはSunoです。画像生成はMidjourneyやDALL·E、音声生成はElevenLabs、動画生成はSoraやVeoと、種類ごとに代表サービスを対応させて覚えます。他の組み合わせは生成物がずれています。",
+  "wrongChoiceExplanations": {
+   "0": "Soraは画像ではなく動画を生成するサービスです。",
+   "1": "ElevenLabsは動画ではなく音声を生成するサービスです。",
+   "3": "Midjourneyは音声ではなく画像を生成するサービスです。"
+  },
+  "domain": "trends",
+  "service": "生成AIサービス",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "生成AIサービス"
+  ],
+  "beginnerNote": "それぞれのサービスが何を作るかを一つずつ当てはめて確認しましょう。",
+  "basis": "レッスン本文『種類ごとの代表サービスを押さえましょう』"
+ },
+ {
+  "id": "b-tr1-12",
+  "question": "画像生成AIが直接生み出せるものとして、適切なのはどれですか。",
+  "choices": [
+   "量産される実物の部品",
+   "店頭に並ぶ実物の商品",
+   "手に取れる実物の楽器",
+   "パッケージの画像データ"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "生成AIが生み出せるのは画像などのデジタルなコンテンツです。パッケージの画像データはその一例です。部品・商品・楽器のような実物そのものは、製造や加工の工程が必要で、生成AIが直接作り出すことはできません。",
+  "wrongChoiceExplanations": {
+   "0": "部品の実物は製造設備で作るもので、画像生成AIの出力ではありません。",
+   "1": "商品の現物は生産工程で作られ、画像生成AIが直接作るものではありません。",
+   "2": "楽器の実物は職人や工場が作るもので、画像生成AIでは作れません。"
+  },
+  "domain": "trends",
+  "service": "生成AIが出来ること",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "生成AIが出来ること"
+  ],
+  "beginnerNote": "画面上で扱えるデータか、手に取れる実物かという違いに注目しましょう。",
+  "basis": "レッスン本文『物理的な製品そのものを作り出すことはできない』"
+ },
+ {
+  "id": "b-tr1-13",
+  "question": "MidjourneyとDALL·Eに共通する点はどれですか。",
+  "choices": [
+   "どちらも指示から音声を生成する",
+   "どちらも指示から画像を生成する",
+   "どちらも指示から動画を生成する",
+   "どちらも指示から楽曲を生成する"
+  ],
+  "correctAnswers": [
+   1
+  ],
+  "explanation": "MidjourneyもDALL·Eも、テキストなどの指示から画像を生成する画像生成AIで、同じ種類のサービスです。音声はElevenLabs、動画はSoraやVeo、楽曲はSunoといった別の種類のサービスが担当します。",
+  "wrongChoiceExplanations": {
+   "0": "音声を生成するのはElevenLabsなどの音声生成AIです。",
+   "2": "動画を生成するのはSoraやVeoなどの動画生成AIです。",
+   "3": "楽曲を生成するのはSunoなどの音楽生成AIです。"
+  },
+  "domain": "trends",
+  "service": "画像生成AI",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "画像生成AI"
+  ],
+  "beginnerNote": "本文では二つを同じかっこの中に並べて紹介しています。同じ種類の例です。",
+  "basis": "レッスン本文『画像生成（Midjourney・DALL·E等）』"
+ },
+ {
+  "id": "b-tr1-14",
+  "question": "生成AIが生み出せるコンテンツの種類に当たる組み合わせはどれですか。",
+  "choices": [
+   "テキスト・画像・音楽",
+   "テキスト・金属・音楽",
+   "画像・建材・動画",
+   "音声・家具・動画"
+  ],
+  "correctAnswers": [
+   0
+  ],
+  "explanation": "生成AIが生み出せるのはテキスト・画像・音楽・音声・動画などのデジタルコンテンツです。金属・建材・家具のような物理的な素材や製品は生成AIが直接作るものではないため、これらを含む組み合わせは当てはまりません。",
+  "wrongChoiceExplanations": {
+   "1": "金属は物理的な素材で、生成AIが生み出すコンテンツではありません。",
+   "2": "建材は物理的な素材で、生成AIが生み出すコンテンツではありません。",
+   "3": "家具は物理的な製品で、生成AIが直接作り出すものではありません。"
+  },
+  "domain": "trends",
+  "service": "生成AIが出来ること",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "生成AIが出来ること"
+  ],
+  "beginnerNote": "データとして扱えるものだけで構成された組み合わせを探しましょう。",
+  "basis": "レッスン本文『テキスト・画像・音楽・音声・動画など多様なコンテンツを生み出せます』"
+ },
+ {
+  "id": "b-tr1-15",
+  "question": "動画生成AIのVeoを開発している企業はどれですか。",
+  "choices": [
+   "OpenAI",
+   "Meta",
+   "Adobe",
+   "Google"
+  ],
+  "correctAnswers": [
+   3
+  ],
+  "explanation": "Veoは、Googleが開発した動画生成AIです。同じ動画生成の分野で代表例とされるSoraは、OpenAIが開発しています。開発元と製品名を取り違えやすいので、SoraとVeoの組み合わせで整理しておきましょう。",
+  "wrongChoiceExplanations": {
+   "0": "OpenAIが開発したのはSoraで、Veoの開発元ではありません。",
+   "1": "Metaは、Veoを開発した企業ではありません。",
+   "2": "Adobeは、Veoを開発した企業ではありません。"
+  },
+  "domain": "trends",
+  "service": "動画生成AIツール",
+  "difficulty": 1,
+  "tags": [
+   "基礎",
+   "動画生成AI"
+  ],
+  "beginnerNote": "Soraの開発元とは別の企業です。検索や地図でも知られる企業を思い出しましょう。",
+  "basis": "既存問題『Googleが開発した動画生成AIとしてVeo』"
+ }
+]

@@ -1,0 +1,422 @@
+[
+{
+"id": "b-gen4-01",
+"question": "Transformerを基盤とするモデルの組み合わせとして正しいものはどれか。",
+"choices": [
+"RNNとLSTM",
+"CNNとGAN",
+"GPTとBERT",
+"VAEとGAN"
+],
+"correctAnswers": [
+2
+],
+"explanation": "GPTとBERTは、どちらもTransformerを基盤として作られたモデルです。GPTは文章生成、BERTは文章の理解に強みを持ち、生成AIの土台になりました。RNNとLSTMは系列を順に処理する旧来のモデル、CNNは画像向け、GANとVAEは画像などを生成する別の手法です。",
+"wrongChoiceExplanations": {
+"0": "RNNとLSTMは、Transformer以前から使われてきた再帰型のモデルです。",
+"1": "CNNは画像処理向け、GANは生成器と識別器を競わせる別の生成手法です。",
+"3": "VAEとGANはどちらもTransformerとは別系統の生成モデルです。"
+},
+"domain": "genAI",
+"service": "Transformer",
+"difficulty": 1,
+"tags": [
+"基礎",
+"Transformer"
+],
+"beginnerNote": "ChatGPTの名前にも入っている「GPT」が、どの仕組みの上に作られているかを思い出しましょう。",
+"basis": "レッスン本文『GPTやBERTの基盤になりました』"
+},
+{
+"id": "b-gen4-02",
+"question": "論文『Attention Is All You Need』でTransformerを提案した研究者らの所属はどこか。",
+"choices": [
+"Google",
+"OpenAI",
+"Meta",
+"Microsoft"
+],
+"correctAnswers": [
+0
+],
+"explanation": "Transformerは、論文『Attention Is All You Need』でGoogleの研究者らが提案したモデルです。この提案がのちのGPTやBERTなど、生成AIの基盤となりました。OpenAIはGPTシリーズを開発した組織ですが、Transformer自体の提案元ではありません。",
+"wrongChoiceExplanations": {
+"1": "OpenAIはTransformerを土台にGPTを開発した組織で、提案元ではありません。",
+"2": "Metaは別のAIモデルを公開してきた企業で、この論文の提案元ではありません。",
+"3": "Microsoftはこの論文の提案元ではなく、提案したのはGoogleの研究者らです。"
+},
+"domain": "genAI",
+"service": "Transformer",
+"difficulty": 1,
+"tags": [
+"基礎",
+"Transformer"
+],
+"beginnerNote": "検索エンジンで有名な企業の研究者たちが発表した論文です。",
+"basis": "レッスン本文『論文『Attention Is All You Need』でGoogleの研究者らが提案したモデル』"
+},
+{
+"id": "b-gen4-03",
+"question": "Transformerが「使わない」と説明されている構造はどれか。",
+"choices": [
+"Self-Attention層",
+"エンコーダとデコーダ",
+"位置エンコーディング",
+"再帰と畳み込みの構造"
+],
+"correctAnswers": [
+3
+],
+"explanation": "Transformerは、再帰（RNN）や畳み込み（CNN）を使わず、Attention機構のみで系列内の要素間の関連度を計算します。そのため系列を1語ずつ順に処理する必要がありません。Self-Attention層、エンコーダ・デコーダ、位置エンコーディングはいずれもTransformerが使う部品です。",
+"wrongChoiceExplanations": {
+"0": "Self-Attention層はTransformerの中核で、使う側の部品です。",
+"1": "エンコーダとデコーダは、Transformerを構成する2つの部分です。",
+"2": "位置エンコーディングは、語順を補うためにTransformerが使う仕組みです。"
+},
+"domain": "genAI",
+"service": "Transformer",
+"difficulty": 1,
+"tags": [
+"基礎",
+"Transformer"
+],
+"beginnerNote": "論文のタイトルにあるAttentionと対比して、頼らない従来の構造を考えましょう。",
+"basis": "レッスン本文『再帰（RNN）や畳み込み（CNN）を使わず、Attention機構のみで』"
+},
+{
+"id": "b-gen4-04",
+"question": "Attention機構を使ってTransformerが計算するものはどれか。",
+"choices": [
+"各単語の出現した回数",
+"系列内の要素同士の関連度",
+"文章全体の文字数の合計",
+"学習データの誤字の数"
+],
+"correctAnswers": [
+1
+],
+"explanation": "Attention機構は、系列内の要素同士がどれだけ関連しているかという関連度を計算します。Transformerはこの関連度をもとに、入力のどこを重視するかを決めます。単語の出現回数や文字数のような単純な集計は、Attentionの計算の目的ではありません。",
+"wrongChoiceExplanations": {
+"0": "出現回数の集計はAttentionの計算ではなく、単語の頻度分析にあたります。",
+"2": "文字数の合計は文章の長さを数えるだけで、要素間の関係を表しません。",
+"3": "誤字の数は学習データの品質確認の話で、Attentionとは無関係です。"
+},
+"domain": "genAI",
+"service": "Attention",
+"difficulty": 1,
+"tags": [
+"基礎",
+"Attention"
+],
+"beginnerNote": "Attentionは「どこに注目するか」を決める仕組みです。注目の度合いを決める材料は何でしょうか。",
+"basis": "レッスン本文『Attention機構のみで系列内の要素間の関連度を計算します』"
+},
+{
+"id": "b-gen4-05",
+"question": "Transformerのエンコーダの役割として正しいものはどれか。",
+"choices": [
+"出力文を1語ずつ生成する",
+"学習データを自動で収集する",
+"入力を処理して表現に変換する",
+"生成結果の誤りを人が修正する"
+],
+"correctAnswers": [
+2
+],
+"explanation": "エンコーダは、入力された系列を処理して、意味や文脈を含む内部表現に変換する部分です。出力を生成するのはデコーダが担当します。学習データの収集や、生成結果を人が修正する作業は、モデルの構造とは別の工程です。",
+"wrongChoiceExplanations": {
+"0": "出力を生成するのはエンコーダではなくデコーダの役割です。",
+"1": "データの収集は学習の準備段階の作業で、エンコーダの役割ではありません。",
+"3": "生成結果の修正は人が行う運用上の作業で、モデルの構造ではありません。"
+},
+"domain": "genAI",
+"service": "Transformerのアーキテクチャ",
+"difficulty": 1,
+"tags": [
+"基礎",
+"Transformerのアーキテクチャ"
+],
+"beginnerNote": "名前にある「エンコード」が、入力に対して何をする動きなのかを考えましょう。",
+"basis": "レッスン本文『入力を処理するエンコーダと出力を生成するデコーダから構成され』"
+},
+{
+"id": "b-gen4-06",
+"question": "Transformerのデコーダの役割として正しいものはどれか。",
+"choices": [
+"処理結果をもとに出力を生成する",
+"入力文を受け取って処理する",
+"学習データの偏りを取り除く",
+"モデルの学習率を自動で決める"
+],
+"correctAnswers": [
+0
+],
+"explanation": "デコーダは、エンコーダなどで処理された情報をもとに、出力を生成する部分です。翻訳なら翻訳後の文を作る側にあたります。入力を受け取って処理するのはエンコーダの役割で、データの偏りの除去や学習率の調整は別の工程や設定の話です。",
+"wrongChoiceExplanations": {
+"1": "入力を受け取って処理するのはデコーダではなくエンコーダです。",
+"2": "データの偏りの除去は前処理や評価の作業で、デコーダの役割ではありません。",
+"3": "学習率は学習時の設定値で、デコーダの機能ではありません。"
+},
+"domain": "genAI",
+"service": "Transformerのアーキテクチャ",
+"difficulty": 1,
+"tags": [
+"基礎",
+"Transformerのアーキテクチャ"
+],
+"beginnerNote": "エンコーダが入力側だとすると、もう一方は何を受け持つかを考えましょう。",
+"basis": "レッスン本文『入力を処理するエンコーダと出力を生成するデコーダから構成され』"
+},
+{
+"id": "b-gen4-07",
+"question": "Self-Attentionの日本語名として正しいものはどれか。",
+"choices": [
+"自己組織化機構",
+"自己注意機構",
+"自己回帰機構",
+"自己符号化機構"
+],
+"correctAnswers": [
+1
+],
+"explanation": "Self-Attentionの日本語名は「自己注意機構」です。同じ系列内の単語どうしが互いに注意（Attention）を向け合い、関連度を計算します。自己回帰は次の単語を順に予測する考え方で、名前は似ていますが別の用語です。",
+"wrongChoiceExplanations": {
+"0": "自己組織化は別の学習手法の名前で、Self-Attentionの訳語ではありません。",
+"2": "自己回帰は次の要素を順に予測する考え方で、Self-Attentionとは別の用語です。",
+"3": "自己符号化はオートエンコーダに関する用語で、Self-Attentionの訳語ではありません。"
+},
+"domain": "genAI",
+"service": "Self-Attention",
+"difficulty": 1,
+"tags": [
+"基礎",
+"Self-Attention"
+],
+"beginnerNote": "英語名のSelfとAttentionを、それぞれ日本語に置き換えてみましょう。",
+"basis": "レッスン本文『Self-Attention（自己注意機構）』"
+},
+{
+"id": "b-gen4-08",
+"question": "Self-Attentionを通すと、各単語の表現はどうなるか。",
+"choices": [
+"単語の綴りが自動で修正される",
+"語順が自動的に整えられる",
+"文の長さが一定にそろえられる",
+"文脈を踏まえた表現が得られる"
+],
+"correctAnswers": [
+3
+],
+"explanation": "Self-Attentionは、各単語について他の全単語との関連度を計算し、その結果を反映することで、文脈を踏まえた表現を得ます。同じ単語でも周囲の語によって表現が変わるのが特徴です。語順の整理や綴りの修正、長さの調整はSelf-Attentionの働きではありません。",
+"wrongChoiceExplanations": {
+"0": "綴りの修正は校正の処理で、Self-Attentionの働きではありません。",
+"1": "Self-Attentionは語順を考慮しないため、語順を整える働きは持ちません。",
+"2": "文の長さの調整は前処理の作業で、Self-Attentionとは無関係です。"
+},
+"domain": "genAI",
+"service": "Self-Attention",
+"difficulty": 1,
+"tags": [
+"基礎",
+"Self-Attention"
+],
+"beginnerNote": "他の単語との関係を計算した結果、単語の表現にどんな情報が加わるかを考えましょう。",
+"basis": "レッスン本文『他の全単語との関連度を計算し、文脈を踏まえた表現を得ます』"
+},
+{
+"id": "b-gen4-09",
+"question": "Self-Attention単体では考慮されない情報はどれか。",
+"choices": [
+"単語が並んでいる順序",
+"単語どうしの関連度",
+"文中の単語の種類",
+"系列全体の単語数"
+],
+"correctAnswers": [
+0
+],
+"explanation": "Self-Attentionは単語どうしの関連度を計算しますが、単語が並んでいる順序は考慮しません。そのため、語順の情報を別に与える位置エンコーディングが必要になります。関連度は計算の対象そのもので、単語の種類は入力から得られます。",
+"wrongChoiceExplanations": {
+"1": "単語どうしの関連度は、Self-Attentionが計算する対象そのものです。",
+"2": "単語の種類は入力された単語から区別でき、Self-Attentionでも扱えます。",
+"3": "単語数は系列から数えられる情報で、考慮されない情報の例ではありません。"
+},
+"domain": "genAI",
+"service": "Self-Attention",
+"difficulty": 1,
+"tags": [
+"基礎",
+"Self-Attention"
+],
+"beginnerNote": "Self-Attentionが計算するのは関係の強さです。計算に含まれていないものは何でしょうか。",
+"basis": "レッスン本文『ただし単語の並び順は考慮しないため、位置情報を別途埋め込む位置エンコーディングが必要になります』"
+},
+{
+"id": "b-gen4-10",
+"question": "位置エンコーディングが各単語に与えるものはどれか。",
+"choices": [
+"単語の意味を説明する文",
+"他の単語との関連度の値",
+"文中での位置を示す情報",
+"翻訳先の言語を示す情報"
+],
+"correctAnswers": [
+2
+],
+"explanation": "位置エンコーディングは、各単語が文中のどの位置にあるかという位置情報を埋め込む仕組みです。これによりTransformerは語順を区別できます。関連度の値はSelf-Attentionが計算するもので、位置情報とは役割が異なります。",
+"wrongChoiceExplanations": {
+"0": "単語の意味を説明する文を与える仕組みではありません。",
+"1": "関連度の値を計算するのはSelf-Attentionで、位置エンコーディングではありません。",
+"3": "翻訳先の言語の指定は、位置エンコーディングの役割ではありません。"
+},
+"domain": "genAI",
+"service": "位置エンコーディング",
+"difficulty": 1,
+"tags": [
+"基礎",
+"位置エンコーディング"
+],
+"beginnerNote": "名前の「位置」が、文のどこを指しているのかを考えましょう。",
+"basis": "レッスン本文『位置情報を別途埋め込む位置エンコーディング』"
+},
+{
+"id": "b-gen4-11",
+"question": "「犬が猫を追う」と「猫が犬を追う」の違いを区別するのに役立つ仕組みはどれか。",
+"choices": [
+"LSTMの忘却ゲート",
+"位置エンコーディング",
+"RNNの再帰的な結合",
+"GANの識別器による判定"
+],
+"correctAnswers": [
+1
+],
+"explanation": "2つの文は同じ単語でも並び順が違い、意味が逆になります。Transformerでは位置エンコーディングで各単語の位置情報を与えることで、この違いを区別できます。忘却ゲートはLSTMの部品、識別器はGANの部品で、語順の区別を担うものではありません。",
+"wrongChoiceExplanations": {
+"0": "忘却ゲートはLSTMの部品で、Transformerの語順の区別とは別の話です。",
+"2": "再帰的な結合はRNNの構造で、Transformerが語順を扱う仕組みではありません。",
+"3": "識別器はGANで本物か偽物かを判定する部品で、語順とは無関係です。"
+},
+"domain": "genAI",
+"service": "位置エンコーディング",
+"difficulty": 1,
+"tags": [
+"基礎",
+"位置エンコーディング"
+],
+"beginnerNote": "同じ単語が使われていて違うのは何か、そこに着目しましょう。",
+"basis": "レッスン本文『単語の並び順は考慮しないため、位置情報を別途埋め込む位置エンコーディングが必要』"
+},
+{
+"id": "b-gen4-12",
+"question": "Attentionで、ある単語への重みが大きいことは何を意味するか。",
+"choices": [
+"その単語が文頭に置かれていること",
+"その単語が誤字として検出されたこと",
+"その単語の文字数が多いこと",
+"その単語との関連度が高いこと"
+],
+"correctAnswers": [
+3
+],
+"explanation": "Attentionでは、着目している単語との関連度が高い単語ほど、大きな重みが置かれます。重みの大きさは、その単語をどれだけ重視して処理するかを表します。文頭にあるか、誤字か、文字数が多いかといった表面的な特徴で重みが決まるわけではありません。",
+"wrongChoiceExplanations": {
+"0": "語順の位置は位置エンコーディングが扱うもので、重みの大きさの意味ではありません。",
+"1": "誤字の検出はAttentionの重みの意味ではありません。",
+"2": "文字数の多さは重みの大きさとは関係がありません。"
+},
+"domain": "genAI",
+"service": "Attention",
+"difficulty": 1,
+"tags": [
+"基礎",
+"Attention"
+],
+"beginnerNote": "重みは「どれだけ重視するか」の度合いです。その度合いは何によって決まるでしょうか。",
+"basis": "レッスン本文『Attention機構のみで系列内の要素間の関連度を計算します』"
+},
+{
+"id": "b-gen4-13",
+"question": "Self-Attentionが関連度を計算する相手の範囲はどれか。",
+"choices": [
+"同じ系列内の他の全単語",
+"直前に現れた1つの単語だけ",
+"次に現れる1つの単語だけ",
+"学習データ全体の全単語"
+],
+"correctAnswers": [
+0
+],
+"explanation": "Self-Attentionは、系列内の各単語について、同じ系列内の他の全単語との関連度を計算します。隣の単語だけでなく、離れた位置の単語も対象になる点が特徴です。学習データ全体ではなく、いま処理している系列の中が範囲になります。",
+"wrongChoiceExplanations": {
+"1": "直前の1語だけを見るのではなく、系列内の他の全単語が対象です。",
+"2": "次の1語だけでなく、系列内のすべての他の単語が対象になります。",
+"3": "対象は処理中の系列内の単語で、学習データ全体ではありません。"
+},
+"domain": "genAI",
+"service": "Self-Attention",
+"difficulty": 1,
+"tags": [
+"基礎",
+"Self-Attention"
+],
+"beginnerNote": "名前の「Self（自己）」が、どの範囲の単語を指しているのかを考えましょう。",
+"basis": "レッスン本文『同じ系列内の他の全単語との関連度を計算し』"
+},
+{
+"id": "b-gen4-14",
+"question": "Self-Attentionと位置エンコーディングの役割の組み合わせとして正しいものはどれか。",
+"choices": [
+"前者は出力生成、後者は入力処理",
+"前者は位置情報、後者は関連度",
+"前者は関連度、後者は位置情報",
+"前者は入力処理、後者は出力生成"
+],
+"correctAnswers": [
+2
+],
+"explanation": "Self-Attentionは単語どうしの関連度を計算し、位置エンコーディングは語順を表す位置情報を与えます。両者が補い合うことで、Transformerは文脈と語順の両方を扱えます。入力処理と出力生成は、エンコーダとデコーダの役割分担です。",
+"wrongChoiceExplanations": {
+"0": "出力生成と入力処理は、Self-Attentionなどの役割ではなくデコーダとエンコーダの役割です。",
+"1": "関連度と位置情報の対応が逆で、関連度はSelf-Attention側が計算します。",
+"3": "入力処理と出力生成は、エンコーダとデコーダの役割分担です。"
+},
+"domain": "genAI",
+"service": "Self-Attention",
+"difficulty": 1,
+"tags": [
+"基礎",
+"Self-Attention"
+],
+"beginnerNote": "片方は「単語どうしの関係」、もう片方は「並び順」を受け持つ仕組みです。",
+"basis": "レッスン本文『Self-Attention…関連度を計算し…位置情報を別途埋め込む位置エンコーディング』"
+},
+{
+"id": "b-gen4-15",
+"question": "RNNと比べたTransformerの処理の特徴として正しいものはどれか。",
+"choices": [
+"前の語の処理が終わるまで待つ",
+"系列内の要素を並列に計算できる",
+"隠れ層の出力を次の時刻へ戻す",
+"文頭から1語ずつしか見られない"
+],
+"correctAnswers": [
+1
+],
+"explanation": "Transformerは再帰を使わないため、系列内の要素の関連度を並列に計算できます。前の語の処理完了を待つ必要がなく、大規模な学習を効率よく行えます。前の語を待つ、隠れ層の出力を次の時刻へ戻す、1語ずつ処理するといった特徴は、RNNの性質です。",
+"wrongChoiceExplanations": {
+"0": "前の語の処理を待つのは、時刻順に進むRNNの性質です。",
+"2": "隠れ層の出力を次の時刻へ戻すのは、RNNの再帰構造です。",
+"3": "1語ずつ順に見るのはRNN的な処理で、Transformerは全体を同時に扱えます。"
+},
+"domain": "genAI",
+"service": "Transformer",
+"difficulty": 1,
+"tags": [
+"基礎",
+"Transformer"
+],
+"beginnerNote": "再帰を使わないことで、処理の進め方がRNNとどう変わるかを考えましょう。",
+"basis": "既存確認問題『系列を順番に処理する必要がなく並列に計算できる』／レッスン本文『再帰（RNN）を使わず』"
+}
+]
