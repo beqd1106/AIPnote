@@ -46,7 +46,7 @@ final class LogicTests: XCTestCase {
         QuizQuestion(id: id, question: "機械学習について正しいものはどれか。",
                      choices: choices, correctAnswers: correct,
                      explanation: "解説", wrongChoiceExplanations: [:],
-                     domain: .ml, service: service, difficulty: 2,
+                     domain: .aiBasics, service: service, difficulty: 2,
                      tags: ["ストレージ"], beginnerNote: beginnerNote)
     }
 
